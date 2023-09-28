@@ -38,7 +38,7 @@ function TableOfContents({ tableOfContents, currentSection }) {
     <>
       <div className="px-8">
         <h5 className="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">
-          On this page
+          目录
         </h5>
         <ul className="text-slate-700 text-sm leading-6">
           {tableOfContents.map((section) => (
@@ -106,14 +106,14 @@ function TableOfContents({ tableOfContents, currentSection }) {
             />
             <div>
               <p className="text-[0.8125rem] font-semibold leading-5 text-sky-500 dark:text-sky-400">
-                From the creators of Tailwind CSS
+                来自顺风CSS的创造者
               </p>
               <p className="mt-1 text-base font-bold tracking-tight leading-[1.375] text-slate-900 dark:text-slate-200">
-                Make your ideas look awesome, without relying on a designer.
+                让你的想法看起来很棒，而不依赖于设计师。
               </p>
               <figure className="mt-6 pl-4 border-l border-slate-100 dark:border-slate-700">
                 <blockquote className="text-sm leading-5 text-slate-600 dark:text-slate-400">
-                  “This is the survival kit I wish I had when I started building apps.”
+                  “这是我希望在开始开发应用程序时拥有的生存工具包。”
                 </blockquote>
                 <figcaption className="mt-3 text-xs leading-5 text-slate-500">
                   Derrick Reimer, <span className="">SavvyCal</span>

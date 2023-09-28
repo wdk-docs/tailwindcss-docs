@@ -44,7 +44,7 @@ function Header() {
           <Logo className="w-auto h-5" />
           <div className="flex items-center">
             <SearchButton className="text-slate-500 hover:text-slate-600 w-8 h-8 -my-1 flex items-center justify-center md:hidden dark:hover:text-slate-300">
-              <span className="sr-only">Search</span>
+              <span className="sr-only">搜索</span>
               <svg
                 width="24"
                 height="24"

@@ -13,12 +13,11 @@ let tabs = {
 
 let readNext = [
   {
-    title: 'Utility-First Fundamentals',
+    title: '实用第一基础',
     href: '/docs/utility-first',
     body: () => (
       <p>
-        Using a utility-first workflow to build complex components from a constrained set of
-        primitive utilities.
+        使用实用程序优先工作流从一组受约束的基本实用程序构建复杂组件。
       </p>
     ),
     icon: {
@@ -28,12 +27,11 @@ let readNext = [
     },
   },
   {
-    title: 'Responsive Design',
+    title: '响应设计',
     href: '/docs/responsive-design',
     body: () => (
       <p>
-        Build fully responsive user interfaces that adapt to any screen size using responsive
-        modifiers.
+        使用响应式修饰符构建完全响应式的用户界面，以适应任何屏幕尺寸。
       </p>
     ),
     icon: {
@@ -43,12 +41,11 @@ let readNext = [
     },
   },
   {
-    title: 'Hover, Focus & Other States',
+    title: '悬停，焦点和其他状态',
     href: '/docs/hover-focus-and-other-states',
     body: () => (
       <p>
-        Style elements in interactive states like hover, focus, and more using conditional
-        modifiers.
+        使用条件修饰语对悬停、聚焦等交互状态中的元素进行样式化。
       </p>
     ),
     icon: {
@@ -58,10 +55,10 @@ let readNext = [
     },
   },
   {
-    title: 'Dark Mode',
+    title: '黑暗模式',
     href: '/docs/dark-mode',
     body: () => (
-      <p>Optimize your site for dark mode directly in your HTML using the dark mode modifier.</p>
+      <p>使用暗模式修改器直接在HTML中优化网站的暗模式。</p>
     ),
     icon: {
       className: 'dark:bg-slate-600 dark:highlight-white/20',
@@ -70,11 +67,11 @@ let readNext = [
     },
   },
   {
-    title: 'Reusing Styles',
+    title: '重用风格',
     href: '/docs/reusing-styles',
     body: () => (
       <p>
-        Manage duplication and keep your projects maintainable by creating reusable abstractions.
+        通过创建可重用的抽象来管理复制并保持项目的可维护性。
       </p>
     ),
     icon: {
@@ -84,10 +81,10 @@ let readNext = [
     },
   },
   {
-    title: 'Customizing the Framework',
+    title: '定制框架',
     href: '/docs/adding-custom-styles',
     body: () => (
-      <p>Customize the framework to match your brand and extend it with your own custom styles.</p>
+      <p>自定义框架以匹配您的品牌，并使用您自己的自定义样式扩展它。</p>
     ),
     icon: {
       className: 'dark:bg-pink-500 dark:highlight-white/30',

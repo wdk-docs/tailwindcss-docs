@@ -28,7 +28,7 @@ export function BlogPostLayout({ children, meta }) {
                 strokeLinejoin="round"
               />
             </svg>
-            Go back
+            回去
           </Link>
         </div>
       </div>
@@ -110,7 +110,7 @@ export function BlogPostLayout({ children, meta }) {
                 <h2 className="text-xl font-semibold text-slate-900 tracking-tight dark:text-white">
                   Get all of our updates directly to your&nbsp;inbox.
                   <br />
-                  Sign up for our newsletter.
+                  注册我们的时事通讯。
                 </h2>
                 <div className="mt-5 max-w-md">
                   <NewsletterForm action="https://app.convertkit.com/forms/3181881/subscriptions" />

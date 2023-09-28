@@ -1,6 +1,6 @@
 ---
 title: 优化生产
-description: Getting the most performance out of Tailwind CSS projects.
+description: 从顺风CSS项目中获得最大的性能。
 ---
 
 import { Heading } from '@/components/Heading'
@@ -8,21 +8,21 @@ import { TipGood, TipBad } from '@/components/Tip'
 import { SnippetGroup } from '@/components/SnippetGroup'
 import { Performance } from '@/components/home/Performance'
 
-Tailwind CSS is incredibly performance focused and aims to produce the smallest CSS file possible by only generating the CSS you are _actually using_ in your project.
+顺风CSS是令人难以置信的性能重点，旨在产生最小的CSS文件可能只生成CSS你实际上在你的项目中使用。
 
-Combined with minification and network compression, this usually leads to CSS files that are less than 10kB, even for large projects. For example, Netflix uses Tailwind for [Netflix Top 10](https://top10.netflix.com/) and the entire website delivers only 6.5kB of CSS over the network.
+结合最小化和网络压缩，这通常会导致CSS文件小于10kB，即使对于大型项目也是如此。例如，Netflix使用Tailwind [Netflix Top 10](https://top10.netflix.com/)，整个网站通过网络只交付了6.5kB的CSS。
 
-With CSS files this small, you don't have to worry about complex solutions like code-splitting your CSS for each page, and can instead just ship a single small CSS file that's downloaded once and cached until you redeploy your site.
+有了这么小的CSS文件，您就不必担心复杂的解决方案，比如为每个页面拆分CSS代码，而是只需发布一个小的CSS文件，下载一次就可以缓存，直到重新部署站点。
 
-For the smallest possible production build, we recommend minifying your CSS with a tool like [cssnano](https://cssnano.co/), and compressing your CSS with [Brotli](https://en.wikipedia.org/wiki/Brotli).
+对于尽可能小的生产构建，我们建议使用[cssnano](https://cssnano.co/)之类的工具缩小CSS，并使用[Brotli](https://en.wikipedia.org/wiki/Brotli)压缩CSS。
 
-If you're using Tailwind CLI, you can minify your CSS by adding the `--minify` flag:
+如果你使用的是顺风命令行，你可以通过添加`--minify`标志来缩小CSS:
 
 ```shell
 npx tailwindcss -o build.css --minify
 ```
 
-If you've installed Tailwind as a PostCSS plugin, add `cssnano` to the end of your plugin list:
+如果你已经安装了Tailwind作为PostCSS插件，在你的插件列表末尾添加`cssnano`:
 
 ```js {{ filename: 'postcss.config.js' }}
 module.exports = {
@@ -34,4 +34,4 @@ module.exports = {
 }
 ```
 
-If you're using a framework, check the documentation as this is often handled for you in production automatically and you don't even need to configure it.
+如果您正在使用框架，请查看文档，因为这通常会在生产环境中自动为您处理，您甚至不需要配置它。
