@@ -1,0 +1,48 @@
+---
+title: 浏览器支持
+description: 了解Tailwind支持哪些浏览器以及如何管理供应商前缀。
+---
+
+总的来说，顺风CSS v3.0是为最新稳定版本的Chrome、Firefox、Edge和Safari设计和测试的。它不支持任何版本的IE，包括IE 11。
+
+虽然顺风CSS中的大多数特性都能在所有现代浏览器中工作，但它也包含了一些尚未被所有浏览器支持的前沿特性的api，例如:`:focus-visible`伪类和`backdrop-filter`实用程序。
+
+由于Tailwind是一个如此低级的框架，如果您不能使用这些特性，只需不使用不支持的实用程序或修饰符，就可以很容易地避免使用这些特性，就像您不会在CSS中使用这些CSS特性一样。
+
+当您不确定是否支持不熟悉的CSS特性时，[Can I Use](https://caniuse.com/?search=focus-visible)数据库是一个很好的资源。
+
+---
+
+## 前缀
+
+许多CSS属性需要厂商前缀才能被浏览器理解， 例如 `background-clip: text` 需要 `-webkit` 前缀在大多数浏览器中工作:
+
+```css
+.bg-clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+```
+
+如果您使用的是Tailwind CLI工具，像这样的供应商前缀将被自动添加。
+
+如果没有，我们建议你使用[Autoprefixer](https://github.com/postcss/autoprefixer)，这是一个PostCSS插件，可以根据你需要支持的浏览器自动添加任何必要的供应商前缀。
+
+要使用它，请通过npm安装它:
+
+```shell
+npm install -D autoprefixer
+```
+
+然后将它添加到PostCSS配置插件列表的最后:
+
+```js
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ]
+}
+```
+
+要了解更多关于指定需要支持哪些浏览器的信息，请查看[Browserslist](https://github.com/browserslist/browserslist)，这是在前端工具中定义目标浏览器的标准方法。

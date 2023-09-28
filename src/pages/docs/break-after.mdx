@@ -1,0 +1,38 @@
+---
+title: "断点后"
+description: "用于控制列或页面在元素之后如何中断的实用程序。"
+---
+
+import utilities from 'utilities?plugin=breakAfter'
+import { BreakpointsAndMediaQueries } from '@/components/BreakpointsAndMediaQueries'
+import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
+
+export const classes = { utilities }
+
+## 基本用法
+
+### 设置后断点行为
+
+使用`break-after-{value}`实用程序来控制列或页分隔符在元素之后的行为。 
+例如，使用`break-after-column`实用程序强制在元素之后进行列分隔。
+
+```html
+<div class="columns-2">
+  <p>Well, let me tell you something, ...</p>
+  <p class="**break-after-column**">Sure, go ahead, laugh...</p>
+  <p>Maybe we can live without...</p>
+  <p>Look. If you think this is...</p>
+</div>
+```
+
+---
+
+## <Heading ignore>应用条件</Heading>
+
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
+
+<HoverFocusAndOtherStates featuredClass="break-after-column" />
+
+### <Heading ignore>断点和媒体查询</Heading>
+
+<BreakpointsAndMediaQueries featuredClass="break-after-column" />

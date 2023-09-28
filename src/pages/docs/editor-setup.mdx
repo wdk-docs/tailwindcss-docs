@@ -1,0 +1,51 @@
+---
+title: 编辑器设置
+description: 插件和配置设置可以改善开发人员使用顺风CSS时的体验。
+---
+
+## 语法的支持
+
+顺风CSS使用了很多自定义的CSS规则，比如`@tailwind`、`@apply`和`@screen`，在许多编辑器中，如果这些规则不能被识别，就会触发警告或错误。
+
+解决这个问题的方法几乎总是为你的编辑器/IDE安装一个插件来支持PostCSS语言，而不是普通的CSS。
+
+如果你正在使用VS Code，我们的官方插件[顺风CSS智能感知](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)包含一个专用的顺风CSS语言模式，它支持顺风使用的所有自定义规则和函数。
+
+在某些情况下，如果您的编辑器对CSS文件中的语法要求非常严格，您可能需要禁用本机CSS检查/验证。
+
+## VS Code的智能感知
+
+Visual Studio Code的官方[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)扩展通过为用户提供自动完成，语法高亮和检查等高级功能来增强Tailwind开发体验。
+
+<img src={require('@/img/intellisense.png').default.src} alt="Tailwind CSS IntelliSense extension for Visual Studio Code" width={1344} height={672} className="rounded-lg" />
+
+- **完成功能**. 对类名的智能建议，以及[CSS函数和指令](/docs/functions-and-directives).
+- **产品毛羽**. 突出显示CSS和标记中的错误和潜在错误。
+- **悬停预览**. 将鼠标悬停在一个Tailwind类的名称上，可以看到完整的CSS。
+- **语法高亮显示**. 提供语法定义，以便正确突出显示顺风功能。
+
+查看项目[在GitHub上](https://github.com/tailwindcss/intellisense)了解更多信息, 或者[将其添加到Visual Studio Code](vscode:extension/bradlc.vscode-tailwindcss)立即开始。
+
+## 自动类排序与Prettier
+
+我们维护一个官方的[Prettier插件](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)顺风CSS，自动排序您的类按照我们的[推荐的类顺序](/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted).
+
+<img src={require('@/img/prettier-banner.jpg').default.src} alt="" width={2400} height={819} className="rounded-lg" />
+
+它可以与自定义的Tailwind配置无缝地工作，因为它只是一个Prettier插件，它可以在任何Prettier工作的地方工作-包括每个流行的编辑器和IDE，当然还有命令行。
+
+```html
+<!-- Before -->
+<button class="text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800">...</button>
+
+<!-- After -->
+<button class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">...</button>
+```
+
+查看插件[在GitHub上](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)了解更多并开始。
+
+## JetBrains IDEs
+
+JetBrains IDEs 就像 WebStorm, PhpStorm, 和其他包括支持智能顺风CSS完成在你的HTML和使用`@apply`。
+
+[在JetBrains IDEs中了解更多关于顺风CSS的支持  &rarr;](https://www.jetbrains.com/help/webstorm/tailwind-css.html)

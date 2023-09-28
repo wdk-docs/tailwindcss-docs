@@ -1,0 +1,326 @@
+---
+title: 重用的风格
+description: 管理重复和创建可重用的抽象。
+---
+
+import { TipGood, TipBad, TipInfo } from '@/components/Tip'
+import { MultiCursorDemo } from '@/components/MultiCursorDemo'
+
+顺风鼓励[实用程序优先](/docs/utility-first)工作流，其中设计仅使用低级实用程序类实现。这是一种避免过早抽象和随之而来的痛点的有效方法。
+
+当然，随着项目的发展，您将不可避免地发现自己在许多不同的地方重复常见的实用程序组合来重新创建相同的设计。
+
+例如，在下面的模板中，你可以看到每个头像图像的实用程序类重复了五次:
+
+```html {{ example: { p: 'none' } }}
+<div class="w-72 sm:w-96 px-8 sm:px-12 py-6 sm:py-8 mx-auto bg-white shadow">
+  <div class="flex text-base items-center space-x-2">
+    <h4 class="text-base font-semibold text-slate-900">Contributors</h4>
+    <span class="text-xs rounded-full px-2 py-1 bg-slate-100 font-semibold text-slate-700">204</span>
+  </div>
+  <div class="mt-3 flex -space-x-2 overflow-hidden">
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+  </div>
+  <div class="mt-3 text-sm font-medium"><a href="#" class="text-blue-500">+ 198 others</a></div>
+</div>
+```
+
+```html
+<div>
+  <div class="flex items-center space-x-2 text-base">
+    <h4 class="font-semibold text-slate-900">Contributors</h4>
+    <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">204</span>
+  </div>
+  <div class="mt-3 flex -space-x-2 overflow-hidden">
+    <img class="**inline-block h-12 w-12 rounded-full ring-2 ring-white**" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="**inline-block h-12 w-12 rounded-full ring-2 ring-white**" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="**inline-block h-12 w-12 rounded-full ring-2 ring-white**" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/>
+    <img class="**inline-block h-12 w-12 rounded-full ring-2 ring-white**" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="**inline-block h-12 w-12 rounded-full ring-2 ring-white**" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+  </div>
+  <div class="mt-3 text-sm font-medium">
+    <a href="#" class="text-blue-500">+ 198 others</a>
+  </div>
+</div>
+```
+
+别慌!在本指南中，您将了解在项目中重用样式的不同策略，以及何时使用每种样式的最佳实践。
+
+---
+
+## 使用编辑器和语言特性
+
+很多时候，像这样的重复甚至不是一个真正的问题，因为它都在一个地方，或者实际上根本不存在，因为你迭代了一组项，只写了一次标记。
+
+如果需要重用的样式只需要在单个文件中重用，那么多光标编辑和循环是管理任何复制的最简单方法。
+
+### 多光标编辑
+
+当复制被定位为单个文件中的一组元素时，最简单的处理方法是使用[多光标编辑](https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor)来一次快速选择和编辑每个元素的类列表:
+
+<MultiCursorDemo />
+
+你会惊讶地发现，这往往是最好的解决方案。如果您可以同时快速编辑所有重复的类列表，那么引入任何额外的抽象都没有好处。
+
+### 循环
+
+在假设需要提取组件或为某些东西创建自定义类之前，请确保在模板中确实使用了它不止一次。
+
+很多时候，在呈现的页面中出现多次的设计元素实际上只编写了一次，因为实际的标记是在循环中呈现的。
+
+例如，本指南开头的复制头像几乎肯定会在实际项目中循环渲染:
+
+```html {{ example: { p: 'none' } }}
+<div class="w-72 sm:w-96 px-8 sm:px-12 py-6 sm:py-8 mx-auto bg-white shadow">
+  <div class="flex text-base items-center space-x-2">
+    <h4 class="text-base font-semibold text-slate-900">Contributors</h4>
+    <span class="text-xs rounded-full px-2 py-1 bg-slate-100 font-semibold text-slate-700">204</span>
+  </div>
+  <div class="mt-3 flex -space-x-2 overflow-hidden">
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+  </div>
+  <div class="mt-3 text-sm font-medium"><a href="#" class="text-blue-500">+ 198 others</a></div>
+</div>
+```
+
+```html
+<div>
+  <div class="flex items-center space-x-2 text-base">
+    <h4 class="font-semibold text-slate-900">Contributors</h4>
+    <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">204</span>
+  </div>
+  <div class="mt-3 flex -space-x-2 overflow-hidden">
+**    {#each contributors as user}**
+**      <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="{user.avatarUrl}" alt="{user.handle}"/>**
+**    {/each}**
+  </div>
+  <div class="mt-3 text-sm font-medium">
+    <a href="#" class="text-blue-500">+ 198 others</a>
+  </div>
+</div>
+```
+
+如果你愿意，你甚至可以使用循环或`map`来重写导航示例:
+
+```html {{ example: { p: 'none' } }}
+<div class="sm:px-8 flex sm:justify-center">
+  <div class="bg-white px-6 py-4 shadow">
+    <nav class="flex justify-center space-x-4">
+      <a href="#/dashboard" class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">Home</a>
+      <a href="#/team" class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">Team</a>
+      <a href="#/projects" class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">Projects</a>
+      <a href="#/reports" class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">Reports</a>
+    </nav>
+  </div>
+</div>
+```
+
+```jsx
+<nav className="flex sm:justify-center space-x-4">
+  {[
+    ['Home', '/dashboard'],
+    ['Team', '/team'],
+    ['Projects', '/projects'],
+    ['Reports', '/reports'],
+  ].map(([title, url]) => (
+    <a href={url} className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">{title}</a>
+  ))}
+</nav>
+```
+
+当元素在这样的循环中呈现时，实际的类列表只写入一次，因此没有实际的重复问题需要解决。
+
+---
+
+## 提取分量和偏导数
+
+如果你需要在多个文件中重用一些样式，最好的策略是创建一个 _component_ (如果你使用的是React、Svelte或Vue这样的前端框架)，或者创建一个 _template_ (如果你使用的是Blade、ERB、Twig或Nunjucks这样的模板语言)。
+
+```html {{ example: { p: 'none' } }}
+<div class="w-72 sm:w-96 px-8 sm:px-12 py-6 sm:py-8 mx-auto bg-white shadow">
+  <div>
+    <img class="rounded" src="https://images.unsplash.com/photo-1452784444945-3f422708fe5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=512&q=80" width="512" height="341" alt="Beach" />
+    <div class="mt-2">
+      <div>
+        <div class="text-xs text-slate-600 uppercase font-bold tracking-wider">Private Villa</div>
+        <div class="font-bold text-slate-700 leading-snug">
+          <a href="#" class="hover:underline">Relaxing All-Inclusive Resort in Cancun</a>
+        </div>
+        <div class="mt-2 text-sm text-slate-600">$299 USD per night</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+```html {{ filename: 'VacationCard.vue' }}
+<template>
+  <div>
+    <img class="rounded" :src="img" :alt="imgAlt">
+    <div class="mt-2">
+      <div>
+        <div class="text-xs text-slate-600 uppercase font-bold tracking-wider">{{ eyebrow }}</div>
+        <div class="font-bold text-slate-700 leading-snug">
+          <a :href="url" class="hover:underline">{{ title }}</a>
+        </div>
+        <div class="mt-2 text-sm text-slate-600">{{ pricing }}</div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    props: ['img', 'imgAlt', 'eyebrow', 'title', 'pricing', 'url']
+  }
+</script>
+```
+
+现在你可以在任意多的地方使用这个组件，同时仍然有一个单一的样式源，这样它们就可以很容易地在一个地方一起更新。
+
+### 与CSS抽象相比
+
+除非组件是单个HTML元素，否则定义它所需的信息不能仅用CSS捕获。对于任何复杂的东西，HTML结构和CSS一样重要。
+
+<TipBad>不要依赖CSS类来提取复杂的组件</TipBad>
+
+```html {{ example: { p: 'none' } }}
+<div class="px-6 py-12">
+  <div class="max-w-sm mx-auto p-6 flex items-center bg-white rounded-xl shadow-md space-x-4">
+    <div class="shrink-0">
+      <svg class="h-12 w-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#2397B3" offset="0%"/><stop stop-color="#13577E" offset="100%"/></linearGradient><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b"><stop stop-color="#73DFF2" offset="0%"/><stop stop-color="#47B1EB" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z" fill="url(#a)" transform="translate(1 1)"/><path d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z" fill="url(#b)" transform="translate(1 1)"/><path d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#FFF"/></g></svg>
+    </div>
+    <div>
+      <div class="text-base sm:text-xl font-medium text-black">ChitChat</div>
+      <p class="text-sm sm:text-base text-slate-500">You have a new message!</p>
+    </div>
+  </div>
+</div>
+```
+
+```html
+<!-- Even with custom CSS, you still need to duplicate this HTML structure -->
+<div class="chat-notification">
+  <div class="chat-notification-logo-wrapper">
+    <img class="chat-notification-logo" src="/img/logo.svg" alt="ChitChat Logo">
+  </div>
+  <div class="chat-notification-content">
+    <h4 class="chat-notification-title">ChitChat</h4>
+    <p class="chat-notification-message">You have a new message!</p>
+  </div>
+</div>
+
+<style>
+  .chat-notification { /* ... */ }
+  .chat-notification-logo-wrapper { /* ... */ }
+  .chat-notification-logo { /* ... */ }
+  .chat-notification-content { /* ... */ }
+  .chat-notification-title { /* ... */ }
+  .chat-notification-message { /* ... */ }
+</style>
+```
+
+即使像这样为组件中的不同元素创建类, _每次要使用该组件时，仍然需要复制HTML_. 当然，您可以在一个地方为每个实例更新字体大小，但是如果需要将标题转换为链接该怎么办呢?
+
+组件和部分模板比纯css抽象更好地解决了这个问题，因为组件可以封装HTML _和_ 样式。更改每个实例的字体大小就像使用CSS一样简单，但是现在您也可以在一个地方将所有标题转换为链接。
+
+<TipGood>创建一个模板部分或JavaScript组件</TipGood>
+
+```html {{ example: { p: 'none' } }}
+<div class="px-6 py-12">
+  <div class="max-w-sm mx-auto p-6 flex items-center bg-white rounded-xl shadow-md space-x-4">
+    <div class="shrink-0">
+      <svg class="h-12 w-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#2397B3" offset="0%"/><stop stop-color="#13577E" offset="100%"/></linearGradient><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b"><stop stop-color="#73DFF2" offset="0%"/><stop stop-color="#47B1EB" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z" fill="url(#a)" transform="translate(1 1)"/><path d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z" fill="url(#b)" transform="translate(1 1)"/><path d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#FFF"/></g></svg>
+    </div>
+    <div>
+      <div class="text-base sm:text-xl font-medium text-black">ChitChat</div>
+      <p class="text-sm sm:text-base text-slate-500">You have a new message!</p>
+    </div>
+  </div>
+</div>
+```
+
+```jsx {{ filename: 'Notification.jsx' }}
+function Notification({ imageUrl, imageAlt, title, message }) {
+  return (
+    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+      <div className="shrink-0">
+        <img className="h-12 w-12" src={imageUrl.src} alt={imageAlt}>
+      </div>
+      <div>
+        <div className="text-xl font-medium text-black">{title}</div>
+        <p className="text-slate-500">{message}</p>
+      </div>
+    </div>
+  )
+}
+```
+
+当您像这样创建组件和模板部分时，除了使用实用程序类之外，没有理由使用其他任何东西，因为您已经有了样式的单一真实来源。
+
+---
+
+## 使用@apply提取类
+
+如果你使用的是传统的模板语言，比如ERB或Twig，那么为像按钮这样小的东西创建一个模板部分，与像`btn`这样简单的CSS类相比，会感觉有点小题大做。
+
+虽然强烈建议您为更复杂的组件创建适当的模板部分，但当模板部分感觉笨拙时，您可以使用Tailwind的`@apply`指令提取重复的实用程序模式到自定义CSS类。
+
+下面是一个`btn-primary`类使用`@apply`从现有的实用程序组合它的样子:
+
+```html {{ example: true }}
+<div class="text-center">
+  <button type="button" class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75">
+    Save changes
+  </button>
+</div>
+```
+
+```html {{ filename: 'HTML' }}
+<!-- Before extracting a custom class -->
+<button class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+  Save changes
+</button>
+
+<!-- After extracting a custom class -->
+<button class="**btn-primary**">
+  Save changes
+</button>
+```
+
+<div className="-mb-4"/>
+
+```css {{ filename: 'CSS' }}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}
+```
+
+在[函数和指令](/docs/functions-and-directives#layer)文档中了解更多关于`@apply`和`@layer`的信息。
+
+### 避免过早抽象
+
+无论你做什么，**不要仅仅为了让事情看起来`更干净`而使用<code className="font-semibold text-slate-900">@apply</code>。是的，充斥着顺风类的HTML模板有点难看。在一个拥有大量自定义CSS的项目中进行更改是更糟糕的。
+
+如果你开始使用`@apply`，你基本上只是再次编写CSS，并放弃了所有的工作流程和可维护性优势，例如:
+
+- **您必须一直考虑类名** — 没有什么比为不值得命名的东西想出一个类名更能让你慢下来或消耗你的精力了。
+- **您必须在多个文件之间跳转才能进行更改** — 这是一个比你在把所有东西放在一起之前想象的更大的工作流程杀手。
+- **改变风格更可怕** — CSS是全局的，你确定你可以在不破坏网站其他部分的情况下改变这个类的最小宽度吗?
+- **你的CSS包会更大** — oof.
+
+如果你打算使用`@apply`，那就把它用在非常小的、高度可重用的东西上，比如按钮和表单控件——即使这样，也只有当你不使用像React这样的框架时，组件才是更好的选择。

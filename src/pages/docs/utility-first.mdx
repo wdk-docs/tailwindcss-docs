@@ -1,0 +1,196 @@
+---
+title: 实用第一基本面
+description: 从一组受约束的基本实用程序构建复杂组件。
+---
+
+import { Heading } from '@/components/Heading'
+import { TipGood, TipBad } from '@/components/Tip'
+
+---
+
+## <Heading hidden>概述</Heading>
+
+传统上，每当你需要在网页上设置样式时，你都会编写CSS。
+
+<TipBad>使用传统方法，自定义设计需要自定义CSS</TipBad>
+
+```html {{ example: true }}
+<div class="max-w-sm mx-auto p-6 flex items-center bg-white rounded-xl shadow-lg space-x-4">
+  <div class="shrink-0">
+    <svg class="h-12 w-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#2397B3" offset="0%"/><stop stop-color="#13577E" offset="100%"/></linearGradient><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b"><stop stop-color="#73DFF2" offset="0%"/><stop stop-color="#47B1EB" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z" fill="url(#a)" transform="translate(1 1)"/><path d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z" fill="url(#b)" transform="translate(1 1)"/><path d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#FFF"/></g></svg>
+  </div>
+  <div>
+    <div class="text-xl font-medium text-black">ChitChat</div>
+    <p class="text-slate-500">你有新留言!</p>
+  </div>
+</div>
+```
+
+```html
+<div class="chat-notification">
+  <div class="chat-notification-logo-wrapper">
+    <img class="chat-notification-logo" src="/img/logo.svg" alt="ChitChat Logo">
+  </div>
+  <div class="chat-notification-content">
+    <h4 class="chat-notification-title">ChitChat</h4>
+    <p class="chat-notification-message">你有新留言!</p>
+  </div>
+</div>
+
+<style>
+  .chat-notification {
+    display: flex;
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .chat-notification-logo-wrapper {
+    flex-shrink: 0;
+  }
+  .chat-notification-logo {
+    height: 3rem;
+    width: 3rem;
+  }
+  .chat-notification-content {
+    margin-left: 1.5rem;
+    padding-top: 0.25rem;
+  }
+  .chat-notification-title {
+    color: #1a202c;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .chat-notification-message {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+</style>
+```
+
+使用Tailwind，您可以通过直接在HTML中应用已有的类来对元素进行样式化。
+
+<TipGood>使用实用程序类构建自定义设计，而无需编写CSS</TipGood>
+
+```html {{ example: true }}
+<div class="max-w-sm mx-auto p-6 flex items-center bg-white rounded-xl shadow-lg space-x-4">
+  <div class="shrink-0">
+    <svg class="h-12 w-12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#2397B3" offset="0%"/><stop stop-color="#13577E" offset="100%"/></linearGradient><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b"><stop stop-color="#73DFF2" offset="0%"/><stop stop-color="#47B1EB" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z" fill="url(#a)" transform="translate(1 1)"/><path d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z" fill="url(#b)" transform="translate(1 1)"/><path d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#FFF"/></g></svg>
+  </div>
+  <div>
+    <div class="text-xl font-medium text-black">ChitChat</div>
+    <p class="text-slate-500">你有新留言!</p>
+  </div>
+</div>
+```
+
+```html
+<div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+  <div class="shrink-0">
+    <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo">
+  </div>
+  <div>
+    <div class="text-xl font-medium text-black">ChitChat</div>
+    <p class="text-slate-500">你有新留言!</p>
+  </div>
+</div>
+```
+
+在上面的例子中，我们使用了:
+
+- Tailwind's [flexbox](/docs/display#flex) 和 [padding](/docs/padding) 实用程序 (`flex`, `shrink-0`, 和 `p-6`) 控制整个卡片布局
+- The [max-width](/docs/max-width) and [margin](/docs/margin) utilities (`max-w-sm` and `mx-auto`) 约束卡片宽度并将其水平居中
+- The [background color](/docs/background-color), [border radius](/docs/border-radius), and [box-shadow](/docs/box-shadow) utilities (`bg-white`, `rounded-xl`, and `shadow-lg`) 为卡片的外观设计样式
+- The [width](/docs/width) and [height](/docs/height) utilities (`w-12` and `h-12`) 调整徽标图像的大小
+- The [space-between](/docs/space) utilities (`space-x-4`) 处理徽标和文本之间的间距
+- The [font size](/docs/font-size), [text color](/docs/text-color), and [font-weight](/docs/font-weight) utilities (`text-xl`, `text-black`, `font-medium`, etc.) 设置卡片文本的样式
+
+这种方法允许我们实现完全自定义的组件设计，而无需编写一行自定义CSS。
+
+现在我知道你在想什么，`这是一场暴行，多么可怕的混乱!`你说得对，确实有点丑。事实上，当你第一次看到它的时候，你几乎不可能认为这是个好主意——你必须真正尝试它。
+
+但一旦你用这种方式构建了一些东西，你很快就会注意到一些非常重要的好处:
+
+- **您没有浪费精力去发明类名**. 不再需要添加愚蠢的类名，比如`sidebar-inner-wrapper`，只是为了能够样式化某些东西，也不再需要为实际上只是一个伸缩容器的东西苦恼于完美的抽象名称。
+- **CSS停止增长**. 使用传统方法，每次添加新特性时，CSS文件都会变大。有了实用程序，一切都是可重用的，所以您很少需要编写新的CSS。
+- **做出改变让人感觉更安全**. CSS是全局的，当你做出改变时，你永远不知道你破坏了什么。HTML中的类是本地的，所以您可以更改它们而不必担心其他东西会损坏。
+
+当您意识到仅使用预定义的实用程序类在HTML中工作是多么高效时，任何其他工作方式都会让您感觉像是一种折磨。
+
+---
+
+## 为什么不直接使用内联样式呢?
+
+对这种方法的常见反应是想知道，`这不是内联样式吗?`在某些方面确实如此-您直接将样式应用于元素，而不是为它们分配一个类名，然后对该类进行样式化。
+
+但是使用实用类比内联样式有几个重要的优势:
+
+- **有约束的设计**. 使用内联样式，每个值都是一个神奇的数字。使用实用程序，您可以从预定义的[设计系统](/docs/theme)中选择样式，这使得构建视觉上一致的UIs变得更加容易。
+- **响应设计**. 你不能在内联样式中使用媒体查询，但你可以使用Tailwind的[响应实用程序](/docs/responsive-design)来轻松构建完全响应的界面。
+- **悬停、聚焦和其他状态**. 内联样式不能针对悬停或焦点这样的状态，但是Tailwind的[状态变体](/docs/hover-focus-and-other-states)可以很容易地用实用工具类对这些状态进行样式化。
+
+这个组件是完全响应式的，包括一个带有悬停和焦点样式的按钮，并且完全由实用程序类构建:
+
+```html {{ example: true }}
+<div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg sm:flex sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 sm:py-4">
+  <img class="block mx-auto sm:mx-0 sm:shrink-0 h-24 rounded-full" src="/img/erin-lindford.jpg" alt="Woman's Face" />
+  <div class="text-center sm:text-left space-y-2">
+    <div class="space-y-0.5">
+      <p class="text-lg text-black font-semibold">
+        Erin Lindford
+      </p>
+      <p class="text-slate-500 font-medium">
+        Product Engineer
+      </p>
+    </div>
+    <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
+  </div>
+</div>
+```
+
+```html
+<div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 **sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6**">
+  <img class="block mx-auto h-24 rounded-full **sm:mx-0 sm:shrink-0**" src="/img/erin-lindford.jpg" alt="Woman's Face" />
+  <div class="text-center space-y-2 **sm:text-left**">
+    <div class="space-y-0.5">
+      <p class="text-lg text-black font-semibold">
+        Erin Lindford
+      </p>
+      <p class="text-slate-500 font-medium">
+        Product Engineer
+      </p>
+    </div>
+    <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 **hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2**">Message</button>
+  </div>
+</div>
+```
+
+---
+
+## 可维护性问题
+
+在使用实用程序优先的方法时，最大的可维护性问题是管理通常重复的实用程序组合。
+
+这很容易通过[提取分量和偏导数](/docs/reusing-styles#extracting-components-and-partials)来解决, 使用[编辑器和语言特性](/docs/reusing-styles#using-editor-and-language-features)，比如多光标编辑和简单循环。
+
+```html
+<!-- PrimaryButton.vue -->
+<template>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <slot/>
+  </button>
+</template>
+```
+
+除此之外，维护实用程序优先的CSS项目比维护大型CSS代码库要容易得多，原因很简单，因为HTML比CSS更容易维护。GitHub、Netflix、Heroku、Kickstarter、Twitch、Segment等大公司都使用了这种方法，并取得了巨大成功。
+
+如果你想听听其他人使用这种方法的经验，请查看以下资源:
+
+- [通过数字: 一年半的原子CSS](https://medium.com/@johnpolacek/by-the-numbers-a-year-and-half-with-atomic-css-39d75b1263b4) by John Polacek
+- [不，实用程序类与内联样式不同](https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles) by Sarah Dayan of Algolia
+- [Diana Mounter在GitHub上使用实用程序类](http://www.fullstackradio.com/75), a podcast interview
+
+要了解更多，请查看[原子/实用程序优先CSS的案例](https://johnpolacek.github.io/the-case-for-atomic-css/), 策展人:[约翰·波拉切克](https://twitter.com/johnpolacek).
