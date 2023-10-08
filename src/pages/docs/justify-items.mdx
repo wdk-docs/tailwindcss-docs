@@ -1,6 +1,6 @@
 ---
-title: "证明物品"
-description: "Utilities for controlling how grid items are aligned along their inline axis."
+title: "对齐项目"
+description: "用于控制网格项沿其行内轴如何对齐的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=justifyItems'
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Start
 
-Use `justify-items-start` to justify grid items against the start of their inline axis:
+使用`justify-items-start`将网格项对齐到其行内轴的起点:
 
 ```html {{ example: true }}
 <div class="grid grid-cols-3 gap-4 font-mono text-white text-sm font-bold leading-6">
@@ -153,12 +153,12 @@ Use `justify-items-stretch` to stretch items along their inline axis:
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="grid justify-items-start" featuredClass="justify-items-center" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="grid justify-items-start" featuredClass="justify-items-center" />

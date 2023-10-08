@@ -146,6 +146,11 @@ export function NavItems() {
           展示
         </Link>
       </li>
+      <li>
+        <Link href="https://daisyui.com" className="hover:text-sky-500 dark:hover:text-sky-400">
+        daisyUI
+        </Link>
+      </li>
     </>
   )
 }

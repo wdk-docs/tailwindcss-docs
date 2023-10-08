@@ -1,6 +1,6 @@
 ---
-title: "轮廓的颜色"
-description: "Utilities for controlling the color of an element's outline."
+title: "轮廓颜色"
+description: "用于控制元素轮廓颜色的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=outlineColor'
@@ -11,11 +11,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the outline color
+### 设置轮廓颜色
 
-Use the `outline-{color}` utilities to change the color of an element's outline.
+使用`outline-{color}`实用程序来更改元素轮廓的颜色。
 
 ```html {{ example: true }}
 <div class="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 font-bold text-sm text-white text-center">
@@ -65,24 +65,24 @@ You can use any value defined in your [opacity scale](/docs/opacity), or use arb
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="outline" featuredClass="outline-blue-400" element="button" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="outline" featuredClass="outline-blue-400" element="button" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="outline" configKey="outlineColor" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="outline-color" featuredClass="outline-[#243c5a]" element="button" />

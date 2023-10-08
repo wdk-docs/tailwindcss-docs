@@ -1,6 +1,6 @@
 ---
 title: "字符间距"
-description: "Utilities for controlling the tracking (letter spacing) of an element."
+description: "用于控制元素的跟踪(字母间距)的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=letterSpacing'
@@ -11,9 +11,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the letter spacing
+### 设置字母间距
 
 Control the letter spacing of an element using the `tracking-{size}` utilities.
 
@@ -46,7 +46,7 @@ Control the letter spacing of an element using the `tracking-{size}` utilities.
 <p class="**tracking-wide** ...">The quick brown fox ...</p>
 ```
 
-### Using negative values
+### 使用负值
 
 To use a negative letter-spacing value, prefix the class name with a dash to convert it to a negative value.
 
@@ -76,21 +76,21 @@ module.exports = {
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="tracking-tight" featuredClass="tracking-wide" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="tracking-tight" featuredClass="tracking-wide" element="p" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides six tracking utilities. You can change, add, or remove these by editing the `theme.letterSpacing` section of your Tailwind config.
 
@@ -113,6 +113,6 @@ By default, Tailwind provides six tracking utilities. You can change, add, or re
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="letter-spacing" featuredClass="tracking-[.25em]" element="p" />

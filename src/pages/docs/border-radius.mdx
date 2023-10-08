@@ -1,6 +1,6 @@
 ---
-title: "边界半径"
-description: "Utilities for controlling the border radius of an element."
+title: "边框圆角"
+description: "用于控制元素边框半径的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=borderRadius'
@@ -10,11 +10,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Rounded corners
+### 圆角
 
-Use utilities like `rounded-sm`, `rounded`, or `rounded-lg` to apply different border radius sizes to an element.
+使用工具，如`rounded-sm`， `rounded`，或`rounded-lg`应用不同的边界半径大小的元素。
 
 ```html {{ example: true }}
 <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
@@ -44,9 +44,9 @@ Use utilities like `rounded-sm`, `rounded`, or `rounded-lg` to apply different b
 <div class="**rounded-full** ..."></div>
 ```
 
-### Pill buttons
+### 药丸按钮
 
-Use the `rounded-full` utility to create pill buttons.
+使用`rounded-full`工具创建按钮。
 
 ```html {{ example: true }}
 <div class="flex justify-center gap-4 text-white text-sm text-center font-bold leading-6">
@@ -61,9 +61,9 @@ Use the `rounded-full` utility to create pill buttons.
 <button class="**rounded-full** ...">Save Changes</button>
 ```
 
-### No rounding
+### 没有圆角
 
-Use `rounded-none` to remove an existing border radius from an element.
+使用`rounded-none`从元素中移除现有的边框半径。
 
 ```html {{ example: true }}
 <div class="flex justify-center gap-4 text-white text-sm text-center font-bold leading-6">
@@ -78,11 +78,11 @@ Use `rounded-none` to remove an existing border radius from an element.
 <button class="**rounded-none** ...">Save Changes</button>
 ```
 
-This is most commonly used to remove a border radius that was applied at a smaller breakpoint.
+这最常用于删除在较小断点处应用的边界半径。
 
-### Rounding sides separately
+### 一面圆角
 
-Use `rounded-{t|r|b|l}{-size?}` to only round one side of an element.
+使用 `rounded-{t|r|b|l}{-size?}` 只圆元素的一面。
 
 ```html {{ example: true }}
 <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
@@ -112,9 +112,9 @@ Use `rounded-{t|r|b|l}{-size?}` to only round one side of an element.
 <div class="**rounded-l-lg** ..."></div>
 ```
 
-### Rounding corners separately
+### 一角圆角
 
-Use `rounded-{tl|tr|br|bl}{-size?}` to only round one corner an element.
+使用 `rounded-{tl|tr|br|bl}{-size?}` 一个元素只绕一个角。
 
 ```html {{ example: true }}
 <div class="flex flex-col sm:flex-row items-center justify-around gap-4 text-white text-sm text-center font-bold leading-6">
@@ -144,9 +144,9 @@ Use `rounded-{tl|tr|br|bl}{-size?}` to only round one corner an element.
 <div class="**rounded-bl-lg** ..."></div>
 ```
 
-### <Heading ignore>Using logical properties</Heading>
+### <Heading ignore>使用逻辑属性</Heading>
 
-Use the `rounded-{s|e|ss|se|es|ee}{-size?}` utilities to set the border radius using [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which map to the appropriate corners based on the text direction.
+使用`rounded-{s|e|ss|se|es|ee}{-size?}`实用工具使用[逻辑属性](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)设置边框半径，它根据文本方向映射到适当的角。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-2 gap-x-4 place-items-center">
@@ -171,7 +171,7 @@ Use the `rounded-{s|e|ss|se|es|ee}{-size?}` utilities to set the border radius u
 <div>
 ```
 
-Here are all the available border color logical property utilities and their physical property equivalents in both LTR and RTL modes.
+以下是LTR和RTL模式下所有可用的边框颜色逻辑属性实用程序及其物理属性等效程序。
 
 | Class | Left-to-right | Right-to-left |
 | --- | --- | --- |
@@ -182,25 +182,25 @@ Here are all the available border color logical property utilities and their phy
 | `rounded-es-*` | `rounded-bl-*` | `rounded-br-*` |
 | `rounded-ee-*` | `rounded-br-*` | `rounded-bl-*` |
 
-For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus-and-other-states#rtl-support) to conditionally apply specific styles depending on the current text direction.
+为了获得更多的控制，你还可以使用[LTR和RTL修饰符](/docs/hover-focus-and-other-states#rtl-support)来根据当前文本的方向有条件地应用特定的样式。
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="rounded" featuredClass="rounded-lg" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="rounded" featuredClass="rounded-lg" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides five border radius size utilities. You can change, add, or remove these by editing the `theme.borderRadius` section of your Tailwind config.
 
@@ -223,6 +223,6 @@ By default, Tailwind provides five border radius size utilities. You can change,
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="border-radius" featuredClass="rounded-[12px]" />

@@ -108,7 +108,7 @@ export function BlogPostLayout({ children, meta }) {
               </div>
               <section className="relative py-16 border-t border-slate-200 dark:border-slate-200/5">
                 <h2 className="text-xl font-semibold text-slate-900 tracking-tight dark:text-white">
-                  Get all of our updates directly to your&nbsp;inbox.
+                  让我们所有的更新直接到您的收件箱。
                   <br />
                   注册我们的时事通讯。
                 </h2>

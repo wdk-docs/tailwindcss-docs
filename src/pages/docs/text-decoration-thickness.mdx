@@ -1,6 +1,6 @@
 ---
 title: "文字装饰厚度"
-description: "Utilities for controlling the thickness of text decorations."
+description: "用于控制文本装饰厚度的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=textDecorationThickness'
@@ -14,7 +14,7 @@ export const classes = {
   sort: (classes) => numbersLast(classes),
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the text decoration thickness
 
@@ -45,21 +45,21 @@ Use the `decoration-{width}` utilities to change the thickness of an element's [
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="underline" featuredClass="decoration-4" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="underline" featuredClass="decoration-4" element="p" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 You can customize the `decoration-{width}` utilities by editing `theme.textDecorationThickness` or `theme.extend.textDecorationThickness` in your `tailwind.config.js` file.
 
@@ -77,6 +77,6 @@ You can customize the `decoration-{width}` utilities by editing `theme.textDecor
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="text-decoration-thickness" featuredClass="decoration-[3px]" element="p" />

@@ -1,6 +1,6 @@
 ---
-title: "标题的一面"
-description: "Utilities for controlling the alignment of a caption element inside of a table."
+title: "表内标题"
+description: "用于控制表内标题元素对齐的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=captionSide'
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Top
 
-Use `caption-top` to position a caption element at the top of a table.
+使用`caption-top`将标题元素定位在表格的顶部。
 
 ```html {{ example: { p: 'none' } }}
 <div class="shadow-sm overflow-hidden px-4 py-8 sm:px-8">
@@ -137,12 +137,12 @@ Use `caption-bottom` to position a caption element at the bottom of a table.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="caption-top" featuredClass="caption-bottom" element="table" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="caption-top" featuredClass="caption-bottom" element="table" />

@@ -182,11 +182,10 @@ export default function Showcase() {
         <div className="relative max-w-3xl px-4 sm:px-6 lg:px-8 mx-auto sm:text-center">
           <h1 className="text-sm leading-6 font-semibold text-sky-500">Showcase</h1>
           <p className="mt-6 text-[2.5rem] leading-none sm:text-6xl tracking-tight font-bold text-slate-900 dark:text-white">
-            You can build anything with Tailwind CSS.
+            你可以用顺风CSS构建任何东西。
           </p>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
-            Well not quite <em>anything</em>, like you can't build a spaceship with it. But you can
-            definitely build the website for the spaceship —{' '}
+            嗯，不完全是<em>任何</em>，就像你不能用它建造宇宙飞船一样。但你绝对可以为宇宙飞船建立网站 —{' '}
             <Link
               href="/showcase/nasa"
               className="font-semibold border-b border-sky-300 text-gray-900 hover:border-b-2 dark:text-white dark:border-sky-400"
@@ -209,9 +208,9 @@ export default function Showcase() {
 
 Showcase.layoutProps = {
   meta: {
-    title: 'Example Showcase',
+    title: '例子展示',
     description:
-      'Beautiful websites built with Tailwind CSS, including marketing sites, SaaS applications, ecommerce stores, and more.',
+      '使用顺风CSS构建的美丽网站，包括营销网站、SaaS应用程序、电子商务商店等。',
     ogImage: require('@/img/showcase/og.jpg'),
   },
 }

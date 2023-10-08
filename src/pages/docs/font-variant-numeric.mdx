@@ -1,6 +1,6 @@
 ---
 title: "字体变体数字"
-description: "Utilities for controlling the variant of numbers."
+description: "用于控制数字变体的实用程序。"
 ---
 
 import { BreakpointsAndMediaQueries } from '@/components/BreakpointsAndMediaQueries'
@@ -20,9 +20,9 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Applying numeric variants
+### 应用数值变体
 
 Use the `font-variant-numeric` utilities to enable additional glyphs for numbers, fractions, and ordinal markers *(in fonts that support them)*.
 
@@ -36,7 +36,7 @@ These utilities are composable so you can enable multiple `font-variant-numeric`
 
 Note that many fonts don't support these features *(stacked fractions support for example is especially rare)*, so some of these utilities may have no effect depending on the font family you are using.
 
-### Ordinal
+### 序数
 
 Use the `ordinal` utility to enable special glyphs for the ordinal markers.
 
@@ -48,7 +48,7 @@ Use the `ordinal` utility to enable special glyphs for the ordinal markers.
 <p class="**ordinal** ...">1st</p>
 ```
 
-### Slashed Zero
+### 削减为零
 
 Use the `slashed-zero` utility to force a 0 with a slash; this is useful when a clear distinction between O and 0 is needed.
 
@@ -60,7 +60,7 @@ Use the `slashed-zero` utility to force a 0 with a slash; this is useful when a 
 <p class="**slashed-zero** ...">0</p>
 ```
 
-### Lining figures
+### 衬里的数据
 
 Use the `lining-nums` utility to use the numeric glyphs that are all aligned by their baseline. This corresponds to the `lnum` OpenType feature. This is the default for most fonts.
 
@@ -74,7 +74,7 @@ Use the `lining-nums` utility to use the numeric glyphs that are all aligned by 
 </p>
 ```
 
-### Oldstyle figures
+### Oldstyle 数据
 
 Use the `oldstyle-nums` utility to use numeric glyphs where some numbers have descenders. This corresponds to the `onum` OpenType feature.
 
@@ -88,7 +88,7 @@ Use the `oldstyle-nums` utility to use numeric glyphs where some numbers have de
 </p>
 ```
 
-### Proportional figures
+### 比例数据
 
 Use the `proportional-nums` utility to use numeric glyphs that have proportional widths (rather than uniform/tabular). This corresponds to the `pnum` OpenType feature.
 
@@ -108,7 +108,7 @@ Use the `proportional-nums` utility to use numeric glyphs that have proportional
 </p>
 ```
 
-### Tabular figures
+### 表格数据
 
 Use the `tabular-nums` utility to use numeric glyphs that have uniform/tabular widths (rather than proportional). This corresponds to the `tnum` OpenType feature.
 
@@ -128,7 +128,7 @@ Use the `tabular-nums` utility to use numeric glyphs that have uniform/tabular w
 </p>
 ```
 
-### Diagonal fractions
+### 对角线分数
 
 Use the `diagonal-fractions` utility to replace numbers separated by a slash with common diagonal fractions. This corresponds to the `frac` OpenType feature.
 
@@ -142,7 +142,7 @@ Use the `diagonal-fractions` utility to replace numbers separated by a slash wit
 </p>
 ```
 
-### Stacked fractions
+### 堆分数
 
 Use the `stacked-fractions` utility to replace numbers separated by a slash with common stacked fractions. This corresponds to the `afrc` OpenType feature. Very few fonts seem to support this feature — we've used Ubuntu Mono here.
 
@@ -156,7 +156,7 @@ Use the `stacked-fractions` utility to replace numbers separated by a slash with
 </p>
 ```
 
-### Resetting numeric font variants
+### 重置数字字体变体
 
 Use the `normal-nums` property to reset numeric font variants. This is usually useful for resetting a font feature at a particular breakpoint:
 
@@ -168,12 +168,12 @@ Use the `normal-nums` property to reset numeric font variants. This is usually u
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="proportional-nums" featuredClass="tabular-nums" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="proportional-nums" featuredClass="tabular-nums" element="p" />

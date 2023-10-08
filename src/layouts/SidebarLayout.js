@@ -403,7 +403,7 @@ function TopLevelNav({ mobile }) {
           </>
         }
       >
-        操场上
+        操场
       </TopLevelLink>
       <TopLevelLink
         mobile={mobile}

@@ -1,5 +1,5 @@
 ---
-title: "清晰的"
+title: "清除浮动"
 description: "用于控制围绕元素的内容包装的实用程序。"
 ---
 
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Clearing left-floated elements
+### 清除左浮动元素
 
-Use `clear-left` to position an element below any preceding left-floated elements.
+使用`clear-left`将一个元素定位在前面的左浮动元素的下面。
 
 ```html {{ example: { resizable: true, p: 'none' } }}
 <div class="mx-4 bg-white shadow-xl p-8 text-slate-700 text-sm sm:text-base leading-6 sm:leading-7 dark:bg-slate-800 dark:text-slate-400">
@@ -39,7 +39,7 @@ Use `clear-left` to position an element below any preceding left-floated element
 <p class="**clear-left** ...">Maybe we can live without libraries...</p>
 ```
 
-### Clearing right-floated elements
+### 清除右浮动元素
 
 Use `clear-right` to position an element below any preceding right-floated elements.
 
@@ -67,7 +67,7 @@ Use `clear-right` to position an element below any preceding right-floated eleme
 <p class="**clear-right** ...">Maybe we can live without libraries...</p>
 ```
 
-### Clearing all floated elements
+### 清除所有浮动元素
 
 Use `clear-both` to position an element below all preceding floated elements.
 
@@ -95,7 +95,7 @@ Use `clear-both` to position an element below all preceding floated elements.
 <p class="**clear-both** ...">Maybe we can live without libraries...</p>
 ```
 
-### Disabling applied clears
+### 禁用已应用清除
 
 Use `clear-none` to reset any clears that are applied to an element. This is the default value for the clear property.
 
@@ -125,12 +125,12 @@ Use `clear-none` to reset any clears that are applied to an element. This is the
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="clear-left" featuredClass="clear-none" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="clear-left" featuredClass="clear-none" element="p" />

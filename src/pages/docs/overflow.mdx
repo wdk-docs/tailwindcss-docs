@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Showing content that overflows
+### 显示溢出的内容
 
-Use `overflow-visible` to prevent content within an element from being clipped. Note that any content that overflows the bounds of the element will then be visible.
+使用`overflow-visible`来防止元素中的内容被剪切。注意，任何超出元素边界的内容都是可见的。
 
 ```html {{ example: true }}
 <div class="overflow-visible relative max-w-sm mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
@@ -272,7 +272,7 @@ Use `overflow-y-scroll` to allow vertical scrolling and always show scrollbars u
 <div class="**overflow-y-scroll** ..."></div>
 ```
 
-### Scrolling in all directions
+### 向各个方向滚动
 
 Use `overflow-scroll` to add scrollbars to an element. Unlike `overflow-auto`, which only shows scrollbars if they are necessary, this utility always shows them. Note that some operating systems (like macOS) hide unnecessary scrollbars regardless of this setting.
 
@@ -442,12 +442,12 @@ Use `overflow-scroll` to add scrollbars to an element. Unlike `overflow-auto`, w
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="overflow-auto" featuredClass="overflow-scroll" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="overflow-auto" featuredClass="overflow-scroll" />

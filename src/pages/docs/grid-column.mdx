@@ -1,6 +1,6 @@
 ---
 title: "网格列开始/结束"
-description: "Utilities for controlling how elements are sized and placed across grid columns."
+description: "用于控制元素在网格列之间的大小和放置方式的实用程序。"
 ---
 
 import gridColumnUtilities from 'utilities?plugin=gridColumn'
@@ -14,11 +14,11 @@ export const classes = {
   utilities: { ...gridColumnUtilities, ...gridColumnStartUtilities, ...gridColumnEndUtilities },
 }
 
-## Basic usage
+## 基本用法
 
-### Spanning columns
+### 跨越列
 
-Use the `col-span-{n}` utilities to make an element span _n_ columns.
+使用`col-span-{n}`实用程序使元素跨度为_n_列。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-3 gap-4 font-mono text-white text-sm text-center font-bold leading-6">
@@ -44,11 +44,12 @@ Use the `col-span-{n}` utilities to make an element span _n_ columns.
 </div>
 ```
 
-### Starting and ending lines
+### 起止线
 
-Use the `col-start-{n}` and `col-end-{n}` utilities to make an element start or end at the _nth_ grid line. These can also be combined with the `col-span-{n}` utilities to span a specific number of columns.
+使用`col-start-{n}`和`col-end-{n}`实用程序使元素开始或结束于_nth_网格线。
+这些工具还可以与`col-span-{n}`实用程序组合使用，以跨越特定数量的列。
 
-Note that CSS grid lines start at 1, not 0, so a full-width element in a 6-column grid would start at line 1 and end at line 7.
+注意，CSS网格行从1开始，而不是0，所以6列网格中的全宽元素将从第1行开始，到第7行结束。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-6 gap-4 font-mono text-white text-sm text-center font-bold leading-6">
@@ -74,25 +75,25 @@ Note that CSS grid lines start at 1, not 0, so a full-width element in a 6-colum
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="col-span-2" featuredClass="col-span-6" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="col-span-2" featuredClass="col-span-6" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
-By default, Tailwind includes grid-column utilities for working with grids with up to 12 columns. You change, add, or remove these by customizing the `gridColumn`, `gridColumnStart`, and `gridColumnEnd` sections of your Tailwind theme config.
+默认情况下，Tailwind包括用于处理最多12列的网格的网格列实用程序。您可以通过自定义顺风主题配置的`gridColumn`， `gridColumnStart`和`gridColumnEnd`部分来更改，添加或删除这些内容。
 
-For creating more `col-{value}` utilities that control the `grid-column` shorthand property directly, customize the `gridColumn` section of your Tailwind theme config:
+要创建更多直接控制`grid-column`快捷属性的`col-{value}`实用程序，请自定义顺风主题配置中的`gridColumn`部分:
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -106,9 +107,9 @@ For creating more `col-{value}` utilities that control the `grid-column` shortha
   }
 ```
 
-We use this internally for our `col-span-{n}` utilities. Note that since this configures the `grid-column` shorthand property directly, we include the word `span` directly in the value name, it's _not_ baked into the class name automatically. That means you are free to add entries that do whatever you want here — they don't just have to be `span` utilities.
+我们在内部将其用于`col-span-{n}`实用程序。注意，由于这直接配置了`grid-column`简写属性，所以我们直接在值名中包含了`span`这个词，它不会自动嵌入到类名中。这意味着您可以自由地在这里添加任何您想要的条目—它们不必仅仅是`span`实用程序。
 
-To add new `col-start-{n}` utilities, use the `gridColumnStart` section of your Tailwind theme config:
+要添加新的`col-start-{n}`实用程序，使用`gridColumnStart`部分的顺风主题配置:
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -126,7 +127,7 @@ To add new `col-start-{n}` utilities, use the `gridColumnStart` section of your 
   }
 ```
 
-To add new `col-end-{n}` utilities, use the `gridColumnEnd` section of your Tailwind theme config:
+要添加新的`col-end-{n}`实用程序，使用`gridColumnEnd`部分的顺风主题配置:
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -144,8 +145,8 @@ To add new `col-end-{n}` utilities, use the `gridColumnEnd` section of your Tail
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
+在[主题定制](/docs/theme#customizing-the-default-theme)文档中了解更多关于自定义默认主题的信息。
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="grid-column/grid-column-start/grid-column-end" featuredClass="col-[16_/_span_16]" />

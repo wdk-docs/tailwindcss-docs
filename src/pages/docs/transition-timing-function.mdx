@@ -10,7 +10,7 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Controlling the easing curve
 
@@ -41,21 +41,21 @@ Use the `ease-{timing}` utilities to control an element's easing curve.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="transition duration-150 ease-out" featuredClass="ease-in" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="transition duration-150 ease-out" featuredClass="ease-in" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides four general purpose transition-timing-function utilities. You can customize these values by editing `theme.transitionTimingFunction` or `theme.extend.transitionTimingFunction` in your `tailwind.config.js` file.
 
@@ -74,6 +74,6 @@ By default, Tailwind provides four general purpose transition-timing-function ut
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="transition-timing-function" featuredClass="ease-[cubic-bezier(0.95,0.05,0.795,0.035)]" />

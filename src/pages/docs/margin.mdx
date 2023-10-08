@@ -1,6 +1,6 @@
 ---
-title: "保证金"
-description: "Utilities for controlling an element's margin."
+title: "外边距"
+description: "控制元件外边距的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=margin'
@@ -14,11 +14,11 @@ export const classes = {
   sort: (classes) => numbersFirst(classes),
 }
 
-## Basic usage
+## 基本用法
 
-### Add margin to a single side
+### 在单面添加边距
 
-Control the margin on one side of an element using the `m{t|r|b|l}-{size}` utilities.
+使用`m{t|r|b|l}-{size}`实用程序控制元素一侧的边距。
 
 For example, `mt-6` would add `1.5rem` of margin to the top of an element, `mr-4` would add `1rem` of margin to the right of an element, `mb-8` would add `2rem` of margin to the bottom of an element, and `ml-2` would add `0.5rem` of margin to the left of an element.
 
@@ -54,7 +54,7 @@ For example, `mt-6` would add `1.5rem` of margin to the top of an element, `mr-4
 <div class="**ml-2** ...">ml-2</div>
 ```
 
-### Add horizontal margin
+### 添加水平边距
 
 Control the horizontal margin of an element using the `mx-{size}` utilities.
 
@@ -70,7 +70,7 @@ Control the horizontal margin of an element using the `mx-{size}` utilities.
 <div class="**mx-8** ...">mx-8</div>
 ```
 
-### Add vertical margin
+### 添加垂直边距
 
 Control the vertical margin of an element using the `my-{size}` utilities.
 
@@ -86,7 +86,7 @@ Control the vertical margin of an element using the `my-{size}` utilities.
 <div class="**my-8** ...">my-8</div>
 ```
 
-### Add margin to all sides
+### 在所有边添加边距
 
 Control the margin on all sides of an element using the `m-{size}` utilities.
 
@@ -102,7 +102,7 @@ Control the margin on all sides of an element using the `m-{size}` utilities.
 <div class="**m-8** ...">m-8</div>
 ```
 
-### Using negative values
+### 使用负值
 
 To use a negative margin value, prefix the class name with a dash to convert it to a negative value.
 
@@ -120,7 +120,7 @@ To use a negative margin value, prefix the class name with a dash to convert it 
 <div class="**-mt-8** bg-sky-300 ...">-mt-8</div>
 ```
 
-### Using logical properties
+### 使用逻辑属性
 
 Use the `ms-*` and `me-*` utilities to set the `margin-inline-start` and `margin-inline-end` [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which map to either the left or right side based on the text direction.
 
@@ -163,21 +163,21 @@ For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="mt-4" featuredClass="mt-8" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="mt-4" featuredClass="mt-8" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's margin scale uses the [default spacing scale](/docs/customizing-spacing). You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -209,6 +209,6 @@ Alternatively, you can customize just the margin scale by editing `theme.margin`
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="margin" featuredClass="m-[5px]" />

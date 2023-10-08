@@ -71,7 +71,7 @@ export const ClassTable = memo(
     return (
       <div ref={ref} className="mt-10 relative">
         <Heading level={2} id="class-reference" className="relative scroll-mt-[var(--scroll-mt)]">
-          <span className="sr-only">Quick reference</span>
+          <span className="sr-only">快速参考</span>
         </Heading>
         <div className="overflow-x-auto flex -mx-4 sm:-mx-6 md:mx-0">
           <div

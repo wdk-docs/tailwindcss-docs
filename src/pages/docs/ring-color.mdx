@@ -1,6 +1,6 @@
 ---
-title: "环的颜色"
-description: "Utilities for setting the color of outline rings."
+title: "环颜色"
+description: "设置轮廓环颜色的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=ringColor'
@@ -20,7 +20,7 @@ export const classes = {
   }
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the ring color
 
@@ -60,24 +60,24 @@ You can use any value defined in your [opacity scale](/docs/opacity), or use arb
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="ring ring-blue-300" featuredClass="ring-blue-500" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="ring ring-blue-300" featuredClass="ring-blue-500" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="ring" configKey="ringColor" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="ring-{color}" featuredClass="ring-[#50d71e]" />

@@ -1,6 +1,6 @@
 ---
-title: "填充"
-description: "Utilities for controlling an element's padding."
+title: "内边距"
+description: "用于控制元素内边距的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=padding'
@@ -14,9 +14,9 @@ export const classes = {
   sort: (classes) => numbersFirst(classes),
 }
 
-## Basic usage
+## 基本用法
 
-### Add padding to a single side
+### 在单面添加填充
 
 Control the padding on one side of an element using the `p{t|r|b|l}-{size}` utilities.
 
@@ -62,7 +62,7 @@ For example, `pt-6` would add `1.5rem` of padding to the top of an element, `pr-
 <div class="**pl-2** ...">pl-2</div>
 ```
 
-### Add horizontal padding
+### 添加水平填充
 
 Control the horizontal padding of an element using the `px-{size}` utilities.
 
@@ -80,7 +80,7 @@ Control the horizontal padding of an element using the `px-{size}` utilities.
 <div class="**px-8** ...">px-8</div>
 ```
 
-### Add vertical padding
+### 添加垂直填充
 
 Control the vertical padding of an element using the `py-{size}` utilities.
 
@@ -98,7 +98,7 @@ Control the vertical padding of an element using the `py-{size}` utilities.
 <div class="**py-8** ...">py-8</div>
 ```
 
-### Add padding to all sides
+### 添加填充到所有的边
 
 Control the padding on all sides of an element using the `p-{size}` utilities.
 
@@ -114,9 +114,9 @@ Control the padding on all sides of an element using the `p-{size}` utilities.
 <div class="**p-8** ...">p-8</div>
 ```
 
-### Using logical properties
+### 使用逻辑属性
 
-Use the `ps-*` and `pe-*` utilities to set the `padding-inline-start` and `padding-inline-end` [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which map to either the left or right side based on the text direction.
+使用`ps-*`和`pe-*`实用程序来设置`padding-inline-start`和`padding-inline-end`[逻辑属性](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)，它们根据文本方向映射到左侧或右侧。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-2 gap-x-4 place-items-center">
@@ -161,21 +161,21 @@ For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="py-4" featuredClass="py-8" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="py-4" featuredClass="py-8" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's padding scale uses the [default spacing scale](/docs/customizing-spacing). You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -207,6 +207,6 @@ Alternatively, you can customize just the padding scale by editing `theme.paddin
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="padding" featuredClass="p-[5px]" />

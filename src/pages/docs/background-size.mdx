@@ -1,6 +1,6 @@
 ---
-title: "背景的大小"
-description: "Utilities for controlling the background size of an element's background image."
+title: "背景大小"
+description: "用于控制元素背景图像的背景大小的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=backgroundSize'
@@ -10,11 +10,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Auto
 
-Use `bg-auto` to display the background image at its default size.
+使用`bg-auto`以默认大小显示背景图像。
 
 ```html {{ example: true }}
 <div class="relative flex items-center justify-center h-48 rounded-lg w-56 sm:w-96 mx-auto overflow-hidden">
@@ -62,21 +62,21 @@ Use `bg-contain` to scale the background image to the outer edges without croppi
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="bg-auto" featuredClass="bg-contain" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="bg-auto" featuredClass="bg-contain" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides utilities for `auto`, `cover`, and `contain` background sizes. You can change, add, or remove these by editing the `theme.backgroundSize` section of your config.
 
@@ -96,6 +96,6 @@ By default, Tailwind provides utilities for `auto`, `cover`, and `contain` backg
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="background-size" featuredClass="bg-[length:200px_100px]" />

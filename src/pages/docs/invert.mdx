@@ -1,6 +1,6 @@
 ---
-title: "反"
-description: "Utilities for applying invert filters to an element."
+title: "反相过滤器"
+description: "将反相过滤器应用于元素的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=invert'
@@ -18,11 +18,11 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Inverting an element's color
+### 反转元素的颜色
 
-Use the `invert` and `invert-0` utilities to control whether an element should be rendered with inverted colors or normally.
+使用`invert`和`invert-0`工具来控制一个元素是应该用倒色渲染还是正常渲染。
 
 ```html {{ example: { p: 'none' } }}
 <div class="flex justify-center sm:block overflow-scroll sm:overflow-visible scroll-p-8">
@@ -60,21 +60,21 @@ Use the `invert` and `invert-0` utilities to control whether an element should b
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="invert" featuredClass="invert-0" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="invert" featuredClass="invert-0" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes a handful of general purpose `invert` utilities. You can customize these values by editing `theme.invert` or `theme.extend.invert` in your `tailwind.config.js` file.
 
@@ -94,6 +94,6 @@ By default, Tailwind includes a handful of general purpose `invert` utilities. Y
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="invert" featuredClass="invert-[.25]" />

@@ -1,5 +1,5 @@
 ---
-title: "User Select"
+title: "用户选择"
 description: "用于控制用户是否可以选择元素中的文本的实用程序。"
 ---
 
@@ -10,9 +10,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Disabling text selection
+### 禁用文本选择
 
 Use `select-none` to prevent selecting text in an element and its children.
 
@@ -30,7 +30,7 @@ Use `select-none` to prevent selecting text in an element and its children.
 </div>
 ```
 
-### Allowing text selection
+### 允许文本选择
 
 Use `select-text` to allow selecting text in an element and its children.
 
@@ -48,7 +48,7 @@ Use `select-text` to allow selecting text in an element and its children.
 </div>
 ```
 
-### Selecting all text in one click
+### 在一次点击中选择所有文本
 
 Use `select-all` to automatically select all the text in an element when a user clicks.
 
@@ -66,7 +66,7 @@ Use `select-all` to automatically select all the text in an element when a user 
 </div>
 ```
 
-### Using auto select behaviour
+### 使用自动选择行为
 
 Use `select-auto` to use the default browser behavior for selecting text. Useful for undoing other classes like `select-none` at different breakpoints.
 
@@ -86,12 +86,12 @@ Use `select-auto` to use the default browser behavior for selecting text. Useful
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates featuredClass="select-all" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries featuredClass="select-all" />

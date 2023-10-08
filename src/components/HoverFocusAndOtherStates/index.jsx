@@ -12,12 +12,11 @@ export function HoverFocusAndOtherStates({
   return (
     <>
       <p>
-        Tailwind lets you conditionally apply utility classes in different states using variant
-        modifiers. For example, use{' '}
+        顺风允许您使用可变修饰符有条件地在不同状态下应用实用程序类。 例如，使用{' '}
         <code>
           {variant}:{featuredClass}
         </code>{' '}
-        to only apply the <code>{featuredClass}</code> utility on {variant}.
+        仅在{variant}时应用<code>{featuredClass}</code>实用程序
       </p>
       {children || (
         <pre className="language-html">
@@ -34,8 +33,8 @@ export function HoverFocusAndOtherStates({
         </pre>
       )}
       <p>
-        For a complete list of all available state modifiers, check out the{' '}
-        <a href="/docs/hover-focus-and-other-states">Hover, Focus, & Other States</a> documentation.
+        有关所有可用状态修饰符的完整列表，请查看{' '}
+        <a href="/docs/hover-focus-and-other-states">悬停、聚焦和其他状态</a>文档.
       </p>
     </>
   )

@@ -9,9 +9,8 @@ export function BreakpointsAndMediaQueries({
   return (
     <>
       <p>
-        You can also use variant modifiers to target media queries like responsive breakpoints, dark
-        mode, prefers-reduced-motion, and more. For example, use <code>md:{featuredClass}</code> to
-        apply the <code>{featuredClass}</code> utility at only medium screen sizes and above.
+        您还可以使用变体修饰符来针对媒体查询，如响应断点、暗模式、prefers-reduced-motion等。
+        例如，使用<code>md:{featuredClass}</code>仅在中等及以上屏幕尺寸上应用<code>{featuredClass}</code>实用工具。
       </p>
       {children || (
         <pre className="language-html">
@@ -27,10 +26,10 @@ export function BreakpointsAndMediaQueries({
         </pre>
       )}
       <p>
-        To learn more, check out the documentation on{' '}
-        <a href="/docs/responsive-design">Responsive Design</a>,{' '}
-        <a href="/docs/dark-mode">Dark Mode</a> and{' '}
-        <a href="/docs/hover-focus-and-other-states#media-queries">other media query modifiers</a>.
+        要了解更多信息，请查看{' '}
+        <a href="/docs/responsive-design">响应式设计</a>{' '}
+        <a href="/docs/dark-mode">黑暗的模式</a> 和{' '}
+        <a href="/docs/hover-focus-and-other-states#media-queries">其他媒体查询修饰符</a>文档.
       </p>
     </>
   )

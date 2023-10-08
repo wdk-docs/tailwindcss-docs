@@ -230,15 +230,15 @@ export const documentationNav = {
   '官方插件': [
     pages['typography-plugin'],
     {
-      title: 'Forms',
+      title: '表单',
       href: 'https://github.com/tailwindlabs/tailwindcss-forms',
     },
     {
-      title: 'Aspect Ratio',
+      title: '纵横比',
       href: 'https://github.com/tailwindlabs/tailwindcss-aspect-ratio',
     },
     {
-      title: 'Container Queries',
+      title: '容器查询',
       href: 'https://github.com/tailwindlabs/tailwindcss-container-queries',
     },
   ],

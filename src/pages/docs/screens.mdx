@@ -1,16 +1,16 @@
 ---
 title: 定制屏幕
-shortTitle: Screens
-description: Customizing the default breakpoints for your project.
+shortTitle: 屏幕
+description: 自定义项目的默认断点。
 ---
 
 import { Heading } from '@/components/Heading'
 
-## <Heading hidden>Configuring custom screens</Heading>
+## <Heading hidden>配置自定义屏幕</Heading>
 
-You define your project's breakpoints in the `theme.screens` section of your `tailwind.config.js` file. The keys become your [responsive modifiers](/docs/responsive-design) (like `md:text-center`), and the values are the `min-width` where that breakpoint should start.
+在`主题`中定义项目的断点。显示`tailwind.config.js`文件中的'部分。键变成你的[响应式修饰符](/docs/responsive-design)(如`md:text-center`)，值是断点应该开始的`min-width`。
 
-The default breakpoints are inspired by common device resolutions:
+默认断点的灵感来自于常见的设备分辨率:
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -36,11 +36,11 @@ module.exports = {
 }
 ```
 
-Feel free to have as few or as many screens as you want, naming them in whatever way you'd prefer for your project.
+您可以随意设置尽可能多或尽可能少的屏幕，以您喜欢的方式命名它们。
 
-### Overriding the defaults
+### 覆盖默认值
 
-To completely replace the default breakpoints, add your custom `screens` configuration directly under the `theme` key:
+要完全替换默认的断点，直接在`theme`键下添加你的自定义`screens`配置:
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -62,7 +62,7 @@ module.exports = {
 
 Any default screens you haven't overridden (such as `xl` using the above example) will be removed and will not be available as screen modifiers.
 
-### Overriding a single screen
+### 覆盖单个屏幕
 
 To override a single screen size (like `lg`), add your custom `screens` value under the `theme.extend` key:
 
@@ -82,7 +82,7 @@ module.exports = {
 
 This will replace the default `screens` value with the same name, without changing the order of your breakpoints.
 
-### Adding larger breakpoints
+### 添加更大的断点
 
 The easiest way to add an additional larger breakpoint is using the `extend` key:
 
@@ -102,7 +102,7 @@ module.exports = {
 
 This will add your custom screen to the end of the default breakpoint list.
 
-### Adding smaller breakpoints
+### 添加更小的断点
 
 If you want to add an additional small breakpoint, you can't use `extend` because the small breakpoint would be added to the end of the breakpoint list, and breakpoints need to be sorted from smallest to largest in order to work as expected with a min-width breakpoint system.
 
@@ -124,7 +124,7 @@ module.exports = {
 
 We expose the default theme at `tailwindcss/defaultTheme` so you don't have to maintain the list of default breakpoints yourself.
 
-### Using custom screen names
+### 使用自定义屏幕名称
 
 You can name your custom screens whatever you like, and are not limited to following the `sm`/`md`/`lg`/`xl`/`2xl`  convention that Tailwind uses by default.
 
@@ -156,11 +156,11 @@ Your responsive modifiers will reflect these custom screen names, so using them 
 
 ---
 
-## Advanced configuration
+## 高级配置
 
 By default, breakpoints are min-width to encourage a [mobile-first](/docs/responsive-design#working-mobile-first) workflow. If you need more control over your media queries, you can also define them using an object syntax that lets you specify explicit min-width and max-width values.
 
-### Max-width breakpoints
+### Max-width 断点
 
 If you want to work with max-width breakpoints instead of min-width, you can specify your screens as objects with a `max` key:
 
@@ -190,7 +190,7 @@ module.exports = {
 
 Make sure to list max-width breakpoints in descending order so that they override each other as expected.
 
-### Fixed-range breakpoints
+### Fixed-range 断点
 
 If you want your breakpoints to specify both a `min-width` and a `max-width`, use the `min` and `max` keys together:
 

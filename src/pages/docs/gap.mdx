@@ -1,6 +1,6 @@
 ---
-title: "Gap"
-description: "Utilities for controlling gutters between grid and flexbox items."
+title: "间隙"
+description: "用于控制网格和弹性项目之间的间隙的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=gap'
@@ -14,11 +14,11 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Basic usage
+## 基本用法
 
-### Setting the gap between elements
+### 设置元素之间的间隙
 
-Use `gap-{size}` to change the gap between both rows and columns in grid and flexbox layouts.
+使用`gap-{size}`来改变网格和弹性布局中行和列之间的间隙。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-2 gap-4 font-mono text-white text-sm text-center font-bold leading-6 bg-stripes-violet rounded-lg">
@@ -38,7 +38,7 @@ Use `gap-{size}` to change the gap between both rows and columns in grid and fle
 </div>
 ```
 
-### Changing row and column gaps independently
+### 独立更改行和列间距
 
 Use `gap-x-{size}` and `gap-y-{size}` to change the gap between rows and columns independently.
 
@@ -66,21 +66,21 @@ Use `gap-x-{size}` and `gap-y-{size}` to change the gap between rows and columns
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="grid gap-4" featuredClass="gap-6" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="grid gap-4" featuredClass="gap-6" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's gap scale uses the [default spacing scale](/docs/customizing-spacing). You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -112,6 +112,6 @@ Alternatively, you can customize just the gap scale by editing `theme.gap` or `t
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="gap" defaultClass="grid" featuredClass="gap-[2.75rem]" />

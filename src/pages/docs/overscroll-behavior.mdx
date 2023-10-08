@@ -1,6 +1,6 @@
 ---
-title: "Overscroll行为"
-description: "Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area."
+title: "滚动过度行为"
+description: "用于控制到达滚动区域边界时浏览器行为的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=overscrollBehavior'
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Preventing parent overscrolling
+### 防止父级滚动过度
 
-Use `overscroll-contain` to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve "bounce" effects when scrolling past the end of the container in operating systems that support it.
+使用`overscroll-contain`来防止目标区域的滚动触发父元素中的滚动，但在支持该操作系统的操作系统中，当滚动超过容器的末端时保留`弹跳`效果。
 
 ```html {{ example: { p: 'none' } }}
 <div class="mx-4 overscroll-contain overflow-auto h-48 bg-white dark:bg-slate-800 shadow-xl p-8 space-y-4 text-slate-700 dark:text-slate-400 text-sm sm:text-base leading-6 sm:leading-7">
@@ -27,7 +27,7 @@ Use `overscroll-contain` to prevent scrolling in the target area from triggering
 <div class="**overscroll-contain** ...">Well, let me tell you something, ...</div>
 ```
 
-### Preventing overscroll bouncing
+### 防止超滚动弹跳
 
 Use `overscroll-none` to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent "bounce" effects when scrolling past the end of the container.
 
@@ -43,7 +43,7 @@ Use `overscroll-none` to prevent scrolling in the target area from triggering sc
 <div class="**overscroll-none** ...">Well, let me tell you something, ...</div>
 ```
 
-### Using the default overscroll behavior
+### 使用默认的超滚动行为
 
 Use `overscroll-auto` to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of the primary scroll area.
 
@@ -61,12 +61,12 @@ Use `overscroll-auto` to make it possible for the user to continue scrolling a p
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="overscroll-auto" featuredClass="overscroll-contain" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="overscroll-auto" featuredClass="overscroll-contain" />

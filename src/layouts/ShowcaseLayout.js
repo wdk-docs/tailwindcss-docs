@@ -121,8 +121,8 @@ export function ShowcaseLayout({ children, slug, meta }) {
 
   return (
     <>
-      <Title>{`Showcase Example: ${meta.title}`}</Title>
-      <OgTitle>{`Showcase Example: ${meta.title}`}</OgTitle>
+      <Title>{`展示的例子: ${meta.title}`}</Title>
+      <OgTitle>{`展示的例子: ${meta.title}`}</OgTitle>
       <Description>
         {meta.description ??
           "See how companies, from small startups to some of the world's largest brands, use Tailwind CSS to build unique websites and products."}
@@ -133,7 +133,7 @@ export function ShowcaseLayout({ children, slug, meta }) {
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 grid items-center grid-cols-[1fr,auto,1fr] gap-6">
             <div className="text-center">
               <p className="text-[0.8125rem] leading-6 font-semibold text-sky-500">
-                <Link href="/showcase">Showcase</Link>
+                <Link href="/showcase">展示</Link>
               </p>
               <h1 className="mt-1 text-xl leading-8 tracking-tight font-semibold text-slate-900 dark:text-white">
                 {meta.title}
@@ -148,7 +148,7 @@ export function ShowcaseLayout({ children, slug, meta }) {
                 >
                   <div className="hidden md:block text-[0.8125rem] leading-6 text-slate-500">
                     <span aria-hidden="true">&larr; </span>
-                    Previous
+                    上一个
                   </div>
                   <div className="hidden md:block mt-2 text-sm leading-6 font-semibold text-slate-900 dark:text-white">
                     {previousSite.name}
@@ -177,7 +177,7 @@ export function ShowcaseLayout({ children, slug, meta }) {
                   className="relative"
                 >
                   <div className="hidden md:block text-[0.8125rem] leading-6 text-slate-500">
-                    Next
+                    下一个
                     <span aria-hidden="true"> &rarr;</span>
                   </div>
                   <div className="hidden md:block mt-2 text-sm leading-6 font-semibold text-slate-900 dark:text-white">
@@ -226,12 +226,12 @@ export function ShowcaseLayout({ children, slug, meta }) {
             />
             <dl className="relative flex flex-wrap h-14 overflow-hidden">
               {[
-                ...(meta.tech ? [{ name: 'Technologies', value: meta.tech }] : []),
+                ...(meta.tech ? [{ name: '技术', value: meta.tech }] : []),
                 {
-                  name: 'Date',
+                  name: '日期',
                   value: (
                     <time dateTime={meta.date}>
-                      {new Date(meta.date).toLocaleDateString('en-US', {
+                      {new Date(meta.date).toLocaleDateString('zh-CN', {
                         day: 'numeric',
                         month: 'long',
                         year: 'numeric',
@@ -270,7 +270,7 @@ export function ShowcaseLayout({ children, slug, meta }) {
               aria-label={`Visit ${meta.title}`}
               className="relative flex-none text-sm text-center font-semibold text-white py-2.5 px-4 rounded-lg bg-slate-900 dark:bg-sky-500 dark:text-white focus:outline-none hover:bg-slate-700 focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:highlight-white/20 dark:hover:bg-sky-400 dark:focus:ring-2 dark:focus:ring-sky-600 dark:focus:ring-offset-slate-900"
             >
-              Go to website <span aria-hidden="true">&rarr;</span>
+              进入网站 <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
           <MDXProvider

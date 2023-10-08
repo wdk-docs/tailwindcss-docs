@@ -10,7 +10,7 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Specifying the rows in a grid
 
@@ -40,21 +40,21 @@ Use the `grid-rows-{n}` utilities to create grids with _n_ equally sized rows.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="grid grid-rows-2" featuredClass="grid-rows-6" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="grid grid-rows-2" featuredClass="grid-rows-6" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes `grid-template-row` utilities for creating basic grids with up to 6 equal width rows. You can customize these values by editing `theme.gridTemplateRows` or `theme.extend.gridTemplateRows` in your `tailwind.config.js` file.
 
@@ -78,6 +78,6 @@ You have direct access to the `grid-template-rows` CSS property here so you can 
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="grid-template-rows" defaultClass="grid" featuredClass="grid-rows-[200px_minmax(900px,_1fr)_100px]" />

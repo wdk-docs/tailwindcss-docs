@@ -1,6 +1,6 @@
 ---
 title: "网格模板列"
-description: "Utilities for specifying the columns in a grid layout."
+description: "用于指定网格布局中的列的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=gridTemplateColumns'
@@ -10,11 +10,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Specifying the columns in a grid
+### 指定网格中的列
 
-Use the `grid-cols-{n}` utilities to create grids with _n_ equally sized columns.
+使用`grid-cols-{n}`实用程序创建具有_n_等长列的网格。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-4 gap-4 font-mono text-white text-sm text-center font-bold leading-6 bg-stripes-fuchsia rounded-lg">
@@ -40,25 +40,26 @@ Use the `grid-cols-{n}` utilities to create grids with _n_ equally sized columns
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="grid grid-cols-1" featuredClass="grid-cols-6" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="grid grid-cols-1" featuredClass="grid-cols-6" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
-By default, Tailwind includes `grid-template-column` utilities for creating basic grids with up to 12 equal width columns. You can customize these values by editing `theme.gridTemplateColumns` or `theme.extend.gridTemplateColumns` in your `tailwind.config.js` file.
+默认情况下，Tailwind包括`grid-template-column`实用程序，用于创建多达12个等宽列的基本网格。
+你可以通过编辑`theme.gridTemplateColumns`或`theme.extend.gridTemplateColumns`在你的`tailwind.config.js`文件自定义这些值。
 
-You have direct access to the `grid-template-columns` CSS property here so you can make your custom column values as generic or as complicated and site-specific as you like.
+您可以直接访问这里的`grid-template-columns`CSS属性，这样您就可以根据自己的喜好将自定义列值设置为通用的或复杂的，以及特定于站点的。
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -76,8 +77,8 @@ You have direct access to the `grid-template-columns` CSS property here so you c
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
+在[主题定制](/docs/theme#customizing-the-default-theme)文档中了解更多关于自定义默认主题的信息。
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="grid-template-columns" defaultClass="grid" featuredClass="grid-cols-[200px_minmax(900px,_1fr)_100px]" />

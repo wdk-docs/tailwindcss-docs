@@ -1,5 +1,5 @@
 ---
-title: "Top / Right / Bottom / Left"
+title: "上/右/下/左"
 description: "用于控制已定位元素位置的实用程序。"
 ---
 
@@ -14,9 +14,9 @@ export const classes = {
   sort: (classes) => numbersFirst(classes),
 }
 
-## Basic usage
+## 基本用法
 
-### Placing a positioned element
+### 放置定位元素
 
 Use the `{top|right|bottom|left|inset}-{size}` utilities to set the horizontal or vertical position of a [positioned element](/docs/position).
 
@@ -99,9 +99,9 @@ Use the `{top|right|bottom|left|inset}-{size}` utilities to set the horizontal o
 </div>
 ```
 
-### Using negative values
+### 使用负值
 
-To use a negative top/right/bottom/left value, prefix the class name with a dash to convert it to a negative value.
+若要使用负的顶/右/底/左值，请在类名前加上破折号以将其转换为负值。
 
 ```html {{ example: true }}
 <div class="flex justify-center font-mono text-white text-sm font-bold leading-6">
@@ -117,7 +117,7 @@ To use a negative top/right/bottom/left value, prefix the class name with a dash
 </div>
 ```
 
-### Using logical properties
+### 使用逻辑属性
 
 Use the `start-*` and `end-*` utilities to set the `inset-inline-start` and `inset-inline-end` [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which map to either the left or right side based on the text direction.
 
@@ -156,21 +156,21 @@ For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="top-4" featuredClass="top-6" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="top-4" featuredClass="top-6" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides top/right/bottom/left/inset utilities for a combination of the [default spacing scale](/docs/customizing-spacing#default-spacing-scale), `auto`, `full` as well as some additional fraction values.
 
@@ -204,6 +204,6 @@ Alternatively, you can customize just the top/right/bottom/left/inset scale by e
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="top/right/bottom/left" featuredClass="top-[3px]" />

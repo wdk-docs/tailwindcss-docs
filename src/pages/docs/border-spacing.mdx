@@ -1,6 +1,6 @@
 ---
-title: "边境间距"
-description: "Utilities for controlling the spacing between table borders."
+title: "边框间距"
+description: "用于控制表边框间距的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=borderSpacing'
@@ -21,7 +21,7 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the border spacing
 
@@ -81,21 +81,21 @@ Use the `border-spacing-*`, `border-spacing-x-*`, and `border-spacing-y-*` utili
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates element="table" featuredClass="border-spacing-2" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries element="table" featuredClass="border-spacing-4" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's border spacing utilities use the [default spacing scale](/docs/customizing-spacing). You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -127,6 +127,6 @@ Alternatively, you can customize just the border spacing scale by editing `theme
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="border-spacing" featuredClass="border-spacing-[7px]" />

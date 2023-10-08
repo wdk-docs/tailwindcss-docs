@@ -9,9 +9,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Making elements invisible
+### 使元素不可见
 
 Use `invisible` to hide an element, but still maintain its place in the DOM, affecting the layout of other elements (compare with `hidden` from the [display](/docs/display#hidden) documentation).
 
@@ -31,7 +31,7 @@ Use `invisible` to hide an element, but still maintain its place in the DOM, aff
 </div>
 ```
 
-### Collapsing elements
+### 崩溃的元素
 
 Use `collapse` to hide table rows, row groups, columns, and column groups as if they were set to `display: none`, but without impacting the size of other rows and columns.
 
@@ -152,7 +152,7 @@ This makes it possible to dynamically toggle rows and columns without affecting 
 </table>
 ```
 
-### Making elements visible
+### 使元素可见
 
 Use `visible` to make an element visible. This is mostly useful for undoing the `invisible` utility at different screen sizes.
 
@@ -174,12 +174,12 @@ Use `visible` to make an element visible. This is mostly useful for undoing the 
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="visible" featuredClass="invisible" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="visible" featuredClass="invisible" />

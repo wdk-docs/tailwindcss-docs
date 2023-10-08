@@ -1,6 +1,6 @@
 ---
-title: "笔划宽度"
-description: "Utilities for styling the stroke width of SVG elements."
+title: "笔画宽度"
+description: "用于样式化SVG元素的笔画宽度的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=strokeWidth'
@@ -10,7 +10,7 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Setting the stroke width
 
@@ -32,21 +32,21 @@ This can be useful for styling icon sets like [Heroicons](https://heroicons.com)
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="stroke-1" featuredClass="stroke-2" element="svg" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="stroke-1" featuredClass="stroke-2" element="svg" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides three `stroke-width` utilities. You change, add, or remove these by editing the `theme.strokeWidth` section of your Tailwind config.
 
@@ -64,6 +64,6 @@ By default, Tailwind provides three `stroke-width` utilities. You change, add, o
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="stroke-width" featuredClass="stroke-[2px]" element="svg" />

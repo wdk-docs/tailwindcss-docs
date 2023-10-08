@@ -1,6 +1,6 @@
 ---
-title: "滚动保证金"
-description: "Utilities for controlling the scroll offset around items in a snap container."
+title: "滚动边距"
+description: "用于控制snap容器中项目周围滚动偏移量的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=scrollMargin'
@@ -14,11 +14,11 @@ export const classes = {
   sort: (classes) => numbersFirst(classes),
 }
 
-## Basic usage
+## 基本用法
 
-### Setting the scroll margin
+### 设置滚动边距
 
-Use the `scroll-m{side}-{size}` utilities to set the scroll offset around items within a snap container.
+使用`scroll-m{side}-{size}`实用程序来设置snap容器内项目周围的滚动偏移量。
 
 ```html {{ example: { p: 'none', hint: 'Scroll in the grid of images to see the expected behaviour' } }}
 <div class="w-full flex gap-12 snap-x overflow-x-auto py-14">
@@ -152,21 +152,21 @@ For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="scroll-m-8" featuredClass="scroll-m-0" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="scroll-m-8" featuredClass="scroll-m-0" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's scroll margin scale uses the [default spacing scale](/docs/customizing-spacing). You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -198,6 +198,6 @@ Alternatively, you can customize just the scroll margin scale by editing `theme.
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="scroll-margin" featuredClass="scroll-m-[24rem]" />

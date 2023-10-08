@@ -1,6 +1,6 @@
 ---
-title: "Min-Height"
-description: "Utilities for setting the minimum height of an element."
+title: "最小高度"
+description: "用于设置元素最小高度的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=minHeight'
@@ -10,9 +10,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the minimum height
+### 设置最小高度
 
 Set the minimum height of an element using the `min-h-0`, `min-h-full`, or `min-h-screen` utilities.
 
@@ -26,21 +26,21 @@ Set the minimum height of an element using the `min-h-0`, `min-h-full`, or `min-
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="h-24 min-h-0" featuredClass="min-h-full" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="h-24 min-h-0" featuredClass="min-h-full" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 You can customize your `min-height` scale by editing `theme.minHeight` or `theme.extend.minHeight` in your `tailwind.config.js` file.
 
@@ -56,6 +56,6 @@ You can customize your `min-height` scale by editing `theme.minHeight` or `theme
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="min-height" featuredClass="min-h-[50%]" />

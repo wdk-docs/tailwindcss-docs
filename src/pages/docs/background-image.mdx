@@ -1,6 +1,6 @@
 ---
 title: "背景图像"
-description: "Utilities for controlling an element's background image."
+description: "用于控制元素背景图像的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=backgroundImage'
@@ -10,7 +10,7 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Linear gradients
 
@@ -34,21 +34,21 @@ To give an element a linear gradient background, use one of the `bg-gradient-{di
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="bg-gradient-to-l" featuredClass="bg-gradient-to-r" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="bg-gradient-to-l" featuredClass="bg-gradient-to-r" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes background image utilities for creating linear gradient backgrounds in eight directions.
 
@@ -71,6 +71,6 @@ These don't just have to be gradients — they can be any background images you 
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="background-image" featuredClass="bg-[url('/img/hero-pattern.svg')]" />

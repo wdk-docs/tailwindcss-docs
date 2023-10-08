@@ -1,6 +1,6 @@
 ---
-title: "之间的空间"
-description: "Utilities for controlling the space between child elements."
+title: "子元素间隔"
+description: "用于控制子元素之间空间的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=space'
@@ -35,11 +35,11 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Add horizontal space between children
+### 在子元素之间添加水平空间
 
-Control the horizontal space between elements using the `space-x-{amount}` utilities.
+使用`space-x-{amount}`实用程序控制元素之间的水平间距。
 
 ```html {{ example: true }}
 <div class="flex justify-start font-mono text-white text-sm font-bold leading-6">
@@ -59,9 +59,9 @@ Control the horizontal space between elements using the `space-x-{amount}` utili
 </div>
 ```
 
-### Add vertical space between children
+### 在子元素之间增加垂直空间
 
-Control the vertical space between elements using the `space-y-{amount}` utilities.
+使用`space-y-{amount}`实用程序控制元素之间的垂直间距。
 
 ```html {{ example: true }}
 <div class="flex flex-col justify-center text-center w-full font-mono text-white text-sm font-bold leading-6">
@@ -81,9 +81,9 @@ Control the vertical space between elements using the `space-y-{amount}` utiliti
 </div>
 ```
 
-### Reversing children order
+### 扭转子元素排序
 
-If your elements are in reverse order (using say `flex-row-reverse` or `flex-col-reverse`), use the `space-x-reverse` or `space-y-reverse` utilities to ensure the space is added to the correct side of each element.
+如果元素的顺序是相反的(例如使用`flex-row-reverse`或`flex-col-reverse`)，请使用`space-x-reverse`或`space-y-reverse`实用程序来确保将空间添加到每个元素的正确一侧。
 
 ```html {{ example: true }}
 <div class="flex justify-end font-mono text-white text-sm font-bold leading-6">
@@ -103,7 +103,7 @@ If your elements are in reverse order (using say `flex-row-reverse` or `flex-col
 </div>
 ```
 
-### Using negative values
+### 使用负值
 
 To use a negative space value, prefix the class name with a dash to convert it to a negative value.
 
@@ -113,11 +113,11 @@ To use a negative space value, prefix the class name with a dash to convert it t
 </div>
 ```
 
-## Limitations
+## 限制
 
-These utilities are really just a shortcut for adding margin to all-but-the-first-item in a group, and aren't designed to handle complex cases like grids, layouts that wrap, or situations where the children are rendered in a complex custom order rather than their natural DOM order.
+这些实用程序实际上只是为组中除第一项之外的所有项添加边距的快捷方式，并不是为处理复杂的情况而设计的，例如网格、包装布局或以复杂的自定义顺序而不是自然DOM顺序呈现子元素的情况。
 
-For those situations, it's better to use the [gap utilities](/docs/gap) when possible, or add margin to every element with a matching negative margin on the parent:
+对于这些情况，最好在可能的情况下使用[gap实用程序](/docs/gap)，或者在父元素上为每个具有匹配的负边距的元素添加边距:
 
 ```html
 <div class="flow-root">
@@ -129,27 +129,27 @@ For those situations, it's better to use the [gap utilities](/docs/gap) when pos
 </div>
 ```
 
-### Cannot be paired with divide utilities
+### 不能与分割公用事业配对
 
-The `space-*` utilities are not designed to work together with the [divide utilities](/docs/divide-width). For those situations, consider adding margin/padding utilities to the children instead.
+`space-*`实用程序不能与[divide实用程序](/docs/divide-width)一起工作。对于这些情况，可以考虑为子元素添加边距/填充实用程序。
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="flex space-x-2" featuredClass="space-x-8" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="flex space-x-2" featuredClass="space-x-8" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's space scale uses the [default spacing scale](/docs/customizing-spacing). You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -181,6 +181,6 @@ Alternatively, you can customize just the space scale by editing `theme.space` o
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="space-{x|y}" featuredClass="space-y-[5px]" />

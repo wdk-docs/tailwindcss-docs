@@ -1,6 +1,6 @@
 ---
 title: "将会改变"
-description: "Utilities for optimizing upcoming animations of elements that are expected to change."
+description: "用于优化即将更改的元素动画的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=willChange'
@@ -10,11 +10,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Optimizing with will change
+### 优化将会改变
 
-Use `will-change-scroll`, `will-change-contents` and `will-change-transform` to optimize an element that's expected to change in the near future by instructing the browser to prepare the necessary animation before it actually begins.
+使用`will-change-scroll`、`will-change-contents`和`will-change-transform`来优化在不久的将来可能发生变化的元素，指示浏览器在实际开始之前准备必要的动画。
 
 ```html
 <div class="overflow-auto **will-change-scroll**">
@@ -22,29 +22,29 @@ Use `will-change-scroll`, `will-change-contents` and `will-change-transform` to 
 </div>
 ```
 
-It's recommended that you apply these utilities just before an element changes, and then remove it shortly after it finishes using `will-change-auto`.
+建议您在元素更改之前应用这些实用工具，然后在它完成后不久使用`will-change-auto`删除它。
 
-The will-change property is intended to be used as a last resort when dealing with **known performance problems**. Avoid using these utilities too much, or simply in anticipation of performance issues, as it could actually cause the page to be less performant.
+will-change属性用于处理**已知性能问题**时的最后手段。避免过多地使用这些实用程序，或者只是为了预期性能问题而使用这些实用程序，因为这实际上可能导致页面的性能降低。
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="will-change-auto" featuredClass="will-change-scroll" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="will-change-auto" featuredClass="will-change-scroll" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
-By default, Tailwind provides four `will-change` utilities. You can customize these values by editing `theme.willChange` or `theme.extend.willChange` in your `tailwind.config.js` file.
+默认情况下，Tailwind提供了四个`will-change`实用程序。你可以通过在你的`tailwind.config.js`文件中编辑`theme.willChange`或`theme.extend.willChange`来定制这些值。
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -58,8 +58,8 @@ By default, Tailwind provides four `will-change` utilities. You can customize th
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
+在[theme customization](/docs/theme#customization-the-default-theme)文档中了解更多关于自定义默认主题的信息。
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="will-change" featuredClass="will-change-[top,left]" />

@@ -1,6 +1,6 @@
 ---
 title: "调整内容"
-description: "Utilities for controlling how rows are positioned in multi-row flex and grid containers."
+description: "用于控制在多行伸缩容器和网格容器中如何定位行的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=alignContent'
@@ -9,7 +9,7 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Start
 
@@ -89,7 +89,7 @@ Use `content-end` to pack rows in a container against the end of the cross axis:
 </div>
 ```
 
-### Space between
+### 之间的空间
 
 Use `content-between` to distribute rows in a container such that there is an equal amount of space between each line:
 
@@ -115,7 +115,7 @@ Use `content-between` to distribute rows in a container such that there is an eq
 </div>
 ```
 
-### Space around
+### 周围的空间
 
 Use `content-around` to distribute rows in a container such that there is an equal amount of space around each line:
 
@@ -141,7 +141,7 @@ Use `content-around` to distribute rows in a container such that there is an equ
 </div>
 ```
 
-### Space evenly
+### 空间均匀
 
 Use `content-evenly` to distribute rows in a container such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using `content-around`:
 
@@ -167,7 +167,7 @@ Use `content-evenly` to distribute rows in a container such that there is an equ
 </div>
 ```
 
-### Stretch
+### 拉伸
 
 Use `content-stretch` to allow content items to fill the available space along the container’s cross axis:
 
@@ -193,7 +193,7 @@ Use `content-stretch` to allow content items to fill the available space along t
 </div>
 ```
 
-### Normal
+### 正常的
 
 Use `content-normal` to pack content items in their default position as if no `align-content` value was set:
 
@@ -221,12 +221,12 @@ Use `content-normal` to pack content items in their default position as if no `a
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="grid content-start" featuredClass="content-around" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="grid content-start" featuredClass="content-around" />

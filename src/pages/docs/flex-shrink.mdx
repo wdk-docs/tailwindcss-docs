@@ -1,5 +1,5 @@
 ---
-title: "Flex Shrink"
+title: "Flex缩小"
 description: "用于控制伸缩项收缩方式的实用程序。"
 ---
 
@@ -14,9 +14,9 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Shrink
+### 缩小
 
 Use `shrink` to allow a flex item to shrink if needed:
 
@@ -48,7 +48,7 @@ Use `shrink` to allow a flex item to shrink if needed:
 </div>
 ```
 
-### Don't shrink
+### 不缩
 
 Use `shrink-0` to prevent a flex item from shrinking:
 
@@ -82,21 +82,21 @@ Use `shrink-0` to prevent a flex item from shrinking:
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="shrink" featuredClass="shrink-0" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="shrink" featuredClass="shrink-0" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides two `shrink` utilities. You can customize these values by editing `theme.flexShrink` or `theme.extend.flexShrink` in your `tailwind.config.js` file.
 
@@ -114,6 +114,6 @@ By default, Tailwind provides two `shrink` utilities. You can customize these va
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="flex-shrink" featuredClass="shrink-[2]" />

@@ -1,5 +1,5 @@
 ---
-title: "Flex Wrap"
+title: "Flex包装"
 description: "用于控制弹性项目自动换行的实用程序。"
 ---
 
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Don't wrap
+### 不要包装
 
-Use `flex-nowrap` to prevent flex items from wrapping, causing inflexible items to overflow the container if necessary:
+使用`flex-nowrap`来防止伸缩项缠绕，导致不灵活的项在必要时溢出容器:
 
 ```html {{ example: true }}
 <div class="flex flex-nowrap gap-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-sky rounded-lg">
@@ -37,7 +37,7 @@ Use `flex-nowrap` to prevent flex items from wrapping, causing inflexible items 
 </div>
 ```
 
-### Wrap normally
+### 包装通常
 
 Use `flex-wrap` to allow flex items to wrap:
 
@@ -57,7 +57,7 @@ Use `flex-wrap` to allow flex items to wrap:
 </div>
 ```
 
-### Wrap reversed
+### 包装逆转
 
 Use `flex-wrap-reverse` to wrap flex items in the reverse direction:
 
@@ -79,12 +79,12 @@ Use `flex-wrap-reverse` to wrap flex items in the reverse direction:
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="flex flex-wrap" featuredClass="flex-wrap-reverse" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="flex flex-wrap" featuredClass="flex-wrap-reverse" />

@@ -1,6 +1,6 @@
 ---
 title: "变换原点"
-description: "Utilities for specifying the origin for an element's transformations."
+description: "用于指定元素转换的源的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=transformOrigin'
@@ -10,7 +10,7 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Changing the transform origin
 
@@ -67,21 +67,21 @@ Specify an element's transform origin using the `origin-{keyword}` utilities.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="origin-center" featuredClass="origin-top" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="origin-center" featuredClass="origin-top" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides `transform-origin` utilities for all of the built-in browser keyword options. You can customize these values by editing `theme.transformOrigin` or `theme.extend.transformOrigin` in your `tailwind.config.js` file.
 
@@ -99,6 +99,6 @@ By default, Tailwind provides `transform-origin` utilities for all of the built-
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="transform-origin" featuredClass="origin-[33%_75%]" />

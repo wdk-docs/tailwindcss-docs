@@ -8,89 +8,105 @@ import { TipGood, TipBad } from '@/components/Tip'
 
 ## <Heading hidden>概述</Heading>
 
-Tailwind中的每个实用程序类都可以在不同的断点上有条件地应用，这使得构建复杂的响应式界面变得轻而易举，而无需离开HTML。
+Tailwind 中的每个实用程序类都可以在不同的断点上有条件地应用，这使得构建复杂的响应式界面变得轻而易举，而无需离开 HTML。
 
 默认情况下有五个断点，灵感来自于常见的设备分辨率:
 
-| Breakpoint prefix | Minimum width | CSS |
-| --- | --- | --- |
-| `sm` | 640px | `@media (min-width: 640px) { ... }` |
-| `md` | 768px | `@media (min-width: 768px) { ... }` |
-| `lg` | 1024px | `@media (min-width: 1024px) { ... }` |
-| `xl` | 1280px | `@media (min-width: 1280px) { ... }` |
-| `2xl` | 1536px | `@media (min-width: 1536px) { ... }` |
+| Breakpoint prefix | Minimum width | CSS                                  |
+| ----------------- | ------------- | ------------------------------------ |
+| `sm`              | 640px         | `@media (min-width: 640px) { ... }`  |
+| `md`              | 768px         | `@media (min-width: 768px) { ... }`  |
+| `lg`              | 1024px        | `@media (min-width: 1024px) { ... }` |
+| `xl`              | 1280px        | `@media (min-width: 1280px) { ... }` |
+| `2xl`             | 1536px        | `@media (min-width: 1536px) { ... }` |
 
-To add a utility but only have it take effect at a certain breakpoint, all you need to do is prefix the utility with the breakpoint name, followed by the `:` character:
+要添加实用程序，但只在某个断点处生效，您需要做的就是在实用程序前面加上断点名称，后跟`:`字符:
 
 ```html
 <!-- Width of 16 by default, 32 on medium screens, and 48 on large screens -->
-<img class="w-16 **md:w-32** **lg:w-48**" src="...">
+<img class="w-16 **md:w-32** **lg:w-48**" src="..." />
 ```
 
-This works for **every utility class in the framework**, which means you can change literally anything at a given breakpoint — even things like letter spacing or cursor styles.
+这适用于**框架中的每个实用程序类**，这意味着您可以在给定的断点上更改任何内容-甚至是字母间距或光标样式。
 
-Here's a simple example of a marketing page component that uses a stacked layout on small screens, and a side-by-side layout on larger screens *(resize your browser to see it in action)*:
+下面是一个营销页面组件的简单示例，它在小屏幕上使用堆叠布局，在大屏幕上使用并排布局 _(调整浏览器大小以查看实际效果)_:
 
 ```html {{ example: { resizable: true, p: 'none' } }}
-<iframe class="w-full h-[496px] pointer-events-none" src="/examples/responsive-design-demo"></iframe>
+<iframe
+  class="w-full h-[496px] pointer-events-none"
+  src="/examples/responsive-design-demo"
+></iframe>
 ```
 
 ```html
 <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden **md:max-w-2xl**">
   <div class="**md:flex**">
     <div class="**md:shrink-0**">
-      <img class="h-48 w-full object-cover **md:h-full md:w-48**" src="/img/building.jpg" alt="Modern building architecture">
+      <img
+        class="h-48 w-full object-cover **md:h-full md:w-48**"
+        src="/img/building.jpg"
+        alt="Modern building architecture"
+      />
     </div>
     <div class="p-8">
-      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
-      <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
-      <p class="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
+      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+        Company retreats
+      </div>
+      <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+        >Incredible accommodation for your team</a
+      >
+      <p class="mt-2 text-slate-500">
+        Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine?
+        We have a list of places to do just that.
+      </p>
     </div>
   </div>
 </div>
 ```
 
-Here's how the example above works:
+下面是上面的例子:
 
-- By default, the outer `div` is `display: block`, but by adding the `md:flex` utility, it becomes `display: flex` on medium screens and larger.
-- When the parent is a flex container, we want to make sure the image never shrinks, so we've added `md:shrink-0` to prevent shrinking on medium screens and larger. Technically we could have just used `shrink-0` since it would do nothing on smaller screens, but since it only matters on `md` screens, it's a good idea to make that clear in the class name.
-- On small screens the image is automatically full width by default. On medium screens and up, we've constrained the width to a fixed size and ensured the image is full height using `md:h-full md:w-48`.
+- 默认情况下，外部`div`是`display: block`，但通过添加`md:flex`实用程序，它在中屏幕和更大屏幕上变成`display: flex`。
+- 当父容器是伸缩容器时，我们希望确保图像永远不会收缩，所以我们添加了`md:shrink-0`来防止在中屏和更大屏幕上收缩。从技术上讲，我们可以只使用`shrink-0`，因为它在较小的屏幕上不起作用，但由于它只在`md`屏幕上起作用，所以在类名中明确这一点是一个好主意。
+- 在小屏幕上，图像默认为全宽。在中屏及以上屏幕上，我们将宽度限制为固定大小，并使用`md:h-full md:w-48`确保图像为全高。
 
-We've only used one breakpoint in this example, but you could easily customize this component at other sizes using the `sm`, `lg`, `xl`, or `2xl` responsive prefixes as well.
+在这个例子中，我们只使用了一个断点，但是您也可以使用`sm`、`lg`、`xl`或`2xl`响应前缀轻松地将该组件定制为其他大小。
 
 ---
 
-## Working mobile-first
+## 工作移动优先
 
-By default, Tailwind uses a mobile-first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap.
+默认情况下，Tailwind 使用移动优先的断点系统，类似于您在 Bootstrap 等其他框架中使用的断点系统。
 
-What this means is that unprefixed utilities (like `uppercase`) take effect on all screen sizes, while prefixed utilities (like `md:uppercase`) only take effect at the specified breakpoint *and above*.
+这意味着不带前缀的实用程序(如`uppercase`)在所有屏幕尺寸上都有效，而带前缀的实用程序(如`md:uppercase`)只在指定的断点 _及以上_ 处生效。
 
-### Targeting mobile screens
+### 瞄准手机屏幕
 
-Where this approach surprises people most often is that to style something for mobile, you need to use the unprefixed version of a utility, not the `sm:` prefixed version. Don't think of `sm:` as meaning "on small screens", think of it as "at the small *breakpoint*".
+这种方法最让人惊讶的地方在于，要为移动设备设计样式，你需要使用工具的无前缀版本，而不是带有`sm:`前缀的版本。不要把`sm:`理解为`在小屏幕上`，把它理解为`在小断点上`。
 
-<TipBad>Don't use <code className="text-sm font-bold text-slate-800">sm:</code> to target mobile devices</TipBad>
+<TipBad>
+  不要使用 <code className="text-sm font-bold text-slate-800">sm:</code> 以移动设备为目标
+</TipBad>
 
 ```html
 <!-- This will only center text on screens 640px and wider, not on small screens -->
 <div class="sm:text-center"></div>
 ```
 
-<TipGood>Use unprefixed utilities to target mobile, and override them at larger breakpoints</TipGood>
+<TipGood>使用无前缀的实用程序来瞄准移动设备，并在较大的断点覆盖它们</TipGood>
 
 ```html
 <!-- This will center text on mobile, and left align it on screens 640px and wider -->
 <div class="text-center sm:text-left"></div>
 ```
 
-For this reason, it's often a good idea to implement the mobile layout for a design first, then layer on any changes that make sense for `sm` screens, followed by `md` screens, etc.
+出于这个原因，通常最好先执行一个设计的移动布局，然后在`sm`屏幕上进行任何有意义的更改，然后是`md`屏幕，等等。
 
-### Targeting a breakpoint range
+### 瞄准断点范围
 
-By default, styles applied by rules like `md:flex` will apply at that breakpoint and stay applied at larger breakpoints.
+默认情况下，像`md:flex`这样的规则应用的样式将在该断点处应用，并在更大的断点处保持应用。
 
-If you'd like to apply a utility _only_ when a specific breakpoint range is active, stack a responsive modifier like `md` with a `max-*` modifier to limit that style to a specific range:
+如果您想*仅*在特定断点范围处于活动状态时应用实用程序，请将响应式修饰符(如`md`)与`max-*`修饰符叠加在一起，以将该样式限制为特定范围:
 
 ```html
 <div class="md:max-xl:flex">
@@ -98,19 +114,19 @@ If you'd like to apply a utility _only_ when a specific breakpoint range is acti
 </div>
 ```
 
-Tailwind generates a corresponding `max-*` modifier for each breakpoint, so out of the box the following modifiers are available:
+Tailwind 为每个断点生成一个相应的`max-*`修饰符，所以下面的修饰符是现成的:
 
-| Modifier | Media query |
-| --- | --- |
-| `max-sm` | `@media not all and (min-width: 640px) { ... }` |
-| `max-md` | `@media not all and (min-width: 768px) { ... }` |
-| `max-lg` | `@media not all and (min-width: 1024px) { ... }` |
-| `max-xl` | `@media not all and (min-width: 1280px) { ... }` |
+| Modifier  | Media query                                      |
+| --------- | ------------------------------------------------ |
+| `max-sm`  | `@media not all and (min-width: 640px) { ... }`  |
+| `max-md`  | `@media not all and (min-width: 768px) { ... }`  |
+| `max-lg`  | `@media not all and (min-width: 1024px) { ... }` |
+| `max-xl`  | `@media not all and (min-width: 1280px) { ... }` |
 | `max-2xl` | `@media not all and (min-width: 1536px) { ... }` |
 
-### Targeting a single breakpoint
+### 瞄准单个断点
 
-To target a single breakpoint, target the range for that breakpoint by stacking a responsive modifier like `md` with the `max-*` modifier for the next breakpoint:
+要瞄准单个断点，通过将响应式修饰符(如`md`)与下一个断点的`max-*`修饰符叠加在一起，来瞄准该断点的范围:
 
 ```html
 <div class="md:max-lg:flex">
@@ -118,41 +134,41 @@ To target a single breakpoint, target the range for that breakpoint by stacking 
 </div>
 ```
 
-Read about [targeting breakpoint ranges](#targeting-a-breakpoint-range) to learn more.
+阅读[目标断点范围](#targeting-a-breakpoint-range)了解更多信息。
 
 ---
 
-## Using custom breakpoints
+## 使用自定义断点
 
-### Customizing your theme
+### 自定义主题
 
-You can completely customize your breakpoints in your `tailwind.config.js` file:
+你可以在你的`tailwind.config.js`文件中完全自定义断点:
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     screens: {
-      'tablet': '640px',
+      tablet: '640px',
       // => @media (min-width: 640px) { ... }
 
-      'laptop': '1024px',
+      laptop: '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': '1280px',
+      desktop: '1280px',
       // => @media (min-width: 1280px) { ... }
     },
-  }
+  },
 }
 ```
 
-Learn more in the [customizing breakpoints documentation](/docs/breakpoints).
+在[自定义断点文档](/docs/breakpoints)中了解更多信息.
 
 ---
 
-### Arbitrary values
+### 任意值
 
-If you need to use a one-off breakpoint that doesn’t make sense to include in your theme, use the `min` or `max` modifiers to generate a custom breakpoint on the fly using any arbitrary value.
+如果你需要使用一次性断点，但在你的主题中没有意义，使用`min`或`max`修饰符来动态地使用任意值生成自定义断点。
 
 ```html
 <div class="**min-[320px]:text-center** **max-[600px]:bg-sky-300**">
@@ -160,4 +176,4 @@ If you need to use a one-off breakpoint that doesn’t make sense to include in 
 </div>
 ```
 
-Learn more about arbitrary value support in the [arbitrary values](/docs/adding-custom-styles#using-arbitrary-values) documentation.
+在[任意值](/docs/adding-custom-styles#using-arbitrary-values)文档中了解更多关于任意值支持的信息。

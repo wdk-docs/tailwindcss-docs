@@ -14,7 +14,7 @@ export const classes = {
   utilities: { ...gridRowUtilities, ...gridRowStartUtilities, ...gridRowEndUtilities }
 }
 
-## Basic usage
+## 基本用法
 
 ### Spanning rows
 
@@ -60,21 +60,21 @@ Note that CSS grid lines start at 1, not 0, so a full-height element in a 3-row 
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="row-span-3" featuredClass="row-span-4" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="row-span-3" featuredClass="row-span-4" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes grid-row utilities for working with grids with up to 6 explicit rows. You can customize these values by editing `theme.gridRow`, `theme.extend.gridRow`, `theme.gridRowStart`, `theme.extend.gridRowStart`, `theme.gridRowEnd`, and `theme.extend.gridRowEnd` in your `tailwind.config.js` file.
 
@@ -134,6 +134,6 @@ To add new `row-end-{n}` utilities, use the `gridRowEnd` section of your Tailwin
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="grid-row/grid-row-start/grid-row-end" featuredClass="row-[span_16_/_span_16]" />

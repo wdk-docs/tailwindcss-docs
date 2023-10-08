@@ -1,6 +1,6 @@
 ---
-title: "环偏置宽度"
-description: "Utilities for simulating an offset when adding outline rings."
+title: "环偏移量"
+description: "用于在添加轮廓环时模拟偏移量的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=ringOffsetWidth'
@@ -16,7 +16,7 @@ export const classes = {
   }
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the ring offset width
 
@@ -71,21 +71,21 @@ For more information, see the [ring offset color](/docs/ring-offset-color) docum
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="ring-2 ring-offset-2" featuredClass="ring-offset-4" element="button" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="ring-2 ring-offset-2" featuredClass="ring-offset-4" element="button" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 To customize which ring offset width utilities are generated, add your custom values under `ringOffsetWidth` key in the `theme` section of your `tailwind.config.js` file.
 
@@ -106,6 +106,6 @@ module.exports = {
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="ring-offset" featuredClass="ring-offset-[3px]" />

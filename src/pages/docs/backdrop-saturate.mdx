@@ -1,6 +1,6 @@
 ---
-title: "背景下的"
-description: "Utilities for applying backdrop saturation filters to an element."
+title: "背景饱和度"
+description: "将背景饱和度滤镜应用于元素的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=backdropSaturate'
@@ -18,7 +18,7 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
 ### Changing backdrop saturation
 
@@ -73,21 +73,21 @@ Use the `backdrop-saturate-{amount}` utilities to control an element's backdrop 
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="backdrop-saturate-50" featuredClass="backdrop-saturate-150" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="backdrop-saturate-50" featuredClass="backdrop-saturate-150" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes a handful of general purpose `backdrop-saturate` utilities. You can customize these values by editing `theme.backdropSaturate` or `theme.extend.backdropSaturate` in your `tailwind.config.js` file.
 
@@ -105,6 +105,6 @@ By default, Tailwind includes a handful of general purpose `backdrop-saturate` u
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="backdrop-saturate" featuredClass="backdrop-saturate-[.25]" />

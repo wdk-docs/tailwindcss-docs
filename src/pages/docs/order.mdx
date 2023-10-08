@@ -1,6 +1,6 @@
 ---
-title: "订单"
-description: "Utilities for controlling the order of flex and grid items."
+title: "排序"
+description: "用于控制伸缩和网格项的顺序的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=order'
@@ -10,9 +10,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Ordering flex and grid items
+### 排序 flex 和 grid 项目
 
 Use `order-{order}` to render flex and grid items in a different order than they appear in the DOM.
 
@@ -32,9 +32,9 @@ Use `order-{order}` to render flex and grid items in a different order than they
 </div>
 ```
 
-### Using negative values
+### 使用负值
 
-To use a negative order value, prefix the class name with a dash to convert it to a negative value.
+若要使用负序值，请在类名前加上破折号以将其转换为负值。
 
 ```html
 <div class="**-order-1**">
@@ -44,21 +44,21 @@ To use a negative order value, prefix the class name with a dash to convert it t
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="order-first" featuredClass="order-last" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="order-first" featuredClass="order-last" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides utilities for `order-first`, `order-last`, `order-none`, and an `order-{number}` utility for the numbers 1 through 12. You can customize these values by editing `theme.order` or `theme.extend.order` in your `tailwind.config.js` file.
 
@@ -76,6 +76,6 @@ By default, Tailwind provides utilities for `order-first`, `order-last`, `order-
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="order" featuredClass="order-[13]" />

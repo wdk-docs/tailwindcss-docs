@@ -23,11 +23,11 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Translating an element
+### 翻译元素
 
-Use the `translate-x-{amount}` and `translate-y-{amount}` utilities to translate an element.
+使用`translate-x-{amount}`和`translate-y-{amount}`实用程序来翻译元素。
 
 ```html {{ example: { p: 'none' } }}
 <div class="flex sm:block overflow-scroll sm:overflow-visible scroll-p-8">
@@ -96,21 +96,21 @@ To use a negative translate value, prefix the class name with a dash to convert 
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates featuredClass="translate-y-12" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries featuredClass="translate-y-12" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides fixed value `translate` utilities that match the [default spacing scale](/docs/customizing-spacing), as well as 50% and 100% variations for translating relative to the element's size.  You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -142,6 +142,6 @@ Alternatively, you can customize just the translate scale by editing `theme.tran
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="translate" featuredClass="translate-y-[17rem]" />

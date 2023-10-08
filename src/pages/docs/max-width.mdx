@@ -1,6 +1,6 @@
 ---
-title: "Max-Width"
-description: "Utilities for setting the maximum width of an element."
+title: "最大宽度"
+description: "用于设置元素的最大宽度的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=maxWidth'
@@ -14,9 +14,9 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Basic usage
+## 基本用法
 
-### Setting the maximum width
+### 设置最大宽度
 
 Set the maximum width of an element using the `max-w-{size}` utilities.
 
@@ -36,7 +36,7 @@ Set the maximum width of an element using the `max-w-{size}` utilities.
 </div>
 ```
 
-### Reading width
+### 阅读宽度
 
 The `max-w-prose` utility gives an element a max-width optimized for readability and adapts based on the font size.
 
@@ -77,7 +77,7 @@ The `max-w-prose` utility gives an element a max-width optimized for readability
 </div>
 ```
 
-### Constraining to your breakpoints
+### 约束你的断点
 
 The `max-w-screen-{breakpoint}` classes can be used to give an element a max-width matching a specific breakpoint. These values are automatically derived from the [`theme.screens` section](/docs/theme#screens) of your `tailwind.config.js` file.
 
@@ -89,21 +89,21 @@ The `max-w-screen-{breakpoint}` classes can be used to give an element a max-wid
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="max-w-sm" featuredClass="max-w-lg" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="max-w-sm" featuredClass="max-w-lg" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 You can customize your `max-width` scale by editing `theme.maxWidth` or `theme.extend.maxWidth` in your `tailwind.config.js` file.
 
@@ -121,6 +121,6 @@ You can customize your `max-width` scale by editing `theme.maxWidth` or `theme.e
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="max-width" featuredClass="max-w-[50%]" />

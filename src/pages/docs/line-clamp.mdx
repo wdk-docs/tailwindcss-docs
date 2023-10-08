@@ -1,6 +1,6 @@
 ---
 title: "线夹"
-description: "Utilities for clamping text to a specific number of lines."
+description: "用于将文本夹紧到特定行数的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=lineClamp'
@@ -10,9 +10,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Truncating multi-line text
+### 截断多行文本
 
 Use the `line-clamp-*` utilities to truncate a block of text after a specific number of lines.
 
@@ -42,7 +42,7 @@ Use the `line-clamp-*` utilities to truncate a block of text after a specific nu
 </article>
 ```
 
-### Undoing line clamping
+### 松开线夹紧
 
 Use `line-clamp-none` to undo a previously applied line clamp utility.
 
@@ -54,21 +54,21 @@ Use `line-clamp-none` to undo a previously applied line clamp utility.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="line-clamp-3" featuredClass="line-clamp-4" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="line-clamp-3" featuredClass="line-clamp-4" element="p" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides the six `line-clamp` utilities. You can customize these values by editing `theme.lineClamp` or `theme.extend.lineClamp` in your `tailwind.config.js` file.
 
@@ -86,6 +86,6 @@ By default, Tailwind provides the six `line-clamp` utilities. You can customize 
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="line-clamp" featuredClass="line-clamp-[7]" element="p" />

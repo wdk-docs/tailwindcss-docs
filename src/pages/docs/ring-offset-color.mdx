@@ -1,6 +1,6 @@
 ---
-title: "环形偏移色"
-description: "Utilities for setting the color of outline ring offsets."
+title: "环偏移色"
+description: "用于设置轮廓环偏移的颜色的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=ringOffsetColor'
@@ -17,7 +17,7 @@ export const classes = {
   }
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the ring offset color
 
@@ -57,24 +57,24 @@ You can use any value defined in your [opacity scale](/docs/opacity), or use arb
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="ring-2 ring-offset-2 ring-offset-blue-300" featuredClass="ring-offset-blue-500" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="ring-2 ring-offset-2 ring-offset-blue-300" featuredClass="ring-offset-blue-500" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="ring offset color" configKey="ringOffsetColor" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="ring-offset-{color}" featuredClass="ring-offset-[#50d71e]" />

@@ -10,9 +10,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Relative line-heights
+### 相对的目的
 
 Use the `leading-none`, `leading-tight`, `leading-snug`, `leading-normal`, `leading-relaxed`, and `leading-loose` utilities to give an element a relative line-height based on its current font-size.
 
@@ -45,7 +45,7 @@ Use the `leading-none`, `leading-tight`, `leading-snug`, `leading-normal`, `lead
 <p class="**leading-loose** ...">So I started to walk into the water...</p>
 ```
 
-### Fixed line-heights
+### 固定的目的
 
 Use the `leading-{size}` utilities to give an element a fixed line-height, irrespective of the current font-size. These are useful when you need very precise control over an element's final size.
 
@@ -80,13 +80,13 @@ Use the `leading-{size}` utilities to give an element a fixed line-height, irres
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="leading-none" featuredClass="leading-loose" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="leading-none" featuredClass="leading-loose" element="p" />
 
@@ -114,9 +114,9 @@ Using the same line-height across different font sizes is generally not going to
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides six relative and eight fixed `line-height` utilities. You change, add, or remove these by customizing the `lineHeight` section of your Tailwind theme config.
 
@@ -135,6 +135,6 @@ By default, Tailwind provides six relative and eight fixed `line-height` utiliti
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="line-height" featuredClass="leading-[3rem]" element="p" />

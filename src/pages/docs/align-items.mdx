@@ -1,6 +1,6 @@
 ---
 title: "调整项目"
-description: "Utilities for controlling how flex and grid items are positioned along a container's cross axis."
+description: "用于控制flex和网格项沿容器的十字轴如何定位的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=alignItems'
@@ -9,9 +9,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Stretch
+### 拉伸
 
 Use `items-stretch` to stretch items to fill the container's cross axis:
 
@@ -99,7 +99,7 @@ Use `items-end` to align items to the end of the container's cross axis:
 </div>
 ```
 
-### Baseline
+### 基线
 
 Use `items-baseline` to align items along the container's cross axis such that all of their baselines align:
 
@@ -123,12 +123,12 @@ Use `items-baseline` to align items along the container's cross axis such that a
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="flex items-stretch" featuredClass="items-center" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="flex items-stretch" featuredClass="items-center" />

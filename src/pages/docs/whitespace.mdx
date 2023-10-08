@@ -1,5 +1,5 @@
 ---
-title: "空格"
+title: "空白"
 description: "用于控制元素的空白属性的实用程序。"
 ---
 
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Normal
+### 正常的
 
-Use `whitespace-normal` to cause text to wrap normally within an element. Newlines and spaces will be collapsed.
+使用`whitespace-normal`使文本在元素内正常换行。换行符和空格将被折叠。
 
 ```html {{ example: { p: 'none' } }}
 <div class="bg-white p-8 shadow-xl text-slate-700 max-w-md mx-auto overflow-auto text-sm leading-6 sm:text-base sm:leading-7 dark:bg-slate-800 dark:text-slate-400">
@@ -33,9 +33,9 @@ You will never know.</div>
 </div>
 ```
 
-### No Wrap
+### 没有包装
 
-Use `whitespace-nowrap` to prevent text from wrapping within an element. Newlines and spaces will be collapsed.
+使用`whitespace-nowrap`来防止文本在元素内换行。换行符和空格将被折叠。
 
 ```html {{ example: { p: 'none' } }}
 <div class="bg-white px-6 py-8 shadow-xl text-slate-700 max-w-md mx-auto overflow-auto text-sm leading-6 sm:text-base sm:leading-7 dark:bg-slate-800 dark:text-slate-400">
@@ -57,7 +57,7 @@ You will never know.</div>
 
 ### Pre
 
-Use `whitespace-pre` to preserve newlines and spaces within an element. Text will not be wrapped.
+使用`whitespace-pre`在元素中保留换行符和空格。文本不会被换行。
 
 ```html {{ example: { p: 'none' } }}
 <div class="bg-white px-6 py-8 shadow-xl text-slate-700 max-w-md mx-auto overflow-auto text-sm leading-6 sm:text-base sm:leading-7 dark:bg-slate-800 dark:text-slate-400">
@@ -81,7 +81,7 @@ You will never know.</div>
 
 ### Pre Line
 
-Use `whitespace-pre-line` to preserve newlines but not spaces within an element. Text will be wrapped normally.
+使用`whitespace-pre-line`在元素中保留换行符，但不保留空格。文本将正常换行。
 
 ```html {{ example: { p: 'none' } }}
 <div class="bg-white px-6 py-8 shadow-xl text-slate-700 max-w-md mx-auto overflow-auto text-sm leading-6 sm:text-base sm:leading-7 dark:bg-slate-800 dark:text-slate-400">
@@ -105,7 +105,7 @@ You will never know.</div>
 
 ### Pre Wrap
 
-Use `whitespace-pre-wrap` to preserve newlines and spaces within an element. Text will be wrapped normally.
+使用`whitespace-pre-wrap`在元素中保留换行符和空格。文本将正常换行。
 
 ```html {{ example: { p: 'none' } }}
 <div class="bg-white px-6 py-8 shadow-xl text-slate-700 max-w-md mx-auto overflow-auto text-sm leading-6 sm:text-base sm:leading-7 dark:bg-slate-800 dark:text-slate-400">
@@ -127,9 +127,9 @@ You will never know.</div>
 </div>
 ```
 
-### Break Spaces
+### 断点空白
 
-Use `whitespace-break-spaces` to preserve newlines and spaces within an element. White space at the end of lines will not hang, but will wrap to the next line.
+使用`whitespace-break-spaces`在元素中保留换行符和空格。行尾的空白不会挂起，而是会自动换行到下一行。
 
 ```html {{ example: { p: 'none' } }}
 <div class="bg-white px-6 py-8 shadow-xl text-slate-700 max-w-md mx-auto overflow-auto text-sm leading-6 sm:text-base sm:leading-7 dark:bg-slate-800 dark:text-slate-400">
@@ -153,12 +153,12 @@ You will never know.</div>
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="whitespace-normal" featuredClass="whitespace-pre" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="whitespace-normal" featuredClass="whitespace-pre" />

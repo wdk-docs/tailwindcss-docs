@@ -1,6 +1,6 @@
 ---
 title: "文字装饰颜色"
-description: "Utilities for controlling the color of text decorations."
+description: "用于控制文本装饰颜色的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=textDecorationColor'
@@ -11,7 +11,7 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Setting the text decoration color
 
@@ -63,24 +63,24 @@ You can use any value defined in your [opacity scale](/docs/opacity), or use arb
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="underline decoration-sky-600" featuredClass="decoration-blue-400" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="underline decoration-sky-600" featuredClass="decoration-blue-400" element="p" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="text decoration" configKey="textDecorationColor" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="text-decoration-color" featuredClass="decoration-[#50d71e]" element="p" />

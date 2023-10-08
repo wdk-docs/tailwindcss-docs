@@ -14,9 +14,9 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Basic usage
+## 基本用法
 
-### Fixed widths
+### 固定宽度
 
 Use `w-{number}` or `w-px` to set an element to a fixed width.
 
@@ -44,7 +44,7 @@ Use `w-{number}` or `w-px` to set an element to a fixed width.
 <div class="**w-24** ...">w-24</div>
 ```
 
-### Percentage widths
+### 百分比宽度
 
 Use `w-{fraction}` or `w-full` to set an element to a percentage based width.
 
@@ -106,7 +106,7 @@ Use `w-{fraction}` or `w-full` to set an element to a percentage based width.
 <div class="**w-full** ...">w-full</div>
 ```
 
-### Viewport width
+### 视窗的宽度
 
 Use `w-screen` to make an element span the entire width of the viewport.
 
@@ -116,9 +116,9 @@ Use `w-screen` to make an element span the entire width of the viewport.
 </div>
 ```
 
-### Resetting the width
+### 重置宽度
 
-The `w-auto` utility can be useful if you need to remove an element's assigned width under a specific condition, like at a particular breakpoint:
+如果你需要在特定条件下删除元素的指定宽度，例如在特定的断点处，`w-auto`实用程序可以很有用:
 
 ```html
 <div class="w-full md:w-auto">
@@ -128,21 +128,21 @@ The `w-auto` utility can be useful if you need to remove an element's assigned w
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="w-1/2" featuredClass="w-full" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="w-1/2" featuredClass="w-full" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's width scale is a combination of the [default spacing scale](/docs/customizing-spacing#default-spacing-scale) as well as some additional values specific to widths.
 
@@ -176,6 +176,6 @@ To customize width separately, use the `theme.width` section of your `tailwind.c
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="width" featuredClass="w-[32rem]" />

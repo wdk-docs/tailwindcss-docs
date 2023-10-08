@@ -1,6 +1,6 @@
 ---
-title: "中风"
-description: "Utilities for styling the stroke of SVG elements."
+title: "笔画"
+description: "用于样式化SVG元素笔画的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=stroke'
@@ -11,11 +11,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the stroke color
+### 设置描边颜色
 
-Use the `stroke-{color}` utilities to change the stroke color of an SVG.
+使用`stroke-{color}`实用程序来更改SVG的笔画颜色。
 
 ```html {{ example: true }}
 <div class="flex items-center justify-center">
@@ -31,28 +31,28 @@ Use the `stroke-{color}` utilities to change the stroke color of an SVG.
 </svg>
 ```
 
-This can be useful for styling icon sets like [Heroicons](https://heroicons.com).
+这对于像[Heroicons](https://heroicons.com)这样的图标设置样式很有用。
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="stroke-cyan-500" featuredClass="stroke-cyan-700" element="svg" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="stroke-cyan-500" featuredClass="stroke-cyan-700" element="svg" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="stroke" configKey="stroke" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="stroke" featuredClass="stroke-[#243c5a]" element="svg" />

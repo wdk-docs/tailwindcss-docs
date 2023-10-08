@@ -1,6 +1,6 @@
 ---
-title: "轮廓的风格"
-description: "Utilities for controlling the style of an element's outline."
+title: "轮廓风格"
+description: "用于控制元素轮廓样式的实用工具。"
 ---
 
 import utilities from 'utilities?plugin=outlineStyle'
@@ -10,11 +10,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the outline style
+### 设置轮廓样式
 
-Use the `outline-{style}` utilities to change the style of an element's outline.
+使用`outline-{style}`实用程序来更改元素轮廓的样式。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-white text-sm font-semibold text-center">
@@ -71,12 +71,12 @@ The `outline-none` utility is implemented using a transparent outline under the 
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="outline" featuredClass="outline-dashed" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="outline" featuredClass="outline-dashed" />

@@ -1,6 +1,6 @@
 ---
-title: "分颜色"
-description: "用于控制元素之间边框颜色的实用程序。"
+title: "分割线颜色"
+description: "用于控制元素之间分割线颜色的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=divideColor'
@@ -40,7 +40,7 @@ export const classes = {
   ),
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the divide color
 
@@ -90,24 +90,24 @@ You can use any value defined in your [opacity scale](/docs/opacity), or use arb
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="divide-y divide-teal-400" featuredClass="divide-pink-400" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="divide-y divide-teal-400" featuredClass="divide-pink-400" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="divide" configKey="divideColor" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="divide-{color}" featuredClass="divide-[#243c5a]" />

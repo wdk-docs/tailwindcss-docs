@@ -50,7 +50,7 @@ export default function Blog({ posts }) {
                   dangerouslySetInnerHTML={{ __html: preview }}
                 />
                 <dl className="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
-                  <dt className="sr-only">Date</dt>
+                  <dt className="sr-only">日期</dt>
                   <dd className={clsx('whitespace-nowrap text-sm leading-6 dark:text-slate-400')}>
                     <time dateTime={meta.date}>{formatDate(meta.date, '{MMMM} {DD}, {YYYY}')}</time>
                   </dd>
@@ -62,7 +62,7 @@ export default function Blog({ posts }) {
               >
                 <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl" />
                 <span className="relative">
-                  Read more<span className="sr-only">, {meta.title}</span>
+                  阅读更多<span className="sr-only">, {meta.title}</span>
                 </span>
                 <svg
                   className="relative mt-px overflow-visible ml-2.5 text-sky-300 dark:text-sky-700"

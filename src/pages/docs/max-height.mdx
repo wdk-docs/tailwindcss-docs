@@ -1,6 +1,6 @@
 ---
-title: "Max-Height"
-description: "Utilities for setting the maximum height of an element."
+title: "最大高度"
+description: "用于设置元素的最大高度的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=maxHeight'
@@ -14,9 +14,9 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Basic usage
+## 基本用法
 
-### Setting the maximum height
+### 设置最大高度
 
 Set the maximum height of an element using the `max-h-full` or `max-h-screen` utilities.
 
@@ -30,21 +30,21 @@ Set the maximum height of an element using the `max-h-full` or `max-h-screen` ut
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="h-48 max-h-full" featuredClass="max-h-screen" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="h-48 max-h-full" featuredClass="max-h-screen" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's max-height scale uses a combination of the [default spacing scale](/docs/customizing-spacing) as well as some additional height related values.
 
@@ -78,6 +78,6 @@ Alternatively, you can customize just the max-height scale by editing `theme.max
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="max-height" featuredClass="max-h-[32rem]" />

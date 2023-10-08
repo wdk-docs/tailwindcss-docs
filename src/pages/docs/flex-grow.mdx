@@ -1,5 +1,5 @@
 ---
-title: "Flex成长"
+title: "Flex增长"
 description: "用于控制伸缩项如何增长的实用程序。"
 ---
 
@@ -14,11 +14,11 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Grow
+### 增长
 
-Use `grow` to allow a flex item to grow to fill any available space:
+使用`grow`来允许伸缩项增长以填充任何可用空间:
 
 ```html {{ example: { resizable: true } }}
 <div class="flex gap-4 text-white text-sm font-bold font-mono leading-6 bg-stripes-indigo rounded-lg">
@@ -48,9 +48,9 @@ Use `grow` to allow a flex item to grow to fill any available space:
 </div>
 ```
 
-### Don't grow
+### 不长
 
-Use `grow-0` to prevent a flex item from growing:
+使用`grow-0`来防止伸缩项的增长:
 
 ```html {{ example: { resizable: true } }}
 <div class="flex gap-4 text-white text-sm font-bold font-mono leading-6 bg-stripes-pink rounded-lg">
@@ -82,21 +82,21 @@ Use `grow-0` to prevent a flex item from growing:
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="grow" featuredClass="grow-0" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="grow" featuredClass="grow-0" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides two `grow` utilities. You can customize these values by editing `theme.flexGrow` or `theme.extend.flexGrow` in your `tailwind.config.js` file.
 
@@ -112,8 +112,8 @@ By default, Tailwind provides two `grow` utilities. You can customize these valu
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
+在[主题定制](/docs/theme#customization-the-default-theme)文档中了解更多关于自定义默认主题的信息。
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="flex-grow" featuredClass="grow-[2]" />

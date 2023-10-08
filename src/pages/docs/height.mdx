@@ -1,6 +1,6 @@
 ---
 title: "高度"
-description: "Utilities for setting the height of an element."
+description: "用于设置元素高度的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=height'
@@ -14,11 +14,11 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Basic usage
+## 基本用法
 
-### Fixed heights
+### 固定的高度
 
-Use `h-{number}` or `h-px` to set an element to a fixed height.
+使用`h-{number}`或`h-px`设置元素的固定高度。
 
 ```html {{ example: true }}
 <div class="flex justify-center items-end space-x-4 font-mono font-bold text-xs text-center text-white">
@@ -70,7 +70,7 @@ Use `h-{number}` or `h-px` to set an element to a fixed height.
 <div class="**h-24** ...">h-24</div>
 ```
 
-### Full height
+### 完整的高度
 
 Use `h-full` to set an element's height to 100% of its parent, as long as the parent has a defined height.
 
@@ -82,7 +82,7 @@ Use `h-full` to set an element's height to 100% of its parent, as long as the pa
 </div>
 ```
 
-### Viewport height
+### 窗口的高度
 
 Use `h-screen` to make an element span the entire height of the viewport.
 
@@ -94,21 +94,21 @@ Use `h-screen` to make an element span the entire height of the viewport.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="h-8" featuredClass="h-full" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="h-8" featuredClass="h-full" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind's height scale is a combination of the [default spacing scale](/docs/customizing-spacing#default-spacing-scale) as well as some additional values specific to heights.
 
@@ -142,6 +142,6 @@ To customize height separately, use the `theme.height` section of your `tailwind
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="height" featuredClass="h-[32rem]" />

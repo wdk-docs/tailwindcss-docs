@@ -1,6 +1,6 @@
 ---
 title: "文本下划线偏移"
-description: "Utilities for controlling the offset of a text underline."
+description: "用于控制文本下划线偏移量的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=textUnderlineOffset'
@@ -14,7 +14,7 @@ export const classes = {
   sort: (classes) => numbersLast(classes),
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the underline offset
 
@@ -50,21 +50,21 @@ Use the `underline-offset-{width}` utilities to change the offset of a text unde
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="underline" featuredClass="underline-offset-4" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="underline" featuredClass="underline-offset-4" element="p" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 You can customize the `underline-offset-{width}` utilities by editing `theme.textUnderlineOffset` or `theme.extend.textUnderlineOffset` in your `tailwind.config.js` file.
 
@@ -82,6 +82,6 @@ You can customize the `underline-offset-{width}` utilities by editing `theme.tex
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="text-underline-offset" featuredClass="underline-offset-[3px]" element="p" />

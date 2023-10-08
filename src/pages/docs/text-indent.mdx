@@ -1,6 +1,6 @@
 ---
 title: "文本缩进"
-description: "Utilities for controlling the amount of empty space shown before text in a block."
+description: "用于控制块中文本前显示的空白量的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=textIndent'
@@ -14,7 +14,7 @@ export const classes = {
   sort: (classes) => numbersFirst(classes),
 }
 
-## Basic usage
+## 基本用法
 
 ### Adding a text indent
 
@@ -54,21 +54,21 @@ To use a negative text indent value, prefix the class name with a dash to conver
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="indent-4" featuredClass="indent-8" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="indent-4" featuredClass="indent-8" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 The default text indent scale is based on the [default spacing scale](/docs/customizing-spacing#default-spacing-scale). You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
@@ -100,6 +100,6 @@ Alternatively, you can customize just the text indent scale by editing `theme.te
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="text-indent" featuredClass="indent-[50%]" />

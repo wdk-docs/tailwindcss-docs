@@ -1,6 +1,6 @@
 ---
 title: "轮廓偏移量"
-description: "Utilities for controlling the offset of an element's outline."
+description: "用于控制元素轮廓偏移量的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=outlineOffset'
@@ -10,11 +10,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the outline offset
+### 设置轮廓偏移量
 
-Use the `outline-{offset}` utilities to change the offset of an element's outline.
+使用`outline-{offset}`实用程序来更改元素轮廓的偏移量。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-4 font-bold text-white text-sm text-center">
@@ -41,21 +41,21 @@ Use the `outline-{offset}` utilities to change the offset of an element's outlin
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="outline" featuredClass="outline-offset-2" element="button" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="outline" featuredClass="outline-offset-2" element="button" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 You can customize the `outline-offset-{width}` utilities by editing `theme.outlineOffset` or `theme.extend.outlineOffset` in your `tailwind.config.js` file.
 
@@ -73,6 +73,6 @@ You can customize the `outline-offset-{width}` utilities by editing `theme.outli
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="outline-offset" featuredClass="outline-offset-[3px]" element="button" />

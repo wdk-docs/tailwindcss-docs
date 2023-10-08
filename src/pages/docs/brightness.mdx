@@ -1,6 +1,6 @@
 ---
 title: "亮度"
-description: "Utilities for applying brightness filters to an element."
+description: "将亮度过滤器应用于元素的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=brightness'
@@ -18,7 +18,7 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
 ### Changing element brightness
 
@@ -80,21 +80,21 @@ Use the `brightness-{amount?}` utilities to control an element's brightness.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="brightness-110" featuredClass="brightness-150" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="brightness-110" featuredClass="brightness-150" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes a handful of general purpose `brightness` utilities. You can customize these values by editing `theme.brightness` or `theme.extend.brightness` in your `tailwind.config.js` file.
 
@@ -113,6 +113,6 @@ By default, Tailwind includes a handful of general purpose `brightness` utilitie
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="brightness" featuredClass="brightness-[1.75]" />

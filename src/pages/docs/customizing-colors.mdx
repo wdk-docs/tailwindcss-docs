@@ -1,6 +1,6 @@
 ---
 title: 自定义颜色
-shortTitle: Colors
+shortTitle: 颜色
 description: 自定义项目的默认调色板。
 ---
 
@@ -9,9 +9,9 @@ import { ColorPaletteReference } from '@/components/ColorPaletteReference'
 import { SnippetGroup } from '@/components/SnippetGroup'
 import { TipGood, TipBad } from '@/components/Tip'
 
-## <Heading hidden>Default color palette</Heading>
+## <Heading hidden>默认调色板</Heading>
 
-Tailwind includes an expertly-crafted default color palette out-of-the-box that is a great starting point if you don't have your own specific branding in mind.
+顺风包括一个专业制作的默认调色板开箱，这是一个很好的起点，如果你没有自己的特定品牌的想法。
 
 <div className="mt-10"></div>
 
@@ -59,7 +59,7 @@ When it comes to building a custom color palette, you can either [configure your
 
 ---
 
-## Using custom colors
+## 使用自定义颜色
 
 If you'd like to completely replace the default color palette with your own custom colors, add your colors directly under the `theme.colors` section of your configuration file:
 
@@ -145,7 +145,7 @@ module.exports = {
 
 This will create classes like `bg-tahiti`, `bg-tahiti-light`, and `bg-tahiti-dark`.
 
-### Arbitrary values
+### 任意值
 
 If you need a one-off custom color in your project, consider using Tailwind's arbitrary value notation to generate a class for that color on-demand instead of adding it to your theme:
 
@@ -167,7 +167,7 @@ If you need a one-off custom color in your project, consider using Tailwind's ar
 
 Learn more in the [using arbitrary values](/docs/adding-custom-styles#using-arbitrary-values) documentation.
 
-### Generating colors
+### 生成的颜色
 
 If you're wondering how we automatically generated the 50–950 shades of each color, bad news — color is complicated and to get the absolute best results we picked all of Tailwind’s default colors by hand, meticulously balancing them by eye and testing them in real designs to make sure we were happy with them.
 
@@ -177,7 +177,7 @@ Two other useful tools we recommend for building your own palettes are [Palettte
 
 ---
 
-## Using the default colors
+## 使用默认颜色
 
 If you don't have a set of completely custom colors in mind for your project, you can curate your colors from our default palette by importing `tailwindcss/colors` in your configuration file and choosing the colors you want to use:
 
@@ -202,7 +202,7 @@ module.exports = {
 
 This can be helpful if you want to deliberately limit your color palette and reduce the number of class names suggested by [IntelliSense](/docs/editor-setup#intelli-sense-for-vs-code).
 
-### Aliasing color names
+### 混叠颜色名称
 
 You can also alias the colors in our default palette to make the names simpler and easier to remember:
 
@@ -228,7 +228,7 @@ You can also alias the colors in our default palette to make the names simpler a
 
 This is especially common for grays, as you usually only use one set in any given project and it's nice to be able to type `bg-gray-300` instead of `bg-neutral-300` for example.
 
-### Adding additional colors
+### 添加其他颜色
 
 If you'd like to add a brand new color to the default palette, add it in the `theme.extend.colors` section of your configuration file:
 
@@ -273,7 +273,7 @@ module.exports = {
 }
 ```
 
-### Disabling a default color
+### 禁用默认颜色
 
 If you'd like to disable any of the default colors, the best approach is to override the default color palette and just include the colors you _do_ want:
 
@@ -298,7 +298,7 @@ module.exports = {
 
 ---
 
-## Naming your colors
+## 给你的颜色命名
 
 Tailwind uses literal color names _(like red, green, etc.)_ and a numeric scale _(where 50 is light and 900 is dark)_ by default. We think this is the best choice for most projects, and have found it easier to maintain than using abstract names like `primary` or `danger`.
 
@@ -337,7 +337,7 @@ Again, we recommend sticking to the default naming convention for most projects,
 
 ---
 
-## Using CSS variables
+## 使用CSS变量
 
 If you'd like to define your colors as CSS variables, you'll need to define those variables as just the color _channels_ if you want them to work with the [opacity modifier syntax](/docs/text-color#changing-the-opacity):
 

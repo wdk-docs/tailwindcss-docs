@@ -6,9 +6,9 @@ description: 创建您自己的可重用配置预设。
 import { TipGood, TipBad } from '@/components/Tip'
 import { ThemeReference } from '@/components/ThemeReference'
 
-By default, any configuration you add in your own `tailwind.config.js` file is intelligently merged with the [default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/config.full.js), with your own configuration acting as a set of overrides and extensions.
+默认情况下，您在自己的`tailwind.config.js`文件中添加的任何配置都会智能地与[默认配置](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/config.full.js)合并，而您自己的配置则作为一组覆盖和扩展。
 
-The `presets` option lets you specify a _different_ configuration to use as your base, making it easy to package up a set of customizations that you'd like to reuse across projects.
+`presets`选项允许您指定一个不同的配置作为您的基础，这样可以轻松打包一组您希望跨项目重用的自定义。
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -20,13 +20,13 @@ module.exports = {
 }
 ```
 
-This can be very useful for teams that manage multiple Tailwind projects for the same brand where they want a single source of truth for colors, fonts, and other common customizations.
+对于管理同一品牌的多个顺风项目的团队来说，这是非常有用的，因为他们想要一个单一的颜色、字体和其他常见定制的真实来源。
 
 ---
 
-## Creating a preset
+## 创建预设
 
-Presets are just regular Tailwind configuration objects, taking the exact same shape as the configuration you would add in your `tailwind.config.js` file.
+预设只是常规的Tailwind配置对象，其形状与您在`tailwind.config.js`文件中添加的配置完全相同。
 
 ```js {{ filename: 'my-preset.js' }}
 // Example preset

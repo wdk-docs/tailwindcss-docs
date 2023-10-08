@@ -1,5 +1,5 @@
 ---
-title: "Flex为基础"
+title: "Flex基础"
 description: "用于控制伸缩项的初始大小的实用程序。"
 ---
 
@@ -10,11 +10,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the flex basis
+### 设置flex基础
 
-Use the `basis-{size}` utilities to set the initial size of flex items.
+使用`basis-{size}`实用程序来设置伸缩项的初始大小。
 
 ```html {{ example: true }}
 <div class="flex flex-row space-x-4 font-mono text-white text-sm font-bold leading-6">
@@ -34,13 +34,13 @@ Use the `basis-{size}` utilities to set the initial size of flex items.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="basis-1/3" featuredClass="basis-1/2" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries featuredClass="basis-1/3">
 
@@ -56,9 +56,9 @@ Use the `basis-{size}` utilities to set the initial size of flex items.
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 The default flex basis scale is a combination of the [default spacing scale](/docs/customizing-spacing#default-spacing-scale) as well as a set of percentage based values.
 
@@ -98,6 +98,6 @@ Alternatively, you can customize just the flex basis scale by editing `theme.fle
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="flex-basis" featuredClass="basis-[14.2857143%]" />

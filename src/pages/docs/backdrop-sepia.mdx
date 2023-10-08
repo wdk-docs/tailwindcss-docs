@@ -1,6 +1,6 @@
 ---
-title: "背景乌贼"
-description: "Utilities for applying backdrop sepia filters to an element."
+title: "背景深褐色"
+description: "将背景深褐色滤镜应用于元素的实用工具。"
 ---
 
 import utilities from 'utilities?plugin=backdropSepia'
@@ -18,11 +18,11 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Adding backdrop sepia filters
+### 添加背景深褐色滤镜
 
-Use the `backdrop-sepia` and `backdrop-sepia-0` utilities to control whether an element's backdrop should be rendered as sepia or in full color.
+使用`backdrop-sepia` 和 `backdrop-sepia-0`工具来控制一个元素的背景是渲染为深褐色还是全色。
 
 ```html {{ example: { p: 'none' } }}
 <div class="flex justify-start sm:block overflow-scroll sm:overflow-visible scroll-p-8">
@@ -56,27 +56,27 @@ Use the `backdrop-sepia` and `backdrop-sepia-0` utilities to control whether an 
 </div>
 ```
 
-### Removing backdrop filters
+### 移除背景滤镜
 
 <RemovingBackdropFilters defaultClass="backdrop-blur-md backdrop-sepia" />
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="backdrop-sepia" featuredClass="backdrop-sepia-0" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="backdrop-sepia" featuredClass="backdrop-sepia-0" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes a handful of general purpose `backdrop-sepia` utilities. You can customize these values by editing `theme.backdropSepia` or `theme.extend.backdropSepia` in your `tailwind.config.js` file.
 
@@ -95,6 +95,6 @@ By default, Tailwind includes a handful of general purpose `backdrop-sepia` util
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="backdrop-sepia" featuredClass="backdrop-sepia-[.25]" />

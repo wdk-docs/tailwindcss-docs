@@ -10,9 +10,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the aspect ratio
+### 设置纵横比
 
 Use the `aspect-{ratio}` utilities to set the desired aspect ratio of an element.
 
@@ -26,15 +26,15 @@ Use the `aspect-{ratio}` utilities to set the desired aspect ratio of an element
 
 Tailwind doesn't include a large set of aspect ratio values out of the box since it's easier to just use arbitrary values. See the [arbitrary values](#arbitrary-values) section for more information.
 
-### Browser support
+### 浏览器支持
 
 The `aspect-{ratio}` utilities use the native `aspect-ratio` CSS property, which was not supported in Safari until version 15. Until Safari 15 is popularized, Tailwind's [aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio) plugin is a good alternative.
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates featuredClass="aspect-square">
 
@@ -44,7 +44,7 @@ The `aspect-{ratio}` utilities use the native `aspect-ratio` CSS property, which
 
 </HoverFocusAndOtherStates>
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries featuredClass="aspect-square">
 
@@ -56,9 +56,9 @@ The `aspect-{ratio}` utilities use the native `aspect-ratio` CSS property, which
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind provides a minimal set of `aspect-ratio` utilities. You can customize these values by editing `theme.aspectRatio` or `theme.extend.aspectRatio` in your `tailwind.config.js` file.
 
@@ -76,7 +76,7 @@ By default, Tailwind provides a minimal set of `aspect-ratio` utilities. You can
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="aspect-ratio">
 

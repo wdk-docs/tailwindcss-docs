@@ -10,9 +10,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the font size
+### 设置字体大小
 
 Control the font size of an element using the `text-{size}` utilities.
 
@@ -59,7 +59,7 @@ Control the font size of an element using the `text-{size}` utilities.
 <p class="**text-2xl** ...">The quick brown fox ...</p>
 ```
 
-### Setting the line-height
+### 设置行高
 
 Set an element's line-height at the same time you set the font size by adding a line-height modifier to any font size utility. For example, use `text-xl/8` to set a font size of `1.25rem` with a line-height of `2rem`.
 
@@ -100,21 +100,21 @@ You can use any value defined in your [line-height scale](/docs/line-height), or
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="text-sm" featuredClass="text-base" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="text-sm" featuredClass="text-base" element="p" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 You can configure your own custom set of font size utilities using the `theme.fontSize` section of your `tailwind.config.js` file.
 
@@ -176,6 +176,6 @@ module.exports = {
 }
 ```
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="font-size" featuredClass="text-[14px]" element="p" />

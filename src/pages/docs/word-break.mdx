@@ -1,6 +1,6 @@
 ---
-title: "单词分割"
-description: "Utilities for controlling word breaks in an element."
+title: "单词断点"
+description: "控制元素中换行符的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=wordBreak'
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Normal
 
-Use `break-normal` to only add line breaks at normal word break points.
+使用`break-normal`只在正常的单词断点处添加换行符。
 
 ```html {{ example: { p: 'none' } }}
 <div class="overflow-x-scroll sm:overflow-x-visible px-4">
@@ -83,12 +83,12 @@ Use `break-keep` to prevent line breaks from being applied to Chinese/Japanese/K
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="break-normal" featuredClass="break-all" element="p" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="break-normal" featuredClass="break-all" element="p" />

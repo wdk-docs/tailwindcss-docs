@@ -1,6 +1,6 @@
 ---
-title: "背景的对比"
-description: "Utilities for applying backdrop contrast filters to an element."
+title: "背景对比"
+description: "将背景对比度过滤器应用于元素的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=backdropContrast'
@@ -18,11 +18,11 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Controlling backdrop contrast
+### 控制背景对比度
 
-Use the `backdrop-contrast-{amount?}` utilities to control an element's backdrop contrast.
+使用`backdrop-contrast-{amount?}`的实用程序来控制元素的背景对比度。
 
 ```html {{ example: { p: 'none' } }}
 <div class="flex justify-start sm:block overflow-scroll sm:overflow-visible scroll-p-8">
@@ -73,21 +73,21 @@ Use the `backdrop-contrast-{amount?}` utilities to control an element's backdrop
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="backdrop-contrast-125" featuredClass="backdrop-contrast-150" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="backdrop-contrast-125" featuredClass="backdrop-contrast-150" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 By default, Tailwind includes a handful of general purpose `backdrop-contrast` utilities. You can customize these values by editing `theme.backdropContrast` or `theme.extend.backdropContrast` in your `tailwind.config.js` file.
 
@@ -105,6 +105,6 @@ By default, Tailwind includes a handful of general purpose `backdrop-contrast` u
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="backdrop-contrast" featuredClass="backdrop-contrast-[.25]" />

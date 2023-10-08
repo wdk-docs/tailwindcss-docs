@@ -1,6 +1,6 @@
 ---
-title: "口音的颜色"
-description: "Utilities for controlling the accented color of a form control."
+title: "强调色"
+description: "用于控制窗体控件的强调色的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=accentColor'
@@ -11,9 +11,9 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
-### Setting the accent color
+### 设置强调色
 
 Use the `accent-{color}` utilities to change the accent color of an element. This is helpful for styling elements like checkboxes and radio groups by overriding the browser's default color.
 
@@ -53,9 +53,9 @@ While it's possible to control the opacity of the accent color using the color o
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates featuredClass="accent-pink-500">
 
@@ -67,7 +67,7 @@ Note, while it's possible to set an accent color using the `hover` and `active` 
 
 </HoverFocusAndOtherStates>
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries featuredClass="accent-pink-500">
 
@@ -79,13 +79,13 @@ Note, while it's possible to set an accent color using the `hover` and `active` 
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="accent" configKey="accentColor" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="accent-color">
 

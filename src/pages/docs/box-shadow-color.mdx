@@ -1,6 +1,6 @@
 ---
 title: "盒影颜色"
-description: "Utilities for controlling the color of a box shadow."
+description: "用于控制框阴影颜色的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=boxShadowColor'
@@ -14,7 +14,7 @@ export const classes = {
   filterProperties: (property) => property !== '--tw-shadow',
 }
 
-## Basic usage
+## 基本用法
 
 ### Setting the box shadow color
 
@@ -70,13 +70,13 @@ When using shadows on a colored background, colored shadows can often look more 
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="shadow shadow-blue-500/40" featuredClass="shadow-indigo-500/40" element="button" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="shadow shadow-blue-500/40" featuredClass="shadow-indigo-500/40" element="button" />
 
@@ -100,12 +100,12 @@ It's necessary for Tailwind to work this way, as otherwise there would be no way
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 <CustomizePluginColors name="box shadow" configKey="boxShadowColor" />
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="box-shadow" featuredClass="shadow-[#50d71e]" element="button" />

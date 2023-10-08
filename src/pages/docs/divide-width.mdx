@@ -1,6 +1,6 @@
 ---
-title: "把宽度"
-description: "用于控制元素之间边框宽度的实用程序。"
+title: "分割线宽度"
+description: "用于控制元素之间分割线宽度的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=divideWidth'
@@ -29,11 +29,11 @@ export const classes = {
   },
 }
 
-## Basic usage
+## 基本用法
 
-### Add borders between horizontal children
+### 在水平子节点之间添加界线
 
-Add borders between horizontal elements using the `divide-x-{width}` utilities.
+使用`divide-x-{width}`实用程序在水平元素之间添加界线。
 
 ```html {{ example: true }}
 <div class="grid grid-cols-3 divide-x font-mono text-sm text-center font-bold leading-6 rounded-lg shadow-lg overflow-hidden dark:divide-slate-700">
@@ -93,21 +93,21 @@ If your elements are in reverse order (using say `flex-row-reverse` or `flex-col
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="divide-y divide-gray-400" featuredClass="divide-y-8" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="divide-y divide-gray-400" featuredClass="divide-y-8" />
 
 ---
 
-## Using custom values
+## 使用自定义值
 
-### Customizing your theme
+### 自定义主题
 
 The divide width scale inherits its values from the `borderWidth` scale by default, so if you'd like to customize your values for both border width and divide width together, use the `theme.borderWidth` section of your `tailwind.config.js` file.
 
@@ -147,6 +147,6 @@ To customize only the divide width values, use the `theme.divideWidth` section o
 
 Learn more about customizing the default theme in the [theme customization](/docs/theme#customizing-the-default-theme) documentation.
 
-### Arbitrary values
+### 任意值
 
 <ArbitraryValues property="divide-{x|y}-{width}" featuredClass="divide-x-[3px]" />

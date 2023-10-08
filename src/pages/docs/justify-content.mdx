@@ -1,6 +1,6 @@
 ---
-title: "证明内容"
-description: "Utilities for controlling how flex and grid items are positioned along a container's main axis."
+title: "对齐内容"
+description: "用于控制flex和网格项沿容器主轴位置的实用程序。"
 ---
 
 import utilities from 'utilities?plugin=justifyContent'
@@ -9,11 +9,11 @@ import { HoverFocusAndOtherStates } from '@/components/HoverFocusAndOtherStates'
 
 export const classes = { utilities }
 
-## Basic usage
+## 基本用法
 
 ### Start
 
-Use `justify-start` to justify items against the start of the container's main axis:
+使用`justify-start`对容器主轴的起点进行对齐:
 
 ```html {{ example: true }}
 <div class="flex justify-start space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-fuchsia rounded-lg">
@@ -33,7 +33,7 @@ Use `justify-start` to justify items against the start of the container's main a
 
 ### Center
 
-Use `justify-center` to justify items along the center of the container's main axis:
+使用`justify-center`来对齐沿着容器主轴中心的项目:
 
 ```html {{ example: true }}
 <div class="flex justify-center space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-blue rounded-lg">
@@ -53,7 +53,7 @@ Use `justify-center` to justify items along the center of the container's main a
 
 ### End
 
-Use `justify-end` to justify items against the end of the container's main axis:
+使用`justify-end`将项目对齐到容器主轴的末端:
 
 ```html {{ example: true }}
 <div class="flex justify-end space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-cyan rounded-lg">
@@ -71,9 +71,9 @@ Use `justify-end` to justify items against the end of the container's main axis:
 </div>
 ```
 
-### Space between
+### 之间的空间
 
-Use `justify-between` to justify items along the container's main axis such that there is an equal amount of space between each item:
+使用`justify-between`来对齐容器主轴上的项目，使每个项目之间的空间相等:
 
 ```html {{ example: true }}
 <div class="flex justify-between space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-pink rounded-lg">
@@ -91,9 +91,9 @@ Use `justify-between` to justify items along the container's main axis such that
 </div>
 ```
 
-### Space around
+### 周围的空间
 
-Use `justify-around` to justify items along the container's main axis such that there is an equal amount of space on each side of each item:
+使用`justify-around`来对齐容器主轴上的项目，这样每个项目的每一边都有等量的空间:
 
 ```html {{ example: true }}
 <div class="flex justify-around space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-purple rounded-lg">
@@ -111,9 +111,9 @@ Use `justify-around` to justify items along the container's main axis such that 
 </div>
 ```
 
-### Space evenly
+### 空间均匀
 
-Use `justify-evenly` to justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using `justify-around`:
+使用`justify-evenly`来对齐容器主轴上的项目，这样每个项目周围就有等量的空间，但也要考虑到使用`justify-around`时每个项目之间通常会看到的空间的两倍:
 
 ```html {{ example: true }}
 <div class="flex justify-evenly space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-indigo rounded-lg">
@@ -131,9 +131,9 @@ Use `justify-evenly` to justify items along the container's main axis such that 
 </div>
 ```
 
-### Stretch
+### 拉伸
 
-Use `justify-stretch` to allow content items to fill the available space along the container's main axis:
+使用`justify-stretch`允许内容项沿着容器的主轴填充可用空间:
 
 ```html {{ example: true }}
 <div class="grid grid-flow-col justify-stretch gap-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-fuchsia rounded-lg">
@@ -151,9 +151,9 @@ Use `justify-stretch` to allow content items to fill the available space along t
 </div>
 ```
 
-### Normal
+### 正常的
 
-Use `justify-normal` to pack content items in their default position as if no `justify-content` value was set:
+使用`justify-normal`将内容项打包到默认位置，就像没有设置`justify-content`值一样:
 
 ```html {{ example: true }}
 <div class="flex justify-normal space-x-4 font-mono text-white text-sm font-bold leading-6 bg-stripes-blue rounded-lg">
@@ -173,12 +173,12 @@ Use `justify-normal` to pack content items in their default position as if no `j
 
 ---
 
-## <Heading ignore>Applying conditionally</Heading>
+## <Heading ignore>应用条件</Heading>
 
-### <Heading ignore>Hover, focus, and other states</Heading>
+### <Heading ignore>悬停、聚焦和其他状态</Heading>
 
 <HoverFocusAndOtherStates defaultClass="flex justify-start" featuredClass="justify-between" />
 
-### <Heading ignore>Breakpoints and media queries</Heading>
+### <Heading ignore>断点和媒体查询</Heading>
 
 <BreakpointsAndMediaQueries defaultClass="flex justify-start" featuredClass="justify-between" />
