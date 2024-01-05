@@ -8,9 +8,9 @@ import { ConfigSample } from '@/components/ConfigSample'
 
 ## <Heading hidden>概述</Heading>
 
-建立在[modern-normalize](https://github.com/sindresorhus/modern-normalize)之上，Preflight是一组用于顺风项目的基本样式，旨在消除跨浏览器的不一致性，并使您更容易在设计系统的约束下工作。
+建立在[modern-normalize](https://github.com/sindresorhus/modern-normalize)之上，Preflight 是一组用于顺风项目的基本样式，旨在消除跨浏览器的不一致性，并使您更容易在设计系统的约束下工作。
 
-当你在CSS中包含`@tailwind base`时，Tailwind会自动注入这些样式:
+当你在 CSS 中包含`@tailwind base`时，Tailwind 会自动注入这些样式:
 
 ```css
 @tailwind base; /* Preflight will be injected here */
@@ -20,15 +20,15 @@ import { ConfigSample } from '@/components/ConfigSample'
 @tailwind utilities;
 ```
 
-虽然Preflight中的大多数风格都是为了不被注意-它们只是让事情表现得更像你期望的那样-有些更固执己见，当你第一次遇到它们时可能会感到惊讶。
+虽然 Preflight 中的大多数风格都是为了不被注意-它们只是让事情表现得更像你期望的那样-有些更固执己见，当你第一次遇到它们时可能会感到惊讶。
 
-有关Preflight应用的所有样式的完整参考，请[参见样式表](https://unpkg.com/tailwindcss@^3/src/css/preflight.css).
+有关 Preflight 应用的所有样式的完整参考，请[参见样式表](https://unpkg.com/tailwindcss@^3/src/css/preflight.css).
 
 ---
 
 ## 默认页边距被删除
 
-Preflight removes all of the default margins from elements like headings, blockquotes, paragraphs, etc.
+Preflight 删除了所有元素的默认边距，如标题、大引号、段落等。
 
 ```css
 blockquote,
@@ -48,13 +48,13 @@ pre {
 }
 ```
 
-This makes it harder to accidentally rely on margin values applied by the user-agent stylesheet that are not part of your spacing scale.
+这使得意外依赖于用户代理样式表应用的不属于间距比例的边距值变得更加困难。
 
 ---
 
 ## 标题没有样式
 
-All heading elements are completely unstyled by default, and have the same font-size and font-weight as normal text.
+所有标题元素在默认情况下都是完全没有样式的，并且具有与普通文本相同的字体大小和字体粗细。
 
 ```css
 h1,
@@ -68,20 +68,20 @@ h6 {
 }
 ```
 
-The reason for this is two-fold:
+原因有二:
 
-- **It helps you avoid accidentally deviating from your type scale**. By default, browsers assign sizes to headings that don't exist in Tailwind's default type scale, and aren't guaranteed to exist in your own type scale.
-- **In UI development, headings should often be visually de-emphasized**. Making headings unstyled by default means any styling you apply to headings happens consciously and deliberately.
+- **它可以帮助您避免意外偏离您的类型刻度**。默认情况下，浏览器为标题分配的大小在 Tailwind 的默认字体比例中不存在，也不能保证在你自己的字体比例中存在。
+- **在 UI 开发中，标题通常应该在视觉上去强调**。将标题默认为无样式意味着您对标题应用的任何样式都是有意识和故意的。
 
-You can always add default header styles to your project by [adding your own base styles](/docs/adding-base-styles).
+你可以通过[添加你自己的基本样式](/docs/adding-base-styles)为你的项目添加默认的标头样式。
 
-If you'd like to selectively introduce sensible default heading styles into article-style parts of a page, we recommend the [@tailwindcss/typography plugin](/docs/typography-plugin/).
+如果你想选择性地在页面的文章样式部分引入明智的默认标题样式，我们推荐使用[@tailwindcss/typography 插件](/docs/typography-plugin/).
 
 ---
 
 ## 列表没有样式
 
-Ordered and unordered lists are unstyled by default, with no bullets/numbers and no margin or padding.
+默认情况下，有序和无序列表是无样式的，没有符号/数字，没有边距或填充。
 
 ```css
 ol,
@@ -92,7 +92,7 @@ ul {
 }
 ```
 
-If you'd like to style a list, you can do so using the [list-style-type](/docs/list-style-type) and [list-style-position](/docs/list-style-position) utilities:
+如果你想样式一个列表，你可以使用[list-style-type](/docs/list-style-type)和[list-style-position](/docs/list-style-position)工具:
 
 ```html
 <ul class="list-disc list-inside">
@@ -102,13 +102,13 @@ If you'd like to style a list, you can do so using the [list-style-type](/docs/l
 </ul>
 ```
 
-You can always add default list styles to your project by [adding your own base styles](/docs/adding-base-styles).
+你可以通过[添加你自己的基本样式](/docs/add-base-styles)为你的项目添加默认的列表样式。
 
-If you'd like to selectively introduce default list styles into article-style parts of a page, we recommend the [@tailwindcss/typography plugin](/docs/typography-plugin/).
+如果你想选择性地将默认列表样式引入页面的文章样式部分，我们推荐使用[@tailwindcss/typography 插件](/docs/typography-plugin/)。
 
 ### 可访问性的考虑
 
-Unstyled lists are [not announced as lists by VoiceOver](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/). If your content is truly a list but you would like to keep it unstyled, [add a "list" role](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) to the element:
+未样式的列表[不是由 VoiceOver 宣布的列表](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)。如果你的内容确实是一个列表，但你想保持它不被样式化，[添加一个"list"角色](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)元素:
 
 ```html
 <ul role="list">
@@ -122,7 +122,7 @@ Unstyled lists are [not announced as lists by VoiceOver](https://unfetteredthoug
 
 ## 图像是块级的
 
-Images and other replaced elements (like `svg`, `video`, `canvas`, and others) are `display: block` by default.
+图像和其他可替换元素(如`svg`、`video`、`canvas`等)默认为`display: block`。
 
 ```css
 img,
@@ -143,14 +143,14 @@ This helps to avoid unexpected alignment issues that you often run into using th
 If you ever need to make one of these elements `inline` instead of `block`, simply use the `inline` utility:
 
 ```html
-<img class="inline" src="..." alt="...">
+<img class="inline" src="..." alt="..." />
 ```
 
 ---
 
 ## 图像被限制为父宽度
 
-Images and videos are constrained to the parent width in a way that preserves their intrinsic aspect ratio.
+图像和视频以一种保留其固有宽高比的方式被限制在父宽度。
 
 ```css
 img,
@@ -163,14 +163,14 @@ video {
 This prevents them from overflowing their containers and makes them responsive by default. If you ever need to override this behavior, use the `max-w-none` utility:
 
 ```html
-<img class="max-w-none" src="..." alt="...">
+<img class="max-w-none" src="..." alt="..." />
 ```
 
 ---
 
 ## 边框样式是全局重置的
 
-In order to make it easy to add a border by simply adding the `border` class, Tailwind overrides the default border styles for all elements with the following rules:
+为了方便添加边框，只需添加 border 类，Tailwind 用以下规则覆盖所有元素的默认边框样式:
 
 ```css
 *,
@@ -198,7 +198,7 @@ When you run into situations like this, you can work around them by overriding t
 
 ## 扩展 Preflight
 
-If you'd like to add your own base styles on top of Preflight, simply add them to your CSS using the `@layer base` directive:
+如果你想在 Preflight 上添加自己的基本样式，只需使用`@layer base`指令将它们添加到你的 CSS 中:
 
 ```css
 @tailwind base;
@@ -223,13 +223,13 @@ If you'd like to add your own base styles on top of Preflight, simply add them t
 @tailwind utilities;
 ```
 
-Learn more in the [adding base styles documentation](/docs/adding-base-styles).
+在[添加基本样式文档](/docs/adding-base-styles)中了解更多信息.
 
 ---
 
 ## 禁用 Preflight
 
-If you'd like to completely disable Preflight — perhaps because you're integrating Tailwind into an existing project or because you'd like to provide your own base styles — all you need to do is set `preflight` to `false` in the `corePlugins` section of your `tailwind.config.js` file:
+如果你想完全禁用 Preflight -也许是因为你正在将 Tailwind 集成到现有项目中，或者因为你想提供自己的基本样式-所有你需要做的就是在`tailwind.config.js`文件的`corePlugins`部分将`Preflight`设置为`false`:
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {

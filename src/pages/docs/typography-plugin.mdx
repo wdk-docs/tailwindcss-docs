@@ -7,25 +7,29 @@ repo: https://github.com/tailwindlabs/tailwindcss-typography
 
 import { TipGood, TipBad, TipInfo } from '@/components/Tip'
 
-官方的顺风CSS排版插件提供了一组`prose`类，你可以用它来为任何你无法控制的香草HTML添加漂亮的排版默认值，比如从Markdown呈现的HTML，或者从CMS提取的HTML。
+官方的顺风 CSS 排版插件提供了一组`prose`类，你可以用它来为任何你无法控制的香草 HTML 添加漂亮的排版默认值，比如从 Markdown 呈现的 HTML，或者从 CMS 提取的 HTML。
 
 <a href="https://play.tailwindcss.com/uj1vGACRJA?layout=preview">
-  <img src={require('@/img/typography-demo.jpg').default.src} alt="Tailwind CSS IntelliSense extension for Visual Studio Code" width={3086} height={1658} className="rounded-lg ring-1 ring-black/5" />
+  <img
+    src={require('@/img/typography-demo.jpg').default.src}
+    alt="Tailwind CSS IntelliSense extension for Visual Studio Code"
+    width={3086}
+    height={1658}
+    className="rounded-lg ring-1 ring-black/5"
+  />
 </a>
 
 ```html
-<article class="prose lg:prose-xl">
-  {{ markdown }}
-</article>
+<article class="prose lg:prose-xl">{{ markdown }}</article>
 ```
 
-看看它看起来像什么行动，检查我们的[现场演示](https://play.tailwindcss.com/uj1vGACRJA?layout=preview)在Tailwind Play。
+看看它看起来像什么行动，检查我们的[现场演示](https://play.tailwindcss.com/uj1vGACRJA?layout=preview)在 Tailwind Play。
 
 ---
 
 ## 安装
 
-从npm安装插件:
+从 npm 安装插件:
 
 ```shell
 npm install -D @tailwindcss/typography
@@ -50,123 +54,108 @@ module.exports = {
 
 ## 基本用法
 
-现在你可以使用`prose`类为任何香草HTML添加合理的排版样式:
+现在你可以使用`prose`类为任何香草 HTML 添加合理的排版样式:
 
 ```html
 <article class="prose lg:prose-xl">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
+  <h1>大蒜面包配奶酪:科学告诉我们的</h1>
   <p>
-    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-    children, with the food earning such an iconic status in our culture that kids will often dress
-    up as warm, cheesy loaf for Halloween.
+    多年来，父母们一直在向孩子们宣扬吃大蒜奶酪面包对健康的好处，这种食物在我们的文化中占据着如此标志性的地位，以至于孩子们经常会在万圣节打扮成温暖的奶酪面包。
   </p>
-  <p>
-    But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-    springing up around the country.
-  </p>
+  <p>但最近的一项研究表明，这道著名的开胃菜可能与全国各地出现的一系列狂犬病病例有关。</p>
   <!-- ... -->
 </article>
 ```
 
 ### 选择灰度
 
-This plugin includes a modifier class for each of the five gray scales Tailwind includes by default so you can easily style your content to match the grays you're using in your project.
+这个插件包括一个修饰器类，为每个五个灰度的顺风包括默认情况下，所以你可以很容易地样式你的内容，以匹配你在你的项目中使用的灰色。
 
 ```html
-<article class="prose **prose-slate**">
-  {{ markdown }}
-</article>
+<article class="prose **prose-slate**">{{ markdown }}</article>
 ```
 
-Here are the classes that are generated using a totally default Tailwind CSS v2.0 build:
+以下是使用完全默认的顺风 CSS v2.0 版本生成的类:
 
-| Class                    | Gray scale |
-| ------------------------ | ---------- |
-| `prose-gray` _(default)_ | Gray       |
-| `prose-slate`            | Slate      |
-| `prose-zinc`             | Zinc       |
-| `prose-neutral`          | Neutral    |
-| `prose-stone`            | Stone      |
+| 类                       | 灰度   |
+| ------------------------ | ------ |
+| `prose-gray` _(default)_ | 灰色的 |
+| `prose-slate`            | 板岩   |
+| `prose-zinc`             | 锌     |
+| `prose-neutral`          | 中性   |
+| `prose-stone`            | 石头   |
 
-Modifier classes are designed to be used with the [multi-class modifier pattern](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/#component-modifiers) and must be used in conjunction with the base `prose` class.
+修饰符类被设计为与[多类修饰符模式](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/#component-modifiers)一起使用，并且必须与基类`prose`一起使用。
 
-<TipInfo>Always include the `prose` class when adding a gray scale modifier</TipInfo>
+<TipInfo>在添加灰度修饰符时，总是包含`prose`类</TipInfo>
 
 ```html
-<article class="**prose** prose-stone">
-  {{ markdown }}
-</article>
+<article class="**prose** prose-stone">{{ markdown }}</article>
 ```
 
-To learn about creating your own color themes, read the [adding custom color themes](#adding-custom-color-themes) documentation.
+要了解如何创建自己的颜色主题，请阅读[添加自定义颜色主题](#adding-custom-color-themes)文档。
 
 ### 使用字型标度
 
-Size modifiers allow you to adjust the overall size of your typography for different contexts.
+大小修饰符允许您根据不同的上下文调整排版的总体大小。
 
 ```html
-<article class="prose **prose-xl**">
-  {{ markdown }}
-</article>
+<article class="prose **prose-xl**">{{ markdown }}</article>
 ```
 
-Five different typography sizes are included out of the box:
+五种不同的排版尺寸包括开箱即用:
 
-| Class                    |  Body font size |
-| ------------------------ | --------------- |
+| Class                    | Body font size    |
+| ------------------------ | ----------------- |
 | `prose-sm`               | 0.875rem _(14px)_ |
-| `prose-base` _(default)_ |     1rem _(16px)_ |
+| `prose-base` _(default)_ | 1rem _(16px)_     |
 | `prose-lg`               | 1.125rem _(18px)_ |
-| `prose-xl`               |  1.25rem _(20px)_ |
-| `prose-2xl`              |   1.5rem _(24px)_ |
+| `prose-xl`               | 1.25rem _(20px)_  |
+| `prose-2xl`              | 1.5rem _(24px)_   |
 
-These can be used in combination with Tailwind's [breakpoint modifiers](/docs/responsive-design) to change the overall font size of a piece of content at different viewport sizes:
-
-```html
-<article class="prose **md:prose-lg** **lg:prose-xl**">
-  {{ markdown }}
-</article>
-```
-
-Everything about the provided size modifiers has been hand-tuned by professional designers to look as beautiful as possible, including the relationships between font sizes, heading spacing, code block padding, and more.
-
-Size modifiers are designed to be used with the [multi-class modifier pattern](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/#component-modifiers) and must be used in conjunction with the base `prose` class.
-
-<TipInfo>Always include the `prose` class when adding a size modifier</TipInfo>
+这些可以与 Tailwind 的[断点修饰符](/docs/responsive-design)结合使用，以改变不同视口大小的内容的整体字体大小:
 
 ```html
-<article class="**prose** prose-lg">
-  {{ markdown }}
-</article>
+<article class="prose **md:prose-lg** **lg:prose-xl**">{{ markdown }}</article>
 ```
 
-To learn about customizing the included type scales, read the documentation on [customizing the CSS](#customizing-the-css).
+所提供的大小修饰符的所有内容都由专业设计师手工调整，以使其看起来尽可能美观，包括字体大小、标题间距、代码块填充等之间的关系。
+
+大小修饰符被设计为与[多类修饰符模式](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/#component-modifiers)一起使用，并且必须与基本的`prose`类一起使用。
+
+<TipInfo>在添加大小修饰符时总是包含`prose`类</TipInfo>
+
+```html
+<article class="**prose** prose-lg">{{ markdown }}</article>
+```
+
+要了解如何自定义包含的字体比例，请阅读文档[自定义 CSS](#customizing-the-css).
 
 ### 适应暗模式
 
-Each default color theme includes a hand-designed dark mode version that you can trigger by adding the `prose-invert` class:
+每个默认颜色主题都包含一个手工设计的暗模式版本，您可以通过添加`prose-invert`类来触发:
 
 ```html
-<article class="prose **dark:prose-invert**">
-  {{ markdown }}
-</article>
+<article class="prose **dark:prose-invert**">{{ markdown }}</article>
 ```
 
-To learn about creating your own color themes, read the [adding custom color themes](#adding-custom-color-themes) documentation.
+要了解如何创建自己的颜色主题，请阅读[添加自定义颜色主题](#adding-custom-color-themes)文档。
 
 ### 元素修饰符
 
-Use element modifiers to customize the style of individual elements in your content directly in your HTML:
+使用元素修饰符直接在 HTML 中自定义内容中单个元素的样式:
 
 ```html
-<article class="prose **prose-img:rounded-xl** **prose-headings:underline** **prose-a:text-blue-600**">
+<article
+  class="prose **prose-img:rounded-xl** **prose-headings:underline** **prose-a:text-blue-600**"
+>
   {{ markdown }}
 </article>
 ```
 
-This makes it easy to do things like style links to match your brand, add a border radius to images, and tons more.
+这使得做一些事情很容易，比如样式链接来匹配你的品牌，为图像添加边框半径，等等。
 
-Here's a complete list of available element modifiers:
+下面是可用元素修饰符的完整列表:
 
 | Modifier                     | Target                       |
 | ---------------------------- | ---------------------------- |
@@ -197,7 +186,7 @@ Here's a complete list of available element modifiers:
 | `prose-video:{utility}`      | `video`                      |
 | `prose-hr:{utility}`         | `hr`                         |
 
-When stacking these modifiers with other modifiers like `hover`, you most likely want the other modifier to come first:
+当将这些修饰符与其他修饰符(如`hover`)叠加时，你很可能希望其他修饰符优先出现:
 
 ```html
 <article class="prose prose-a:text-blue-600 **hover:prose-a:text-blue-500**">
@@ -205,13 +194,13 @@ When stacking these modifiers with other modifiers like `hover`, you most likely
 </article>
 ```
 
-Read the Tailwind CSS documentation on [ordering stacked modifiers](/docs/hover-focus-and-other-states#ordering-stacked-modifiers) to learn more.
+阅读顺风 CSS 文档关于[排序堆叠修饰符](/docs/hover-focus-and-other-states#ordered-stacked-modifiers)了解更多。
 
-### 覆盖max-width
+### 覆盖 max-width
 
-Each size modifier comes with a baked in `max-width` designed to keep the content as readable as possible. This isn't always what you want though, and sometimes you'll want the content to just fill the width of its container.
+每个大小修改器都带有一个`max-width`，旨在保持内容尽可能可读。但这并不总是您想要的，有时您会希望内容只是填充其容器的宽度。
 
-In those cases, all you need to do is add `max-w-none` to your content to override the embedded max-width:
+在这些情况下，你所需要做的就是在你的内容中添加`max-w-none`来覆盖嵌入的 max-width:
 
 ```html
 <div class="grid grid-cols-4">
@@ -219,9 +208,7 @@ In those cases, all you need to do is add `max-w-none` to your content to overri
     <!-- ... -->
   </div>
   <div class="col-span-3">
-    <article class="prose **max-w-none**">
-      {{ markdown }}
-    </article>
+    <article class="prose **max-w-none**">{{ markdown }}</article>
   </div>
 </div>
 ```
@@ -232,7 +219,7 @@ In those cases, all you need to do is add `max-w-none` to your content to overri
 
 ### 撤消排版样式
 
-If you have a block of markup embedded in some content that shouldn't inherit the `prose` styles, use the `not-prose` class to sandbox it:
+如果你在某些内容中嵌入了一个不应该继承`prose`样式的标记块，使用`not-prose`类对其进行沙箱处理:
 
 ```html
 <article class="prose">
@@ -248,11 +235,11 @@ If you have a block of markup embedded in some content that shouldn't inherit th
 </article>
 ```
 
-Note that you can't nest new `prose` instances within a `not-prose` block at this time.
+请注意，此时不能在`非散文`块中嵌套新的`散文`实例。
 
 ### 添加自定义颜色主题
 
-You can create your own color theme by adding a new key in the `typography` section of your `tailwind.config.js` file and providing your colors under the `css` key:
+你可以在`tailwind.config.js`文件的`typography`部分添加一个新键，并在`css`键下提供你的颜色，从而创建你自己的颜色主题:
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -306,11 +293,11 @@ module.exports = {
 }
 ```
 
-See our internal [style definitions](https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js) for some more examples.
+更多示例请参见我们的内部[样式定义](https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js)。
 
 ### 更改默认的类名
 
-If you need to use a class name other than `prose` for any reason, you can do so using the `className` option when registering the plugin:
+如果你出于任何原因需要使用`prose`以外的类名，你可以在注册插件时使用`className`选项:
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -327,7 +314,7 @@ module.exports = {
 }
 ```
 
-Now every instance of `prose` in the default class names will be replaced by your custom class name:
+现在，默认类名中的每个`prose`实例都将被您的自定义类名所替换:
 
 ```html
 <article class="wysiwyg wysiwyg-slate lg:wysiwyg-xl">
@@ -343,9 +330,9 @@ Now every instance of `prose` in the default class names will be replaced by you
 </article>
 ```
 
-### 自定义CSS
+### 自定义 CSS
 
-If you want to customize the raw CSS generated by this plugin, add your overrides under the `typography` key in the `theme` section of your `tailwind.config.js` file:
+如果你想自定义这个插件生成的原始 CSS，在`tailwind.config.js`文件的`theme`部分的`typography`键下添加你的覆盖:
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -374,7 +361,7 @@ module.exports = {
 }
 ```
 
-Like with all theme customizations in Tailwind, you can also define the `typography` key as a function if you need access to the `theme` helper:
+与顺风中的所有主题自定义一样，如果你需要访问`theme`助手，你也可以将`typography`键定义为一个函数:
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -399,6 +386,6 @@ module.exports = {
 }
 ```
 
-Customizations should be applied to a specific modifier like `DEFAULT` or `xl`, and must be added under the `css` property. Customizations are authored in the same [CSS-in-JS syntax](/docs/plugins#css-in-js-syntax) used to write Tailwind plugins.
+自定义应该应用于特定的修饰符，如`DEFAULT`或`xl`，并且必须添加在`css`属性下。自定义使用与编写顺风插件相同的[CSS-in-JS 语法](/docs/plugins#css-in-js-syntax)编写。
 
-See [the default styles](https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js) for this plugin for more in-depth examples of configuring each modifier.
+查看这个插件的[默认样式](https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js)，以获得配置每个修饰符的更深入的示例。

@@ -1,6 +1,6 @@
 ---
-title: "过渡性质"
-description: "Utilities for controlling which CSS properties transition."
+title: '过渡性质'
+description: '用于控制哪些CSS属性转换的实用程序。'
 ---
 
 import utilities from 'utilities?plugin=transitionProperty'
@@ -12,31 +12,37 @@ export const classes = { utilities }
 
 ## 基本用法
 
-### Controlling transitioned properties
+### 控制转换的属性
 
-Use the `transition-{properties}` utilities to specify which properties should transition when they change.
+使用`transition-{properties}`实用程序可以指定更改时应转换的属性。
 
-```html {{ example: { hint: 'Hover the button to see the expected behaviour' } }}
+```html {{ example: { hint: '悬停按钮以查看预期行为' } }}
 <div class="flex justify-around text-white text-sm font-bold leading-6">
-  <button class="px-4 py-2 font-semibold text-sm bg-blue-500 text-white rounded-md shadow-sm hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 ease-in-out delay-150 duration-300">
-    Save Changes
+  <button
+    class="px-4 py-2 font-semibold text-sm bg-blue-500 text-white rounded-md shadow-sm hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 ease-in-out delay-150 duration-300"
+  >
+    保存更改
   </button>
 </div>
 ```
 
 ```html
-<button class="**transition** ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ...">
-  Save Changes
+<button
+  class="**transition** ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."
+>
+  保存更改
 </button>
 ```
 
-### Prefers-reduced-motion
+### 喜欢减少运动
 
-For situations where the user has specified that they prefer reduced motion, you can conditionally apply animations and transitions using the `motion-safe` and `motion-reduce` variants:
+对于用户指定喜欢减少运动的情况，可以使用`motion-safe` 和 `motion-reduce`变体有条件地应用动画和过渡：
 
 ```html
-<button class="transition transform hover:-translate-y-1 **motion-reduce:transition-none motion-reduce:hover:transform-none** ...">
-  Hover me
+<button
+  class="transition transform hover:-translate-y-1 **motion-reduce:transition-none motion-reduce:hover:transform-none** ..."
+>
+  悬停我
 </button>
 ```
 

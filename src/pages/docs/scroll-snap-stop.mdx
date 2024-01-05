@@ -1,6 +1,6 @@
 ---
-title: "滚动止动"
-description: "Utilities for controlling whether you can skip past possible snap positions."
+title: '滚动止动'
+description: '用于控制是否可以跳过可能的捕捉位置的实用程序。'
 ---
 
 import utilities from 'utilities?plugin=scrollSnapStop'
@@ -12,14 +12,18 @@ export const classes = { utilities }
 
 ## 基本用法
 
-### Forcing snap position stops
+### 强制捕捉位置停止
 
-Use the `snap-always` utility together with the `snap-mandatory` utility to force a snap container to always stop on an element before the user can continue scrolling to the next item.
+将`snap-always`实用程序与`snap-mandatory`实用工具结合使用，可以强制捕捉容器始终停止在元素上，然后用户才能继续滚动到下一个项目。
 
-```html {{ example: { p: 'none', hint: 'Scroll in the grid of images to see the expected behaviour' } }}
+```html {{ example: { p: 'none', hint: '在图像网格中滚动以查看预期行为' } }}
 <!-- Snap Point -->
 <div class="flex ml-[50%] items-end justify-start pt-10 mb-6">
-  <div class="ml-2 rounded font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-indigo-50 text-indigo-600 ring-indigo-600 dark:bg-indigo-500 dark:ring-0 dark:text-white dark:highlight-white/10">snap point</div>
+  <div
+    class="ml-2 rounded font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-indigo-50 text-indigo-600 ring-indigo-600 dark:bg-indigo-500 dark:ring-0 dark:text-white dark:highlight-white/10"
+  >
+    snap point
+  </div>
   <div class="absolute top-0 bottom-0 left-1/2 border-l border-indigo-500"></div>
 </div>
 <!-- Contents -->
@@ -28,22 +32,40 @@ Use the `snap-always` utility together with the `snap-mandatory` utility to forc
     <div class="shrink-0 w-4 sm:w-48"></div>
   </div>
   <div class="snap-always snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-always snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-always snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-always snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-always snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-always snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-center shrink-0">
     <div class="shrink-0 w-4 sm:w-48"></div>
@@ -54,34 +76,50 @@ Use the `snap-always` utility together with the `snap-mandatory` utility to forc
 ```html
 <div class="**snap-x snap-mandatory** ...">
   <div class="**snap-always** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-always** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-always** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-always** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-always** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-always** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
 </div>
 ```
 
-### Skipping snap position stops
+### 跳过捕捉位置停止
 
-Use the `snap-normal` utility to allow a snap container to skip past possible scroll snap positions.
+使用`snap-normal`实用程序允许捕捉容器跳过可能的滚动捕捉位置。
 
-```html {{ example: { p: 'none', hint: 'Scroll in the grid of images to see the expected behaviour' } }}
+```html {{ example: { p: 'none', hint: '在图像网格中滚动以查看预期行为' } }}
 <!-- Snap Point -->
 <div class="flex ml-[50%] items-end justify-start pt-10 mb-6">
-  <div class="ml-2 rounded font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-indigo-50 text-indigo-600 ring-indigo-600 dark:bg-indigo-500 dark:ring-0 dark:text-white dark:highlight-white/10">snap point</div>
+  <div
+    class="ml-2 rounded font-mono text-[0.625rem] leading-6 px-1.5 ring-1 ring-inset bg-indigo-50 text-indigo-600 ring-indigo-600 dark:bg-indigo-500 dark:ring-0 dark:text-white dark:highlight-white/10"
+  >
+    snap point
+  </div>
   <div class="absolute top-0 bottom-0 left-1/2 border-l border-indigo-500"></div>
 </div>
 <!-- Contents -->
@@ -90,22 +128,40 @@ Use the `snap-normal` utility to allow a snap container to skip past possible sc
     <div class="shrink-0 w-4 sm:w-48"></div>
   </div>
   <div class="snap-normal snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-normal snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-normal snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-normal snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-normal snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-normal snap-center shrink-0 first:pl-8 last:pr-8">
-    <img class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white" src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      class="shrink-0 w-80 h-40 object-cover rounded-lg shadow-xl bg-white"
+      src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="snap-center shrink-0">
     <div class="shrink-0 w-4 sm:w-48"></div>
@@ -116,22 +172,34 @@ Use the `snap-normal` utility to allow a snap container to skip past possible sc
 ```html
 <div class="**snap-x** ...">
   <div class="**snap-normal** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-normal** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-normal** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-normal** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-normal** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
   <div class="**snap-normal** snap-center ...">
-    <img src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <img
+      src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+    />
   </div>
 </div>
 ```

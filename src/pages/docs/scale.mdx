@@ -1,6 +1,6 @@
 ---
-title: "缩放"
-description: "使用transform缩放元素的实用工具。"
+title: '缩放'
+description: '使用transform缩放元素的实用工具。'
 ---
 
 import utilities from 'utilities?plugin=scale'
@@ -18,7 +18,7 @@ export const classes = {
     let x = properties['--tw-scale-x']
     let y = properties['--tw-scale-y']
     return {
-      transform: x && y ? `scale(${x})` : (x ? `scaleX(${x})` : `scaleY(${y})`)
+      transform: x && y ? `scale(${x})` : x ? `scaleX(${x})` : `scaleY(${y})`,
     }
   },
 }
@@ -27,55 +27,81 @@ export const classes = {
 
 ### 缩放元素
 
-Use the `scale-{percentage}`, `scale-x-{percentage}`, and `scale-y-{percentage}` utilities to scale an element.
+使用`scale-{percentage}`, `scale-x-{percentage}`, 和 `scale-y-{percentage}`实用程序缩放元素。
 
 ```html {{ example: { p: 'none' } }}
 <div class="flex sm:block overflow-scroll sm:overflow-visible scroll-p-8">
-<div class="flex items-center justify-around gap-12 sm:gap-4 font-mono font-bold p-8 px-12 sm:px-8 pb-10 shrink-0">
-  <div class="flex flex-col items-center shrink-0">
-    <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">scale-75</p>
-    <div class="relative">
-      <div class="absolute inset-0">
-        <img class="w-24 h-24 object-cover rounded-lg opacity-25" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
+  <div
+    class="flex items-center justify-around gap-12 sm:gap-4 font-mono font-bold p-8 px-12 sm:px-8 pb-10 shrink-0"
+  >
+    <div class="flex flex-col items-center shrink-0">
+      <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">
+        scale-75
+      </p>
+      <div class="relative">
+        <div class="absolute inset-0">
+          <img
+            class="w-24 h-24 object-cover rounded-lg opacity-25"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+        </div>
+        <div class="relative z-10 scale-75">
+          <img
+            class="w-24 h-24 object-cover rounded-lg shadow-xl"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+          <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+        </div>
       </div>
-      <div class="relative z-10 scale-75">
-        <img class="w-24 h-24 object-cover rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+    </div>
+    <div class="flex flex-col items-center shrink-0">
+      <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">
+        scale-100
+      </p>
+      <div class="relative">
+        <div class="absolute inset-0">
+          <img
+            class="w-24 h-24 object-cover rounded-lg opacity-25"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+        </div>
+        <div class="relative z-10 scale-100">
+          <img
+            class="w-24 h-24 object-cover rounded-lg shadow-xl"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+          <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center shrink-0">
+      <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">
+        scale-125
+      </p>
+      <div class="relative">
+        <div class="absolute inset-0">
+          <img
+            class="w-24 h-24 object-cover rounded-lg opacity-25"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+        </div>
+        <div class="relative z-10 scale-125">
+          <img
+            class="w-24 h-24 object-cover rounded-lg shadow-xl"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+          <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="flex flex-col items-center shrink-0">
-    <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">scale-100</p>
-    <div class="relative">
-      <div class="absolute inset-0">
-        <img class="w-24 h-24 object-cover rounded-lg opacity-25" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-      </div>
-      <div class="relative z-10 scale-100">
-        <img class="w-24 h-24 object-cover rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col items-center shrink-0">
-    <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">scale-125</p>
-    <div class="relative">
-      <div class="absolute inset-0">
-        <img class="w-24 h-24 object-cover rounded-lg opacity-25" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-      </div>
-      <div class="relative z-10 scale-125">
-        <img class="w-24 h-24 object-cover rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 ```
 
 ```html
-<img class="**scale-75** ...">
-<img class="**scale-100** ...">
-<img class="**scale-125** ...">
+<img class="**scale-75** ..." />
+<img class="**scale-100** ..." />
+<img class="**scale-125** ..." />
 ```
 
 ### 使用负值
@@ -83,7 +109,7 @@ Use the `scale-{percentage}`, `scale-x-{percentage}`, and `scale-y-{percentage}`
 To use a negative scale value, prefix the class name with a dash to convert it to a negative value.
 
 ```html
-<img class="**-scale-50**">
+<img class="**-scale-50**" />
 ```
 
 ### 消除转换

@@ -1,6 +1,6 @@
 ---
-title: "翻译"
-description: "用transform转换元素的实用程序。"
+title: '转换'
+description: '用transform转换元素的实用程序。'
 ---
 
 import utilities from 'utilities?plugin=translate'
@@ -18,79 +18,103 @@ export const classes = {
     let x = properties['--tw-translate-x']
     let y = properties['--tw-translate-y']
     return {
-      transform: `translate${x ? 'X' : 'Y'}(${x || y})`
+      transform: `translate${x ? 'X' : 'Y'}(${x || y})`,
     }
   },
 }
 
 ## 基本用法
 
-### 翻译元素
+### 转换元素
 
-使用`translate-x-{amount}`和`translate-y-{amount}`实用程序来翻译元素。
+使用`translate-x-{amount}`和`translate-y-{amount}`实用程序来转换元素。
 
 ```html {{ example: { p: 'none' } }}
 <div class="flex sm:block overflow-scroll sm:overflow-visible scroll-p-8">
-<div class="flex items-center justify-around gap-4 font-mono font-bold p-8 pb-12 shrink-0">
-  <div class="flex flex-col items-center shrink-0">
-    <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">translate-y-6</p>
-    <div class="relative">
-      <div class="absolute inset-0">
-        <img class="w-24 h-24 object-cover rounded-lg opacity-25" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-      </div>
-      <div class="relative z-10 translate-y-6">
-        <img class="w-24 h-24 object-cover rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col items-center shrink-0">
-    <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">-translate-y-6</p>
-    <div class="relative">
-      <div class="absolute inset-0">
-        <img class="w-24 h-24 object-cover rounded-lg opacity-25" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-      </div>
-      <div class="relative z-10 -translate-y-6">
-        <img class="w-24 h-24 object-cover rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+  <div class="flex items-center justify-around gap-4 font-mono font-bold p-8 pb-12 shrink-0">
+    <div class="flex flex-col items-center shrink-0">
+      <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">
+        translate-y-6
+      </p>
+      <div class="relative">
+        <div class="absolute inset-0">
+          <img
+            class="w-24 h-24 object-cover rounded-lg opacity-25"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+        </div>
+        <div class="relative z-10 translate-y-6">
+          <img
+            class="w-24 h-24 object-cover rounded-lg shadow-xl"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+          <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="flex flex-col items-center shrink-0">
-    <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">translate-x-6</p>
-    <div class="relative">
-      <div class="absolute inset-0">
-        <img class="w-24 h-24 object-cover rounded-lg opacity-25" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
+    <div class="flex flex-col items-center shrink-0">
+      <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">
+        -translate-y-6
+      </p>
+      <div class="relative">
+        <div class="absolute inset-0">
+          <img
+            class="w-24 h-24 object-cover rounded-lg opacity-25"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+        </div>
+        <div class="relative z-10 -translate-y-6">
+          <img
+            class="w-24 h-24 object-cover rounded-lg shadow-xl"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+          <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+        </div>
       </div>
-      <div class="relative z-10 translate-x-6">
-        <img class="w-24 h-24 object-cover rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80" />
-        <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+    </div>
+    <div class="flex flex-col items-center shrink-0">
+      <p class="font-medium text-sm text-slate-500 font-mono text-center mb-9 dark:text-slate-400">
+        translate-x-6
+      </p>
+      <div class="relative">
+        <div class="absolute inset-0">
+          <img
+            class="w-24 h-24 object-cover rounded-lg opacity-25"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+        </div>
+        <div class="relative z-10 translate-x-6">
+          <img
+            class="w-24 h-24 object-cover rounded-lg shadow-xl"
+            src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80"
+          />
+          <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 ```
 
 ```html
-<img class="**translate-y-6** ...">
-<img class="**-translate-y-6** ...">
-<img class="**translate-x-6** ...">
+<img class="**translate-y-6** ..." />
+<img class="**-translate-y-6** ..." />
+<img class="**translate-x-6** ..." />
 ```
 
-### Using negative values
+### 使用负值
 
-To use a negative translate value, prefix the class name with a dash to convert it to a negative value.
+要使用负值转换值，请在类名前面加一个短划线，将其转换为负值。
 
 ```html
-<img class="**-translate-y-6** ...">
+<img class="**-translate-y-6** ..." />
 ```
 
-### Removing transforms
+### 正在删除转换
 
 <RemovingTransforms defaultClass="scale-75 translate-x-4 skew-y-3" />
 
-### Hardware acceleration
+### 硬件加速
 
 <HardwareAcceleration defaultClass="translate-y-6" />
 
@@ -112,7 +136,7 @@ To use a negative translate value, prefix the class name with a dash to convert 
 
 ### 自定义主题
 
-By default, Tailwind provides fixed value `translate` utilities that match the [default spacing scale](/docs/customizing-spacing), as well as 50% and 100% variations for translating relative to the element's size.  You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
+By default, Tailwind provides fixed value `translate` utilities that match the [default spacing scale](/docs/customizing-spacing), as well as 50% and 100% variations for translating relative to the element's size. You can customize your spacing scale by editing `theme.spacing` or `theme.extend.spacing` in your `tailwind.config.js` file.
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
